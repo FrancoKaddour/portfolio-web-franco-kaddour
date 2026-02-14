@@ -50,26 +50,26 @@ const ContactPage = () => {
           {"}"}
         </div>
         
-        <div className="relative z-10 max-w-md w-full px-4 sm:px-0">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-sans font-bold text-foreground mb-2">
+        <div className="relative z-10 max-w-xs lg:max-w-sm w-full px-4 sm:px-0">
+          <h2 className="text-base sm:text-lg md:text-xl font-sans font-bold text-foreground mb-1.5 sm:mb-2">
             {t('contact.title')}
           </h2>
-          <p className="text-xs sm:text-sm md:text-base font-sans text-muted-foreground mb-4 sm:mb-6 md:mb-8 leading-relaxed">
+          <p className="text-[10px] sm:text-xs md:text-sm font-sans text-muted-foreground mb-3 sm:mb-4 md:mb-6 leading-relaxed">
             {t('contact.description')}
           </p>
 
-          <div className="space-y-2 sm:space-y-3 md:space-y-6">
+          <div className="space-y-2 sm:space-y-2.5 md:space-y-3">
             {/* Email */}
             <a
               href="mailto:francokaddour@gmail.com"
-              className="flex items-center gap-4 p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors group"
+              className="flex items-center gap-2 sm:gap-3 p-2.5 sm:p-3 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors group"
             >
-              <div className="p-1.5 sm:p-2 md:p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                <Mail className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-primary" />
+              <div className="p-1.5 sm:p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-primary" />
               </div>
               <div>
-                <h3 className="text-sm sm:text-base md:text-lg font-sans font-semibold text-foreground mb-0.5 sm:mb-1">Email</h3>
-                <p className="text-[10px] sm:text-xs md:text-sm text-primary font-mono break-all">francokaddour@gmail.com</p>
+                <h3 className="text-xs sm:text-sm md:text-base font-sans font-semibold text-foreground mb-0.5">Email</h3>
+                <p className="text-[9px] sm:text-[10px] md:text-xs text-primary font-mono break-all">francokaddour@gmail.com</p>
               </div>
             </a>
 
@@ -78,14 +78,14 @@ const ContactPage = () => {
               href="https://github.com/FrancoKaddour"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 sm:gap-3 md:gap-4 p-2 sm:p-3 md:p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors group"
+              className="flex items-center gap-2 sm:gap-3 p-2.5 sm:p-3 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors group"
             >
-              <div className="p-1.5 sm:p-2 md:p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                <Github className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-primary" />
+              <div className="p-1.5 sm:p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                <Github className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-primary" />
               </div>
               <div>
-                <h3 className="text-sm sm:text-base md:text-lg font-sans font-semibold text-foreground mb-0.5 sm:mb-1">GitHub</h3>
-                <p className="text-[10px] sm:text-xs md:text-sm text-primary font-mono break-all">github.com/FrancoKaddour</p>
+                <h3 className="text-xs sm:text-sm md:text-base font-sans font-semibold text-foreground mb-0.5">GitHub</h3>
+                <p className="text-[9px] sm:text-[10px] md:text-xs text-primary font-mono break-all">github.com/FrancoKaddour</p>
               </div>
             </a>
 
@@ -94,14 +94,14 @@ const ContactPage = () => {
               href="https://www.linkedin.com/in/francokaddour/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 sm:gap-3 md:gap-4 p-2 sm:p-3 md:p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors group"
+              className="flex items-center gap-2 sm:gap-3 p-2.5 sm:p-3 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors group"
             >
-              <div className="p-1.5 sm:p-2 md:p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                <Linkedin className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-primary" />
+              <div className="p-1.5 sm:p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-primary" />
               </div>
               <div>
-                <h3 className="text-sm sm:text-base md:text-lg font-sans font-semibold text-foreground mb-0.5 sm:mb-1">LinkedIn</h3>
-                <p className="text-[10px] sm:text-xs md:text-sm text-primary font-mono break-all">linkedin.com/in/francokaddour</p>
+                <h3 className="text-xs sm:text-sm md:text-base font-sans font-semibold text-foreground mb-0.5">LinkedIn</h3>
+                <p className="text-[9px] sm:text-[10px] md:text-xs text-primary font-mono break-all">linkedin.com/in/francokaddour</p>
               </div>
             </a>
           </div>
