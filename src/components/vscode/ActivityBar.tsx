@@ -1,4 +1,4 @@
-import { Files, GitBranch, Code2, Pencil, Mail } from "lucide-react";
+import { Files, GitBranch, Code2, Mail } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { UserPopover } from "../UserPopover";
 import { SettingsPopover } from "../SettingsPopover";
@@ -7,7 +7,6 @@ const topIcons = [
   { id: "explorer", icon: Files, path: "/" },
   { id: "git", icon: GitBranch, path: "/github" },
   { id: "code", icon: Code2, path: "/projects" },
-  { id: "pencil", icon: Pencil, path: "/articles" },
   { id: "mail", icon: Mail, path: "/contact" },
 ];
 
@@ -20,14 +19,14 @@ export function ActivityBar({ activePage }: ActivityBarProps) {
   const location = useLocation();
 
   return (
-    <div className="flex flex-col items-center bg-vscode-activitybar w-12 h-full border-r border-border shrink-0">
+    <div className="flex flex-col items-center bg-vscode-activitybar w-10 md:w-12 h-full border-r border-border shrink-0">
       {topIcons.map((item) => {
         const isActive = location.pathname === item.path;
         return (
           <button
             key={item.id}
             onClick={() => navigate(item.path)}
-            className={`w-full p-3 flex justify-center transition-colors relative ${
+            className={`w-full p-2 md:p-3 flex justify-center transition-colors relative ${
               isActive
                 ? "text-foreground"
                 : "text-muted-foreground hover:text-foreground"
@@ -36,12 +35,12 @@ export function ActivityBar({ activePage }: ActivityBarProps) {
             {isActive && (
               <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-foreground" />
             )}
-            <item.icon className="w-[22px] h-[22px]" strokeWidth={1.5} />
+            <item.icon className="w-5 h-5 md:w-[22px] md:h-[22px]" strokeWidth={1.5} />
           </button>
         );
       })}
-      <div className="mt-auto flex flex-col items-center gap-2">
-        <div className="border-t border-border w-6 mb-4"></div>
+      <div className="mt-auto flex flex-col items-center gap-1 md:gap-2 pb-2">
+        <div className="border-t border-border w-5 md:w-6 mb-2 md:mb-4"></div>
         <UserPopover />
         <SettingsPopover />
       </div>

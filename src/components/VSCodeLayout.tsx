@@ -11,7 +11,6 @@ const pageMap: Record<string, string> = {
   "/about": "about",
   "/contact": "contact",
   "/projects": "projects",
-  "/articles": "articles",
   "/github": "github",
 };
 
@@ -24,7 +23,7 @@ export function VSCodeLayout() {
       <TitleBar />
       <div className="flex flex-1 overflow-hidden">
         <ActivityBar activePage={activePage} />
-        <div className="w-[220px] shrink-0 border-r border-border overflow-y-auto">
+        <div className="hidden lg:block w-[220px] shrink-0 border-r border-border overflow-y-auto">
           <FileExplorer />
         </div>
         <div className="flex flex-col flex-1 overflow-hidden">

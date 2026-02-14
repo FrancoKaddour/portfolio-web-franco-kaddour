@@ -12,7 +12,6 @@ const files: FileItem[] = [
   { name: "about.html", icon: "/logos/html_icon.svg", path: "/about" },
   { name: "contact.css", icon: "/logos/css_icon.svg", path: "/contact" },
   { name: "projects.js", icon: "/logos/js_icon.svg", path: "/projects" },
-  { name: "articles.json", icon: "/logos/json_icon.svg", path: "/articles" },
   { name: "github.md", icon: "/logos/markdown_icon.svg", path: "/github" },
 ];
 

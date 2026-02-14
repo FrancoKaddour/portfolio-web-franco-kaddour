@@ -1,55 +1,109 @@
 import { useTranslation } from 'react-i18next';
+import { Mail, Github, Linkedin } from 'lucide-react';
 
 const ContactPage = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="max-w-3xl mx-auto px-8 py-12">
-      <h1 className="text-4xl font-sans font-bold text-primary mb-4 text-center">
-        {t('contact.title')}
-      </h1>
-      <p className="text-center text-foreground font-mono text-[14px] mb-12 max-w-xl mx-auto">
-        {t('contact.description')}
-      </p>
-
-      <div className="max-w-2xl mx-auto bg-card border border-border rounded overflow-hidden">
-        {/* Top accent bar */}
-        <div className="h-1 bg-primary" />
+    <div className="flex flex-col lg:flex-row h-full">
+      {/* Code side */}
+      <div className="flex-1 flex items-center justify-center lg:justify-end p-4 md:p-8 lg:pr-4 relative overflow-hidden">
+        {/* Big decorative braces */}
+        <div className="hidden lg:block absolute left-8 top-1/2 -translate-y-1/2 text-[280px] font-mono text-border/30 leading-none select-none pointer-events-none">
+          {"{"}
+        </div>
         
-        <div className="p-6 font-mono text-[14px] leading-[28px]">
+        <div className="relative z-10 font-mono text-[10px] sm:text-[11px] md:text-[13px] leading-[16px] sm:leading-[18px] md:leading-[22px] bg-card/60 rounded-lg p-3 sm:p-4 md:p-6 backdrop-blur-sm border border-border max-w-lg w-full lg:ml-40">
           <div className="flex">
             <div className="flex flex-col items-end pr-6 text-vscode-line-number select-none">
-              {Array.from({ length: 9 }, (_, i) => (
+              {Array.from({ length: 11 }, (_, i) => (
                 <span key={i}>{i + 1}</span>
               ))}
             </div>
             <div>
-              <div>
-                <span className="text-syntax-punctuation">.socials </span>
-                <span className="text-syntax-punctuation">{"{"}</span>
-              </div>
-              <div className="pl-6">
-                <span className="text-syntax-property">email</span>
-                <span className="text-syntax-punctuation">: </span>
-                <a href="mailto:francokaddour@gmail.com" className="text-primary hover:underline">francokaddour@gmail.com</a>
-                <span className="text-syntax-punctuation">;</span>
-              </div>
-              <div className="pl-6">
-                <span className="text-syntax-property">github</span>
-                <span className="text-syntax-punctuation">: </span>
-                <a href="https://github.com/FrancoKaddour" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">github.com/FrancoKaddour</a>
-                <span className="text-syntax-punctuation">;</span>
-              </div>
-              <div className="pl-6">
-                <span className="text-syntax-property">linkedin</span>
-                <span className="text-syntax-punctuation">: </span>
-                <a href="https://www.linkedin.com/in/francokaddour/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">linkedin.com/in/francokaddour</a>
-                <span className="text-syntax-punctuation">;</span>
-              </div>
-              <div>
-                <span className="text-syntax-punctuation">{"}"}</span>
-              </div>
+              <span className="text-syntax-keyword">const</span> <span className="text-syntax-variable">ContactPage</span> <span className="text-syntax-keyword">=</span> <span className="text-syntax-punctuation">() =&gt; {"{"}</span>
+              <br />
+              <span className="pl-4 text-syntax-keyword">const</span> <span className="text-syntax-variable font-bold">socials</span> <span className="text-syntax-keyword">=</span> <span className="text-syntax-punctuation">{"{"}</span>
+              <br />
+              <span className="pl-8 text-syntax-property">email</span><span className="text-syntax-punctuation">:</span> <span className="text-syntax-string">'francokaddour@gmail.com'</span><span className="text-syntax-punctuation">,</span>
+              <br />
+              <span className="pl-8 text-syntax-property">github</span><span className="text-syntax-punctuation">:</span> <span className="text-syntax-string">'github.com/FrancoKaddour'</span><span className="text-syntax-punctuation">,</span>
+              <br />
+              <span className="pl-8 text-syntax-property">linkedin</span><span className="text-syntax-punctuation">:</span> <span className="text-syntax-string">'linkedin.com/in/francokaddour'</span>
+              <br />
+              <span className="pl-4 text-syntax-punctuation">{"}"};</span>
+              <br /><br />
+              <span className="pl-4 text-syntax-keyword">return</span> <span className="text-syntax-punctuation">&lt;</span><span className="text-syntax-tag">ContactForm</span> <span className="text-syntax-property">data</span><span className="text-syntax-keyword">=</span><span className="text-syntax-punctuation">{"{"}</span><span className="text-syntax-variable">socials</span><span className="text-syntax-punctuation">{"}"}</span> <span className="text-syntax-punctuation">/&gt;;</span>
+              <br />
+              <span className="text-syntax-punctuation">{"}"};</span>
+              <br /><br />
+              <span className="text-syntax-keyword">export default</span> <span className="text-syntax-variable">ContactPage</span><span className="text-syntax-punctuation">;</span>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Socials side */}
+      <div className="flex-1 flex items-center justify-center lg:justify-start lg:pl-32 p-4 md:p-8 relative overflow-hidden">
+        {/* Big decorative braces */}
+        <div className="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2 text-[280px] font-mono text-border/20 leading-none select-none pointer-events-none">
+          {"}"}
+        </div>
+        
+        <div className="relative z-10 max-w-md w-full px-4 sm:px-0">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-sans font-bold text-foreground mb-2">
+            {t('contact.title')}
+          </h2>
+          <p className="text-xs sm:text-sm md:text-base font-sans text-muted-foreground mb-4 sm:mb-6 md:mb-8 leading-relaxed">
+            {t('contact.description')}
+          </p>
+
+          <div className="space-y-2 sm:space-y-3 md:space-y-6">
+            {/* Email */}
+            <a
+              href="mailto:francokaddour@gmail.com"
+              className="flex items-center gap-4 p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors group"
+            >
+              <div className="p-1.5 sm:p-2 md:p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                <Mail className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-sm sm:text-base md:text-lg font-sans font-semibold text-foreground mb-0.5 sm:mb-1">Email</h3>
+                <p className="text-[10px] sm:text-xs md:text-sm text-primary font-mono break-all">francokaddour@gmail.com</p>
+              </div>
+            </a>
+
+            {/* GitHub */}
+            <a
+              href="https://github.com/FrancoKaddour"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 sm:gap-3 md:gap-4 p-2 sm:p-3 md:p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors group"
+            >
+              <div className="p-1.5 sm:p-2 md:p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                <Github className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-sm sm:text-base md:text-lg font-sans font-semibold text-foreground mb-0.5 sm:mb-1">GitHub</h3>
+                <p className="text-[10px] sm:text-xs md:text-sm text-primary font-mono break-all">github.com/FrancoKaddour</p>
+              </div>
+            </a>
+
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/francokaddour/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 sm:gap-3 md:gap-4 p-2 sm:p-3 md:p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors group"
+            >
+              <div className="p-1.5 sm:p-2 md:p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                <Linkedin className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-sm sm:text-base md:text-lg font-sans font-semibold text-foreground mb-0.5 sm:mb-1">LinkedIn</h3>
+                <p className="text-[10px] sm:text-xs md:text-sm text-primary font-mono break-all">linkedin.com/in/francokaddour</p>
+              </div>
+            </a>
           </div>
         </div>
       </div>

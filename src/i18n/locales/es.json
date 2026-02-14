@@ -3,19 +3,19 @@
     "firstName": "Franco",
     "lastName": "Kaddour",
     "role": "Desarrollador Web",
-    "description": "Creo aplicaciones web limpias y responsivas usando React, TypeScript y tecnologías web modernas. Actualmente estudiando Tecnicatura en Programación en UTN."
+    "description": "Creo aplicaciones web simples y responsivas usando React, TypeScript y tecnologías modernas. Estudiante de Tecnicatura en Programación en UTN."
   },
   "about": {
     "title": "Franco Kaddour",
     "subtitle": "Desarrollador Web",
-    "bio1": "¡Hola! Soy un desarrollador web de Buenos Aires, Argentina. Me especializo en desarrollo frontend con JavaScript, React y TypeScript, pero también tengo conocimientos en desarrollo backend con Node.js.",
-    "bio2": "Actualmente estoy estudiando Tecnicatura en Programación en UTN (Universidad Tecnológica Nacional). Me apasiona crear aplicaciones web limpias, performantes y amigables con el usuario.",
-    "techStackTitle": "Stack Tecnológico",
-    "techStackDesc": "HTML, CSS, JavaScript, React, TypeScript, Node.js, Tailwind CSS y varias otras herramientas modernas de desarrollo web.",
+    "bio1": "Hola! Soy Franco, un desarrollador web de Buenos Aires, Argentina. Me dedico principalmente al desarrollo frontend con JavaScript, React y TypeScript, aunque también tengo experiencia en backend con Node.js.",
+    "bio2": "Actualmente estoy cursando la Tecnicatura en Programación en la UTN. Me encanta crear aplicaciones web que sean simples, rápidas y fáciles de usar.",
+    "techStackTitle": "Tecnologías",
+    "techStackDesc": "Manejo HTML, CSS, JavaScript, React, TypeScript, Node.js, Tailwind CSS y otras herramientas modernas para desarrollo web.",
     "projectsTitle": "Proyectos",
-    "projectsDesc": "He trabajado en varios proyectos incluyendo Espacio Vina, Miga Club y La Basica. Cada proyecto me ha enseñado lecciones valiosas en desarrollo full-stack y diseño de experiencia de usuario.",
-    "contactTitle": "Ponte en contacto",
-    "contactDesc": "No dudes en contactarme, puedes encontrar mis redes sociales"
+    "projectsDesc": "Trabajé en varios proyectos como Espacio Vina, Miga Club y La Básica. Cada uno me enseñó un montón sobre desarrollo full-stack y cómo hacer que las apps sean realmente útiles para la gente.",
+    "contactTitle": "Hablemos",
+    "contactDesc": "Si querés charlar o tenés alguna propuesta, acá están mis redes"
   },
   "projects": {
     "title": "Mis Proyectos",
@@ -34,8 +34,8 @@
     }
   },
   "contact": {
-    "title": "Contáctame",
-    "description": "No dudes en contactarme a través de cualquiera de estas plataformas. Siempre estoy abierto a nuevas oportunidades y conexiones."
+    "title": "Charlemos",
+    "description": "Si querés contactarme, acá están mis redes. Siempre abierto a nuevas oportunidades."
   },
   "nav": {
     "home": "Inicio",
