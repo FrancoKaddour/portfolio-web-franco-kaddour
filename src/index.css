@@ -2,75 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 
 @layer base {
   :root {
-    /* VS Code Dark Theme */
-    --background: 0 0% 12%; /* #1e1e1e */
-    --foreground: 0 0% 83%; /* #d4d4d4 */
+    /* Night Owl inspired dark theme */
+    --background: 215 55% 8%; /* #011627 */
+    --foreground: 213 31% 81%; /* #a7b7c8 → #d6deeb */
 
-    --card: 0 0% 15%; /* #252526 */
-    --card-foreground: 0 0% 83%;
+    --card: 215 42% 13%; /* #011e36 */
+    --card-foreground: 213 31% 81%;
 
-    --popover: 0 0% 15%;
-    --popover-foreground: 0 0% 83%;
+    --popover: 215 42% 13%;
+    --popover-foreground: 213 31% 81%;
 
-    --primary: 207 100% 40%; /* #007acc */
-    --primary-foreground: 0 0% 100%;
+    --primary: 7 65% 72%; /* #E99287 coral */
+    --primary-foreground: 215 55% 8%;
 
-    --secondary: 0 0% 20%; /* #333333 */
-    --secondary-foreground: 0 0% 83%;
+    --secondary: 215 30% 16%; /* #1a2b3c */
+    --secondary-foreground: 213 31% 81%;
 
-    --muted: 0 0% 18%; /* #2d2d2d */
-    --muted-foreground: 0 0% 60%;
+    --muted: 215 30% 14%;
+    --muted-foreground: 215 15% 50%;
 
-    --accent: 207 100% 40%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 7 65% 72%;
+    --accent-foreground: 215 55% 8%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 207 100% 40%;
+    --border: 215 25% 17%;
+    --input: 215 25% 17%;
+    --ring: 7 65% 72%;
 
-    --radius: 0px;
+    --radius: 0.25rem;
 
-    /* VS Code specific tokens */
-    --vscode-activitybar: 0 0% 20%; /* #333333 */
-    --vscode-sidebar: 0 0% 15%; /* #252526 */
-    --vscode-editor: 0 0% 12%; /* #1e1e1e */
-    --vscode-tab-active: 0 0% 12%;
-    --vscode-tab-inactive: 0 0% 18%; /* #2d2d2d */
-    --vscode-tab-border: 0 0% 15%;
-    --vscode-statusbar: 207 100% 40%;
-    --vscode-titlebar: 0 0% 19%; /* #303030 */
-    --vscode-selection: 207 50% 25%; /* #094771 */
-    --vscode-line-number: 0 0% 40%;
-    --vscode-line-active: 0 0% 15%;
-    --vscode-minimap: 0 0% 14%;
+    /* VS Code layout tokens */
+    --vscode-activitybar: 215 50% 6%; /* very dark */
+    --vscode-sidebar: 215 45% 10%; /* #011627 close */
+    --vscode-editor: 215 55% 8%;
+    --vscode-tab-active: 215 55% 8%;
+    --vscode-tab-inactive: 215 45% 10%;
+    --vscode-tab-border: 215 40% 12%;
+    --vscode-statusbar: 215 50% 6%;
+    --vscode-titlebar: 215 50% 6%;
+    --vscode-selection: 215 40% 20%;
+    --vscode-line-number: 215 15% 35%;
+    --vscode-line-active: 215 40% 12%;
 
-    /* Syntax colors */
-    --syntax-keyword: 207 65% 59%; /* #569cd6 */
-    --syntax-string: 29 63% 59%; /* #ce9178 */
-    --syntax-function: 51 76% 76%; /* #dcdcaa */
-    --syntax-variable: 187 47% 55%; /* #4ec9b0 */
-    --syntax-comment: 100 36% 46%; /* #6a9955 */
-    --syntax-number: 69 56% 72%; /* #b5cea8 */
-    --syntax-type: 187 47% 55%;
-    --syntax-property: 187 100% 75%; /* #9cdcfe */
-    --syntax-punctuation: 0 0% 83%;
-    --syntax-tag: 207 65% 59%;
+    /* Syntax colors - Night Owl */
+    --syntax-keyword: 286 60% 67%; /* #c792ea purple */
+    --syntax-string: 89 54% 67%; /* #addb67 green */
+    --syntax-function: 207 82% 66%; /* #82aaff blue */
+    --syntax-variable: 213 31% 87%; /* #d6deeb light */
+    --syntax-comment: 215 15% 40%; /* #637777 gray-green */
+    --syntax-number: 33 90% 65%; /* #f78c6c orange */
+    --syntax-type: 172 68% 50%; /* #7fdbca teal */
+    --syntax-property: 7 65% 72%; /* #E99287 coral */
+    --syntax-punctuation: 213 31% 81%;
+    --syntax-tag: 7 65% 72%;
+    --syntax-component: 33 90% 65%;
 
-    --sidebar-background: 0 0% 15%;
-    --sidebar-foreground: 0 0% 76%;
-    --sidebar-primary: 207 100% 40%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 207 50% 25%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 207 100% 40%;
+    --sidebar-background: 215 45% 10%;
+    --sidebar-foreground: 213 20% 60%;
+    --sidebar-primary: 7 65% 72%;
+    --sidebar-primary-foreground: 215 55% 8%;
+    --sidebar-accent: 215 40% 20%;
+    --sidebar-accent-foreground: 213 31% 87%;
+    --sidebar-border: 215 25% 17%;
+    --sidebar-ring: 7 65% 72%;
   }
 }
 
@@ -80,8 +80,8 @@
   }
 
   body {
-    @apply bg-background text-foreground font-mono;
-    font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace;
+    @apply bg-background text-foreground;
+    font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
     overflow: hidden;
   }
 
@@ -90,20 +90,20 @@
   }
 
   ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    background: hsl(var(--vscode-editor));
+    background: transparent;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: hsl(0 0% 30%);
-    border-radius: 0;
+    background: hsl(215 20% 25%);
+    border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(0 0% 40%);
+    background: hsl(215 20% 35%);
   }
 }
