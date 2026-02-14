@@ -1,45 +1,58 @@
+import { useTranslation } from 'react-i18next';
+import { ContactModal } from '@/components/ContactModal';
+import { useState } from 'react';
+
 const AboutPage = () => {
+  const { t } = useTranslation();
+  const [contactOpen, setContactOpen] = useState(false);
+
   return (
-    <div className="max-w-3xl mx-auto px-8 py-12 font-mono text-[14px] leading-[26px]">
-      <h1 className="text-4xl font-sans font-bold text-primary mb-1 text-center">
-        Tu Nombre
-      </h1>
-      <p className="text-center text-foreground text-lg font-sans mb-10">
-        Software Engineer
-      </p>
+    <>
+      <div className="max-w-3xl mx-auto px-8 py-12 font-mono text-[14px] leading-[26px]">
+        <h1 className="text-4xl font-sans font-bold text-primary mb-1 text-center">
+          {t('about.title')}
+        </h1>
+        <p className="text-center text-foreground text-lg font-sans mb-10">
+          {t('about.subtitle')}
+        </p>
 
-      <p className="text-foreground mb-6">
-        Hey! I'm a software engineer from Buenos Aires, Argentina. I primarily
-        work with JavaScript / TypeScript and the React ecosystem.
-      </p>
-      <p className="text-foreground mb-10">
-        I'm focused on frontend development with React, but you'll also find me
-        working with Node.js, PostgreSQL and Express while building the backend
-        for my personal projects.
-      </p>
+        <p className="text-foreground mb-6">
+          {t('about.bio1')}
+        </p>
+        <p className="text-foreground mb-10">
+          {t('about.bio2')}
+        </p>
 
-      <h2 className="text-2xl font-sans font-bold text-primary mb-4">Experience</h2>
-      <p className="text-foreground mb-4">
-        Currently working as a Full Stack Developer, building modern web applications
-        with a lean team of engineers.
-      </p>
-      <p className="text-foreground mb-10">
-        I've been leading the development efforts for building responsive and 
-        performant user interfaces. I also maintain our component library and website.
-      </p>
+        <h2 className="text-2xl font-sans font-bold text-primary mb-4">
+          {t('about.techStackTitle')}
+        </h2>
+        <p className="text-foreground mb-10">
+          {t('about.techStackDesc')}
+        </p>
 
-      <h2 className="text-2xl font-sans font-bold text-primary mb-4">Tech Stack</h2>
-      <p className="text-foreground mb-10">
-        React, TypeScript, Next.js, Node.js, Tailwind CSS, PostgreSQL, Docker, Git, 
-        and many more tools that help me build great software.
-      </p>
+        <h2 className="text-2xl font-sans font-bold text-primary mb-4">
+          {t('about.projectsTitle')}
+        </h2>
+        <p className="text-foreground mb-10">
+          {t('about.projectsDesc')}
+        </p>
 
-      <h2 className="text-2xl font-sans font-bold text-primary mb-4">Beyond Code</h2>
-      <p className="text-foreground">
-        Aside from programming, I like to read, listen to music, explore new 
-        technologies and contribute to open source projects.
-      </p>
-    </div>
+        <h2 className="text-2xl font-sans font-bold text-primary mb-4">
+          {t('about.contactTitle')}
+        </h2>
+        <p className="text-foreground">
+          {t('about.contactDesc')}{' '}
+          <button
+            onClick={() => setContactOpen(true)}
+            className="text-primary hover:underline cursor-pointer font-semibold"
+          >
+            aquí
+          </button>
+        </p>
+      </div>
+      
+      <ContactModal open={contactOpen} onOpenChange={setContactOpen} />
+    </>
   );
 };
 

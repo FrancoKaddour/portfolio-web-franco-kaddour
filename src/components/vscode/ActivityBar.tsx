@@ -1,17 +1,14 @@
-import { Files, GitBranch, Code2, Pencil, Mail, User, Settings } from "lucide-react";
+import { Files, GitBranch, Code2, Pencil, Mail } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { UserPopover } from "../UserPopover";
+import { SettingsPopover } from "../SettingsPopover";
 
 const topIcons = [
   { id: "explorer", icon: Files, path: "/" },
-  { id: "git", icon: GitBranch, path: null },
-  { id: "code", icon: Code2, path: null },
-  { id: "pencil", icon: Pencil, path: null },
+  { id: "git", icon: GitBranch, path: "/github" },
+  { id: "code", icon: Code2, path: "/projects" },
+  { id: "pencil", icon: Pencil, path: "/articles" },
   { id: "mail", icon: Mail, path: "/contact" },
-];
-
-const bottomIcons = [
-  { id: "user", icon: User },
-  { id: "settings", icon: Settings },
 ];
 
 interface ActivityBarProps {
@@ -20,16 +17,16 @@ interface ActivityBarProps {
 
 export function ActivityBar({ activePage }: ActivityBarProps) {
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <div className="flex flex-col items-center bg-vscode-activitybar w-12 h-full border-r border-border shrink-0">
       {topIcons.map((item) => {
-        const isActive = item.id === "explorer" || 
-          (item.id === "mail" && activePage === "contact");
+        const isActive = location.pathname === item.path;
         return (
           <button
             key={item.id}
-            onClick={() => item.path && navigate(item.path)}
+            onClick={() => navigate(item.path)}
             className={`w-full p-3 flex justify-center transition-colors relative ${
               isActive
                 ? "text-foreground"
@@ -43,15 +40,10 @@ export function ActivityBar({ activePage }: ActivityBarProps) {
           </button>
         );
       })}
-      <div className="mt-auto">
-        {bottomIcons.map((item) => (
-          <button
-            key={item.id}
-            className="w-full p-3 flex justify-center text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <item.icon className="w-[22px] h-[22px]" strokeWidth={1.5} />
-          </button>
-        ))}
+      <div className="mt-auto flex flex-col items-center gap-2">
+        <div className="border-t border-border w-6 mb-4"></div>
+        <UserPopover />
+        <SettingsPopover />
       </div>
     </div>
   );

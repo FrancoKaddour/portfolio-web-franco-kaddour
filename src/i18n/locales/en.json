@@ -1,0 +1,51 @@
+{
+  "home": {
+    "firstName": "Franco",
+    "lastName": "Kaddour",
+    "role": "Web Developer",
+    "description": "I build clean, responsive web applications using React, TypeScript, and modern web technologies. Currently studying Tecnicatura en Programación at UTN."
+  },
+  "about": {
+    "title": "Franco Kaddour",
+    "subtitle": "Web Developer",
+    "bio1": "Hey! I'm a web developer from Buenos Aires, Argentina. I specialize in frontend development with JavaScript, React, and TypeScript, but I also have knowledge in backend development with Node.js.",
+    "bio2": "I'm currently studying Tecnicatura en Programación at UTN (Universidad Tecnológica Nacional). I'm passionate about creating clean, performant, and user-friendly web applications.",
+    "techStackTitle": "Tech Stack",
+    "techStackDesc": "HTML, CSS, JavaScript, React, TypeScript, Node.js, Tailwind CSS, and various other modern web development tools.",
+    "projectsTitle": "Projects",
+    "projectsDesc": "I've worked on several projects including Espacio Vina, Miga Club, and La Basica. Each project has taught me valuable lessons in full-stack development and user experience design.",
+    "contactTitle": "Get in Touch",
+    "contactDesc": "Feel free to reach out, you can find all my social networks"
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "Here's a collection of my recent work. These projects showcase my skills in web development, design, and problem-solving.",
+    "espacioVina": {
+      "name": "Espacio Vina",
+      "description": "A modern wine experience platform. Built with React and Node.js featuring product catalog, user authentication, and online booking system."
+    },
+    "migaClub": {
+      "name": "Miga Club",
+      "description": "A community platform for music lovers and artists. Features user profiles, event management, and social interaction capabilities."
+    },
+    "laBasica": {
+      "name": "La Basica",
+      "description": "A music education and collaboration platform. Built to help musicians learn, practice, and collaborate with others in real-time."
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "description": "Feel free to reach out to me through any of the social platforms below. I'm always open to new opportunities and connections."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "articles": "Articles",
+    "github": "GitHub"
+  },
+  "buttons": {
+    "viewProjects": "View Projects"
+  }
+}

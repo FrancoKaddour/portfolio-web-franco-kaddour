@@ -1,12 +1,15 @@
+import { useTranslation } from 'react-i18next';
+
 const ContactPage = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="max-w-3xl mx-auto px-8 py-12">
       <h1 className="text-4xl font-sans font-bold text-primary mb-4 text-center">
-        Contact Me
+        {t('contact.title')}
       </h1>
       <p className="text-center text-foreground font-mono text-[14px] mb-12 max-w-xl mx-auto">
-        Feel free to reach out to me through any of the social platforms below.
-        I'm always open to new opportunities and connections.
+        {t('contact.description')}
       </p>
 
       <div className="max-w-2xl mx-auto bg-card border border-border rounded overflow-hidden">
@@ -26,39 +29,21 @@ const ContactPage = () => {
                 <span className="text-syntax-punctuation">{"{"}</span>
               </div>
               <div className="pl-6">
-                <span className="text-syntax-property">website</span>
-                <span className="text-syntax-punctuation">: </span>
-                <a href="#" className="text-primary hover:underline">tudominio.com</a>
-                <span className="text-syntax-punctuation">;</span>
-              </div>
-              <div className="pl-6">
                 <span className="text-syntax-property">email</span>
                 <span className="text-syntax-punctuation">: </span>
-                <a href="mailto:tu@email.com" className="text-primary hover:underline">tu@email.com</a>
+                <a href="mailto:francokaddour@gmail.com" className="text-primary hover:underline">francokaddour@gmail.com</a>
                 <span className="text-syntax-punctuation">;</span>
               </div>
               <div className="pl-6">
                 <span className="text-syntax-property">github</span>
                 <span className="text-syntax-punctuation">: </span>
-                <a href="https://github.com" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">tu-usuario</a>
+                <a href="https://github.com/FrancoKaddour" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">github.com/FrancoKaddour</a>
                 <span className="text-syntax-punctuation">;</span>
               </div>
               <div className="pl-6">
                 <span className="text-syntax-property">linkedin</span>
                 <span className="text-syntax-punctuation">: </span>
-                <a href="https://linkedin.com" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">tu-usuario</a>
-                <span className="text-syntax-punctuation">;</span>
-              </div>
-              <div className="pl-6">
-                <span className="text-syntax-property">twitter</span>
-                <span className="text-syntax-punctuation">: </span>
-                <a href="https://twitter.com" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">@tu_usuario</a>
-                <span className="text-syntax-punctuation">;</span>
-              </div>
-              <div className="pl-6">
-                <span className="text-syntax-property">telegram</span>
-                <span className="text-syntax-punctuation">: </span>
-                <a href="#" className="text-primary hover:underline">tu_usuario</a>
+                <a href="https://www.linkedin.com/in/francokaddour/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">linkedin.com/in/francokaddour</a>
                 <span className="text-syntax-punctuation">;</span>
               </div>
               <div>

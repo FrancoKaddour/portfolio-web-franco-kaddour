@@ -1,13 +1,15 @@
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const HomePage = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <div className="flex h-full">
       {/* Code side */}
-      <div className="flex-1 flex items-center justify-center p-8 relative overflow-hidden">
+      <div className="flex-1 flex items-center justify-end p-8 relative overflow-hidden">
         {/* Big decorative braces */}
         <div className="absolute left-8 top-1/2 -translate-y-1/2 text-[280px] font-mono text-border/30 leading-none select-none pointer-events-none">
           {"{"}
@@ -27,11 +29,11 @@ const HomePage = () => {
               <br />
               <span className="pl-4 text-syntax-keyword">const</span> <span className="text-syntax-variable font-bold">developerInfo</span> <span className="text-syntax-keyword">=</span> <span className="text-syntax-punctuation">{"{"}</span>
               <br />
-              <span className="pl-8 text-syntax-property">name</span><span className="text-syntax-punctuation">:</span> <span className="text-syntax-string">'Tu Nombre'</span><span className="text-syntax-punctuation">,</span>
+              <span className="pl-8 text-syntax-property">name</span><span className="text-syntax-punctuation">:</span> <span className="text-syntax-string">{`'${t('home.firstName')} ${t('home.lastName')}'`}</span><span className="text-syntax-punctuation">,</span>
               <br />
-              <span className="pl-8 text-syntax-property">role</span><span className="text-syntax-punctuation">:</span> <span className="text-syntax-string">'Full Stack Developer'</span><span className="text-syntax-punctuation">,</span>
+              <span className="pl-8 text-syntax-property">role</span><span className="text-syntax-punctuation">:</span> <span className="text-syntax-string">{`'${t('home.role')}'`}</span><span className="text-syntax-punctuation">,</span>
               <br />
-              <span className="pl-8 text-syntax-property">bio</span><span className="text-syntax-punctuation">:</span> <span className="text-syntax-string">'Building modern web experiences'</span>
+              <span className="pl-8 text-syntax-property">bio</span><span className="text-syntax-punctuation">:</span> <span className="text-syntax-string">{`'${t('home.description')}'`}</span>
               <br />
               <span className="pl-4 text-syntax-punctuation">{"}"};</span>
               <br /><br />
@@ -78,22 +80,22 @@ const HomePage = () => {
         
         <div className="relative z-10 max-w-md">
           <h1 className="text-5xl font-sans font-bold text-foreground mb-1 leading-tight">
-            Tu Nombre
+            {t('home.firstName')}
           </h1>
           <h1 className="text-5xl font-sans font-bold text-primary mb-4 leading-tight">
-            Apellido
+            {t('home.lastName')}
           </h1>
           <p className="text-xl font-sans text-foreground mb-6">
-            Full Stack Web Developer
+            {t('home.role')}
           </p>
           <p className="text-base font-sans text-muted-foreground mb-8 leading-relaxed">
-            I build elegant, responsive web applications with modern technologies. Focused on clean code and intuitive user experiences.
+            {t('home.description')}
           </p>
           <button
             onClick={() => navigate("/projects")}
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-sans font-medium rounded hover:opacity-90 transition-opacity"
           >
-            View Projects <ArrowRight className="w-4 h-4" />
+            {t('buttons.viewProjects')} <ArrowRight className="w-4 h-4" />
           </button>
         </div>
       </div>

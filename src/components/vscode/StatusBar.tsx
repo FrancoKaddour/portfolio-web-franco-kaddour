@@ -16,7 +16,6 @@ export function StatusBar() {
         </div>
       </div>
       <div className="flex items-center gap-4">
-        <span>Powered by Next.js</span>
         <span>✓ Prettier</span>
       </div>
     </div>

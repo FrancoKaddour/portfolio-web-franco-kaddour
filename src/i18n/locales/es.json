@@ -1,0 +1,51 @@
+{
+  "home": {
+    "firstName": "Franco",
+    "lastName": "Kaddour",
+    "role": "Desarrollador Web",
+    "description": "Creo aplicaciones web limpias y responsivas usando React, TypeScript y tecnologías web modernas. Actualmente estudiando Tecnicatura en Programación en UTN."
+  },
+  "about": {
+    "title": "Franco Kaddour",
+    "subtitle": "Desarrollador Web",
+    "bio1": "¡Hola! Soy un desarrollador web de Buenos Aires, Argentina. Me especializo en desarrollo frontend con JavaScript, React y TypeScript, pero también tengo conocimientos en desarrollo backend con Node.js.",
+    "bio2": "Actualmente estoy estudiando Tecnicatura en Programación en UTN (Universidad Tecnológica Nacional). Me apasiona crear aplicaciones web limpias, performantes y amigables con el usuario.",
+    "techStackTitle": "Stack Tecnológico",
+    "techStackDesc": "HTML, CSS, JavaScript, React, TypeScript, Node.js, Tailwind CSS y varias otras herramientas modernas de desarrollo web.",
+    "projectsTitle": "Proyectos",
+    "projectsDesc": "He trabajado en varios proyectos incluyendo Espacio Vina, Miga Club y La Basica. Cada proyecto me ha enseñado lecciones valiosas en desarrollo full-stack y diseño de experiencia de usuario.",
+    "contactTitle": "Ponte en contacto",
+    "contactDesc": "No dudes en contactarme, puedes encontrar mis redes sociales"
+  },
+  "projects": {
+    "title": "Mis Proyectos",
+    "description": "Aquí hay una colección de mis trabajos recientes. Estos proyectos muestran mis habilidades en desarrollo web, diseño y resolución de problemas.",
+    "espacioVina": {
+      "name": "Espacio Vina",
+      "description": "Una plataforma moderna de experiencia de vinos. Construida con React y Node.js con catálogo de productos, autenticación de usuarios y sistema de reserva en línea."
+    },
+    "migaClub": {
+      "name": "Miga Club",
+      "description": "Una plataforma comunitaria para amantes de la música y artistas. Con perfiles de usuario, gestión de eventos y capacidades de interacción social."
+    },
+    "laBasica": {
+      "name": "La Basica",
+      "description": "Una plataforma de educación musical y colaboración. Construida para ayudar a músicos a aprender, practicar y colaborar con otros en tiempo real."
+    }
+  },
+  "contact": {
+    "title": "Contáctame",
+    "description": "No dudes en contactarme a través de cualquiera de estas plataformas. Siempre estoy abierto a nuevas oportunidades y conexiones."
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "articles": "Artículos",
+    "github": "GitHub"
+  },
+  "buttons": {
+    "viewProjects": "Ver Proyectos"
+  }
+}
