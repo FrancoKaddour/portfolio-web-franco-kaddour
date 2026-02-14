@@ -18,52 +18,30 @@ const HomePage = () => {
         <div className="relative z-10 font-mono text-[10px] sm:text-[11px] md:text-[13px] leading-[16px] sm:leading-[18px] md:leading-[22px] bg-card/60 rounded-lg p-3 sm:p-4 md:p-6 backdrop-blur-sm border border-border max-w-lg w-full">
           <div className="flex">
             <div className="flex flex-col items-end pr-6 text-vscode-line-number select-none">
-              {Array.from({ length: 25 }, (_, i) => (
+              {Array.from({ length: 13 }, (_, i) => (
                 <span key={i}>{i + 1}</span>
               ))}
             </div>
             <div>
-              <span className="text-syntax-keyword">const</span> <span className="text-syntax-variable">HomePage</span> <span className="text-syntax-keyword">=</span> <span className="text-syntax-punctuation">() =&gt; {"{"}</span>
+              <span className="text-syntax-keyword">const</span> <span className="text-syntax-variable">developer</span> <span className="text-syntax-keyword">=</span> <span className="text-syntax-punctuation">{"{"}</span>
               <br />
-              <span className="pl-4 text-syntax-keyword">const</span> <span className="text-syntax-punctuation">[</span><span className="text-syntax-variable">isLoaded</span><span className="text-syntax-punctuation">,</span> <span className="text-syntax-variable">setIsLoaded</span><span className="text-syntax-punctuation">]</span> <span className="text-syntax-keyword">=</span> <span className="text-syntax-function">useState</span><span className="text-syntax-punctuation">(</span><span className="text-syntax-keyword">true</span><span className="text-syntax-punctuation">);</span>
+              <span className="pl-4 text-syntax-property">name</span><span className="text-syntax-punctuation">:</span> <span className="text-syntax-string">{`'${t('home.firstName')} ${t('home.lastName')}'`}</span><span className="text-syntax-punctuation">,</span>
               <br />
-              <span className="pl-4 text-syntax-keyword">const</span> <span className="text-syntax-variable font-bold">developerInfo</span> <span className="text-syntax-keyword">=</span> <span className="text-syntax-punctuation">{"{"}</span>
+              <span className="pl-4 text-syntax-property">role</span><span className="text-syntax-punctuation">:</span> <span className="text-syntax-string">{`'${t('home.role')}'`}</span><span className="text-syntax-punctuation">,</span>
               <br />
-              <span className="pl-8 text-syntax-property">name</span><span className="text-syntax-punctuation">:</span> <span className="text-syntax-string">{`'${t('home.firstName')} ${t('home.lastName')}'`}</span><span className="text-syntax-punctuation">,</span>
-              <br />
-              <span className="pl-8 text-syntax-property">role</span><span className="text-syntax-punctuation">:</span> <span className="text-syntax-string">{`'${t('home.role')}'`}</span><span className="text-syntax-punctuation">,</span>
-              <br />
-              <span className="pl-8 text-syntax-property">bio</span><span className="text-syntax-punctuation">:</span> <span className="text-syntax-string">{`'${t('home.description')}'`}</span>
-              <br />
-              <span className="pl-4 text-syntax-punctuation">{"}"};</span>
-              <br /><br />
-              <span className="pl-4 text-syntax-function">useEffect</span><span className="text-syntax-punctuation">(() =&gt; {"{"}</span>
-              <br />
-              <span className="pl-8 text-syntax-variable">document</span><span className="text-syntax-punctuation">.</span><span className="text-syntax-property">title</span> <span className="text-syntax-keyword">=</span> <span className="text-syntax-string">{"`${developerInfo.name} | Portfolio`"}</span><span className="text-syntax-punctuation">;</span>
-              <br />
-              <span className="pl-8 text-syntax-function">setIsLoaded</span><span className="text-syntax-punctuation">(</span><span className="text-syntax-keyword">true</span><span className="text-syntax-punctuation">);</span>
-              <br />
-              <span className="pl-4 text-syntax-punctuation">{"}"}, []);</span>
-              <br /><br />
-              <span className="pl-4 text-syntax-keyword">return</span> <span className="text-syntax-punctuation">(</span>
-              <br />
-              <span className="pl-8 text-syntax-punctuation">&lt;</span><span className="text-syntax-tag">main</span> <span className="text-syntax-property">className</span><span className="text-syntax-keyword">=</span><span className="text-syntax-string">"hero-container"</span><span className="text-syntax-punctuation">&gt;</span>
-              <br />
-              <span className="pl-12 text-syntax-punctuation">&lt;</span><span className="text-syntax-tag">h1</span><span className="text-syntax-punctuation">&gt;</span><span className="text-syntax-punctuation">{"{"}</span><span className="text-syntax-variable">developerInfo</span><span className="text-syntax-punctuation">.</span><span className="text-syntax-property">name</span><span className="text-syntax-punctuation">{"}"}</span><span className="text-syntax-punctuation">&lt;/</span><span className="text-syntax-tag">h1</span><span className="text-syntax-punctuation">&gt;</span>
-              <br />
-              <span className="pl-12 text-syntax-punctuation">&lt;</span><span className="text-syntax-tag">p</span><span className="text-syntax-punctuation">&gt;</span><span className="text-syntax-punctuation">{"{"}</span><span className="text-syntax-variable">developerInfo</span><span className="text-syntax-punctuation">.</span><span className="text-syntax-property">role</span><span className="text-syntax-punctuation">{"}"}</span><span className="text-syntax-punctuation">&lt;/</span><span className="text-syntax-tag">p</span><span className="text-syntax-punctuation">&gt;</span>
-              <br />
-              <span className="pl-12 text-syntax-punctuation">&lt;</span><span className="text-syntax-tag">div</span> <span className="text-syntax-property">className</span><span className="text-syntax-keyword">=</span><span className="text-syntax-string">"cta"</span><span className="text-syntax-punctuation">&gt;</span>
-              <br />
-              <span className="pl-16 text-syntax-punctuation">&lt;</span><span className="text-syntax-component">Link</span> <span className="text-syntax-property">href</span><span className="text-syntax-keyword">=</span><span className="text-syntax-string">"/projects"</span><span className="text-syntax-punctuation">&gt;</span><span className="text-syntax-variable">View Projects</span><span className="text-syntax-punctuation">&lt;/</span><span className="text-syntax-component">Link</span><span className="text-syntax-punctuation">&gt;</span>
-              <br />
-              <span className="pl-12 text-syntax-punctuation">&lt;/</span><span className="text-syntax-tag">div</span><span className="text-syntax-punctuation">&gt;</span>
-              <br />
-              <span className="pl-8 text-syntax-punctuation">&lt;/</span><span className="text-syntax-tag">main</span><span className="text-syntax-punctuation">&gt;</span>
-              <br />
-              <span className="pl-4 text-syntax-punctuation">);</span>
+              <span className="pl-4 text-syntax-property">bio</span><span className="text-syntax-punctuation">:</span> <span className="text-syntax-string">{`'${t('home.description')}'`}</span>
               <br />
               <span className="text-syntax-punctuation">{"}"};</span>
+              <br /><br />
+              <span className="text-syntax-keyword">return</span> <span className="text-syntax-punctuation">&lt;</span><span className="text-syntax-tag">Hero</span>
+              <br />
+              <span className="pl-4 text-syntax-property">title</span><span className="text-syntax-keyword">=</span><span className="text-syntax-punctuation">{"{"}</span><span className="text-syntax-variable">developer</span><span className="text-syntax-punctuation">.</span><span className="text-syntax-property">name</span><span className="text-syntax-punctuation">{"}"}</span>
+              <br />
+              <span className="pl-4 text-syntax-property">subtitle</span><span className="text-syntax-keyword">=</span><span className="text-syntax-punctuation">{"{"}</span><span className="text-syntax-variable">developer</span><span className="text-syntax-punctuation">.</span><span className="text-syntax-property">role</span><span className="text-syntax-punctuation">{"}"}</span>
+              <br />
+              <span className="pl-4 text-syntax-property">bio</span><span className="text-syntax-keyword">=</span><span className="text-syntax-punctuation">{"{"}</span><span className="text-syntax-variable">developer</span><span className="text-syntax-punctuation">.</span><span className="text-syntax-property">bio</span><span className="text-syntax-punctuation">{"}"}</span>
+              <br />
+              <span className="text-syntax-punctuation">/&gt;;</span>
               <br /><br />
               <span className="text-syntax-keyword">export default</span> <span className="text-syntax-variable">HomePage</span><span className="text-syntax-punctuation">;</span>
             </div>
