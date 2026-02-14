@@ -1,7 +1,7 @@
-import { VSCodeLayout } from "@/components/VSCodeLayout";
+import { Navigate } from "react-router-dom";
 
 const Index = () => {
-  return <VSCodeLayout />;
+  return <Navigate to="/" replace />;
 };
 
 export default Index;
