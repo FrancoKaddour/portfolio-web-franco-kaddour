@@ -1,31 +1,33 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
-const LanguageSwitcher = () => {
+const langs = [
+  { code: "es", label: "ES" },
+  { code: "en", label: "EN" },
+  { code: "pt", label: "PT" },
+];
+
+export function LanguageSwitcher() {
   const { i18n } = useTranslation();
 
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-    localStorage.setItem('language', lng);
-  };
-
   return (
-    <div className="flex gap-1 items-center text-[10px] font-mono">
-      {['es', 'en', 'pt'].map((lang) => (
-        <button
-          key={lang}
-          onClick={() => changeLanguage(lang)}
-          className={`px-1.5 py-0.5 rounded transition-colors text-xs ${
-            i18n.language === lang
-              ? 'bg-primary text-primary-foreground font-bold'
-              : 'text-muted-foreground hover:text-foreground'
-          }`}
-          title={lang === 'es' ? 'Español' : lang === 'en' ? 'English' : 'Português'}
-        >
-          {lang.toUpperCase()}
-        </button>
+    <div className="flex items-center gap-1.5">
+      {langs.map((lang, i) => (
+        <span key={lang.code} className="flex items-center gap-1.5">
+          <button
+            onClick={() => i18n.changeLanguage(lang.code)}
+            className={`text-[11px] tracking-[0.1em] uppercase transition-colors cursor-pointer ${
+              i18n.language === lang.code
+                ? "text-primary font-bold"
+                : "text-foreground/50 hover:text-foreground"
+            }`}
+          >
+            {lang.label}
+          </button>
+          {i < langs.length - 1 && (
+            <span className="text-foreground/30 text-[11px]">·</span>
+          )}
+        </span>
       ))}
     </div>
   );
-};
-
-export default LanguageSwitcher;
+}

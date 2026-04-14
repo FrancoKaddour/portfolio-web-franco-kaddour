@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc -l /c/Users/Usuario/Desktop/portfolio-web-franco-kaddour/src/**/*.tsx)",
+      "Bash(npm run:*)",
+      "Bash(node run.js /tmp/playwright-test-benobi.js)",
+      "Bash(node run.js ':*)"
+    ]
+  }
+}

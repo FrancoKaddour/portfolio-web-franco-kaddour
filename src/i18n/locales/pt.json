@@ -2,50 +2,54 @@
   "home": {
     "firstName": "Franco",
     "lastName": "Kaddour",
-    "role": "Desenvolvedor Web",
-    "description": "Construo aplicações web limpas e responsivas usando React, TypeScript e tecnologias web modernas. Atualmente estudando Tecnicatura em Programação na UTN."
+    "bio": "Desenvolvo aplicações web modernas com foco em interfaces limpas e código de qualidade. Trabalho com React, TypeScript e Node.js construindo desde e-commerces até plataformas comunitárias.",
+    "currentlyLabel": "Atualmente:",
+    "studyingLabel": "Estudando:",
+    "studyingValue": "Tecnicatura Universitária em Programação — UTN (Universidad Tecnológica Nacional)",
+    "linkAbout": "Mais sobre Franco Kaddour",
+    "linkProjects": "Ver meus projetos",
+    "linkContact": "Contato"
   },
   "about": {
-    "title": "Franco Kaddour",
-    "subtitle": "Desenvolvedor Web",
-    "bio1": "Olá! Sou um desenvolvedor web de Buenos Aires, Argentina. Sou especialista em desenvolvimento frontend com JavaScript, React e TypeScript, mas também tenho conhecimento em desenvolvimento backend com Node.js.",
-    "bio2": "Estou atualmente estudando Tecnicatura em Programação na UTN (Universidad Tecnológica Nacional). Sou apaixonado por criar aplicações web limpas, eficientes e amigáveis ao usuário.",
-    "techStackTitle": "Stack de Tecnologias",
-    "techStackDesc": "HTML, CSS, JavaScript, React, TypeScript, Node.js, Tailwind CSS e várias outras ferramentas modernas de desenvolvimento web.",
-    "projectsTitle": "Projetos",
-    "projectsDesc": "Trabalhei em vários projetos incluindo Espacio Vina, Miga Club e La Basica. Cada projeto me ensinou lições valiosas em desenvolvimento full-stack e design de experiência do usuário.",
-    "contactTitle": "Entre em Contato",
-    "contactDesc": "Sinta-se livre para entrar em contato, você pode encontrar todas as minhas redes sociais"
+    "pageTitle": "About",
+    "webDevTitle": "Desenvolvimento Web",
+    "webDevDesc1": "Construo aplicações web com React, TypeScript e Node.js. Me concentro em interfaces limpas, código manutenível e experiências de usuário intuitivas. Trabalho tanto em frontend quanto backend, criando produtos completos do zero.",
+    "webDevCurrently": "Atualmente estou focado em:",
+    "projectEspacioVina": "E-commerce de vinhos desenvolvido em PHP com dashboard administrativo, catálogo de produtos e sistema de gestão completo.",
+    "projectMigaClub": "Landing page para um clube de música com dashboard administrativo, construída com HTML, CSS e JavaScript.",
+    "projectLaBasica": "Loja de confeitaria com carrinho de compras e dashboard, desenvolvida com React e TypeScript.",
+    "projectPortfolio": "Este site, construído com React, TypeScript e Vite. Design inspirado na estética minimalista.",
+    "techTitle": "Tecnologias",
+    "techFrontend": "Frontend: React, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS",
+    "techBackend": "Backend: Node.js, PHP, Express",
+    "techTools": "Ferramentas: Git, GitHub, Vite, VS Code, Vercel, Figma",
+    "techDesign": "Design: Responsive design, acessibilidade web, UI/UX",
+    "educationTitle": "Formação",
+    "educationUTN": "Tecnicatura Universitária em Programação — UTN (Universidad Tecnológica Nacional), em andamento",
+    "educationSelfTaught": "Autodidata em desenvolvimento web com projetos reais para clientes",
+    "shortBioTitle": "Bio Curta",
+    "shortBio1": "Franco Kaddour é um desenvolvedor web de Buenos Aires, Argentina. Ele constrói aplicações web com React, TypeScript e Node.js, focando em interfaces limpas e experiências de usuário de qualidade.",
+    "shortBio2": "Atualmente estuda Tecnicatura em Programação na UTN enquanto trabalha em projetos reais como Espacio Viña, Miga Club e La Básica.",
+    "headshotTitle": "Foto",
+    "contactSectionTitle": "Contato",
+    "thankYou": "Obrigado pela visita!"
   },
   "projects": {
-    "title": "Meus Projetos",
-    "description": "Aqui está uma coleção do meu trabalho recente. Estes projetos mostram minhas habilidades em desenvolvimento web, design e resolução de problemas.",
-    "espacioVina": {
-      "name": "Espacio Vina",
-      "description": "Uma plataforma moderna de experiência de vinho. Construída com React e Node.js apresentando catálogo de produtos, autenticação de usuário e sistema de reserva online."
-    },
-    "migaClub": {
-      "name": "Miga Club",
-      "description": "Uma plataforma comunitária para amantes de música e artistas. Apresenta perfis de usuário, gerenciamento de eventos e capacidades de interação social."
-    },
-    "laBasica": {
-      "name": "La Basica",
-      "description": "Uma plataforma de educação musical e colaboração. Construída para ajudar músicos a aprender, praticar e colaborar com outros em tempo real."
-    }
+    "title": "Projetos",
+    "subtitle": "Esta lista contém os projetos em que trabalhei. Cada um representa um desafio diferente e uma oportunidade de aprendizado.",
+    "espacioVinaDesc": "Espacio Viña é um e-commerce de vinhos desenvolvido em PHP com um dashboard administrativo completo. Inclui catálogo de produtos, gestão de pedidos e painel de administração para o negócio.",
+    "migaClubDesc": "Miga Club é uma landing page para um clube de música com dashboard administrativo. Construída com HTML, CSS e JavaScript vanilla, com design responsivo e animações.",
+    "laBasicaDesc": "La Básica é uma loja de confeitaria online com carrinho de compras e dashboard administrativo. Desenvolvida com React e TypeScript, com UI moderna e fluida.",
+    "portfolioDesc": "Este portfólio pessoal, construído com React, TypeScript e Vite. Design minimalista inspirado na estética do benobi.one com suporte a múltiplos idiomas.",
+    "monitoreoDesc": "Projeto de monitoramento ambiental desenvolvido em Python para a UTN. Sistema de coleta e visualização de dados ambientais."
   },
   "contact": {
-    "title": "Fale Comigo",
-    "description": "Sinta-se livre para entrar em contato comigo através de qualquer uma das plataformas sociais abaixo. Sempre estou aberto a novas oportunidades e conexões."
+    "pageTitle": "Contato",
+    "thankYou": "Obrigado pela visita!"
   },
   "nav": {
-    "home": "Início",
-    "about": "Sobre",
+    "about": "About",
     "projects": "Projetos",
-    "contact": "Contato",
-    "articles": "Artigos",
-    "github": "GitHub"
-  },
-  "buttons": {
-    "viewProjects": "Ver Projetos"
+    "contact": "Contato"
   }
 }

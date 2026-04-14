@@ -1,76 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* Night Owl inspired dark theme */
-    --background: 215 55% 8%; /* #011627 */
-    --foreground: 213 31% 81%; /* #a7b7c8 → #d6deeb */
+    /* Benobi.one inspired light palette */
+    --background: 214 25% 94%;      /* #edf1f5 */
+    --foreground: 232 30% 14%;      /* #1a1a2e */
 
-    --card: 215 42% 13%; /* #011e36 */
-    --card-foreground: 213 31% 81%;
+    --card: 210 20% 98%;            /* #f7f9fb */
+    --card-foreground: 232 30% 14%;
 
-    --popover: 215 42% 13%;
-    --popover-foreground: 213 31% 81%;
+    --popover: 210 20% 98%;
+    --popover-foreground: 232 30% 14%;
 
-    --primary: 217 91% 60%; /* #3b82f6 azul profesional */
+    --primary: 193 30% 41%;         /* #4a7c89 teal accent */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 215 30% 16%; /* #1a2b3c */
-    --secondary-foreground: 213 31% 81%;
+    --secondary: 214 20% 88%;
+    --secondary-foreground: 232 30% 14%;
 
-    --muted: 215 30% 14%;
-    --muted-foreground: 215 15% 50%;
+    --muted: 214 15% 85%;
+    --muted-foreground: 215 10% 45%;
 
-    --accent: 217 91% 60%;
+    --accent: 193 30% 41%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 25% 17%;
-    --input: 215 25% 17%;
-    --ring: 217 91% 60%;
+    --border: 210 18% 78%;          /* #b8c4ce */
+    --input: 210 18% 78%;
+    --ring: 193 30% 41%;
 
     --radius: 0.25rem;
-
-    /* VS Code layout tokens */
-    --vscode-activitybar: 215 50% 6%; /* very dark */
-    --vscode-sidebar: 215 45% 10%; /* #011627 close */
-    --vscode-editor: 215 55% 8%;
-    --vscode-tab-active: 215 55% 8%;
-    --vscode-tab-inactive: 215 45% 10%;
-    --vscode-tab-border: 215 40% 12%;
-    --vscode-statusbar: 215 50% 6%;
-    --vscode-titlebar: 215 50% 6%;
-    --vscode-selection: 215 40% 20%;
-    --vscode-line-number: 215 15% 35%;
-    --vscode-line-active: 215 40% 12%;
-
-    /* Syntax colors - Night Owl */
-    --syntax-keyword: 286 60% 67%; /* #c792ea purple */
-    --syntax-string: 89 54% 67%; /* #addb67 green */
-    --syntax-function: 207 82% 66%; /* #82aaff blue */
-    --syntax-variable: 213 31% 87%; /* #d6deeb light */
-    --syntax-comment: 215 15% 40%; /* #637777 gray-green */
-    --syntax-number: 33 90% 65%; /* #f78c6c orange */
-    --syntax-type: 172 68% 50%; /* #7fdbca teal */
-    --syntax-property: 7 65% 72%; /* #E99287 coral */
-    --syntax-punctuation: 213 31% 81%;
-    --syntax-tag: 7 65% 72%;
-    --syntax-component: 33 90% 65%;
-
-    --sidebar-background: 215 45% 10%;
-    --sidebar-foreground: 213 20% 60%;
-    --sidebar-primary: 217 91% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 215 40% 20%;
-    --sidebar-accent-foreground: 213 31% 87%;
-    --sidebar-border: 215 25% 17%;
-    --sidebar-ring: 217 91% 60%;
   }
 }
 
@@ -79,14 +42,19 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
-    font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
-    overflow: hidden;
+    font-family: 'Courier New', 'Courier', 'Lucida Console', monospace;
+    overflow-x: hidden;
   }
 
   ::selection {
-    background-color: hsl(var(--vscode-selection));
+    background-color: hsl(193 30% 41% / 0.2);
+    color: hsl(232 30% 14%);
   }
 
   ::-webkit-scrollbar {
@@ -99,11 +67,36 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: hsl(215 20% 25%);
+    background: hsl(210 18% 78%);
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(215 20% 35%);
+    background: hsl(210 15% 65%);
   }
+
+  a {
+    @apply text-primary;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: hsl(193 35% 32%);
+  }
+}
+
+/* Fade-in animation for page transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter {
+  animation: fadeIn 0.4s ease-out;
 }

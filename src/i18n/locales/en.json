@@ -2,50 +2,54 @@
   "home": {
     "firstName": "Franco",
     "lastName": "Kaddour",
-    "role": "Web Developer",
-    "description": "I build clean, responsive web applications using React, TypeScript, and modern web technologies. Currently studying Tecnicatura en Programación at UTN."
+    "bio": "I build modern web applications focused on clean interfaces and quality code. I work with React, TypeScript, and Node.js building everything from e-commerces to community platforms.",
+    "currentlyLabel": "Currently:",
+    "studyingLabel": "Studying:",
+    "studyingValue": "Software Engineering Degree — UTN (Universidad Tecnológica Nacional)",
+    "linkAbout": "Read more about Franco Kaddour",
+    "linkProjects": "See what I've built",
+    "linkContact": "Get in touch"
   },
   "about": {
-    "title": "Franco Kaddour",
-    "subtitle": "Web Developer",
-    "bio1": "Hey! I'm a web developer from Buenos Aires, Argentina. I specialize in frontend development with JavaScript, React, and TypeScript, but I also have knowledge in backend development with Node.js.",
-    "bio2": "I'm currently studying Tecnicatura en Programación at UTN (Universidad Tecnológica Nacional). I'm passionate about creating clean, performant, and user-friendly web applications.",
-    "techStackTitle": "Tech Stack",
-    "techStackDesc": "HTML, CSS, JavaScript, React, TypeScript, Node.js, Tailwind CSS, and various other modern web development tools.",
-    "projectsTitle": "Projects",
-    "projectsDesc": "I've worked on several projects including Espacio Vina, Miga Club, and La Basica. Each project has taught me valuable lessons in full-stack development and user experience design.",
-    "contactTitle": "Get in Touch",
-    "contactDesc": "Feel free to reach out, you can find all my social networks"
+    "pageTitle": "About",
+    "webDevTitle": "Web Development",
+    "webDevDesc1": "I build web applications with React, TypeScript, and Node.js. I focus on clean interfaces, maintainable code, and intuitive user experiences. I work on both frontend and backend, creating complete products from scratch.",
+    "webDevCurrently": "Currently I'm focused on:",
+    "projectEspacioVina": "A wine e-commerce built with PHP featuring an admin dashboard, product catalog, and full management system.",
+    "projectMigaClub": "A landing page for a music club with an admin dashboard, built with HTML, CSS, and JavaScript.",
+    "projectLaBasica": "A pastry shop with shopping cart and admin dashboard, built with React and TypeScript.",
+    "projectPortfolio": "This site, built with React, TypeScript, and Vite. Design inspired by minimalist aesthetics.",
+    "techTitle": "Tech Stack",
+    "techFrontend": "Frontend: React, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS",
+    "techBackend": "Backend: Node.js, PHP, Express",
+    "techTools": "Tools: Git, GitHub, Vite, VS Code, Vercel, Figma",
+    "techDesign": "Design: Responsive design, web accessibility, UI/UX",
+    "educationTitle": "Education",
+    "educationUTN": "Software Engineering Degree — UTN (Universidad Tecnológica Nacional), in progress",
+    "educationSelfTaught": "Self-taught web developer with real-world client projects",
+    "shortBioTitle": "Short Bio",
+    "shortBio1": "Franco Kaddour is a web developer from Buenos Aires, Argentina. He builds web applications with React, TypeScript, and Node.js, focusing on clean interfaces and quality user experiences.",
+    "shortBio2": "He is currently studying Software Engineering at UTN while working on real projects like Espacio Viña, Miga Club, and La Básica.",
+    "headshotTitle": "Headshot",
+    "contactSectionTitle": "Contact",
+    "thankYou": "Thank you for visiting!"
   },
   "projects": {
-    "title": "My Projects",
-    "description": "Here's a collection of my recent work. These projects showcase my skills in web development, design, and problem-solving.",
-    "espacioVina": {
-      "name": "Espacio Vina",
-      "description": "A modern wine experience platform. Built with React and Node.js featuring product catalog, user authentication, and online booking system."
-    },
-    "migaClub": {
-      "name": "Miga Club",
-      "description": "A community platform for music lovers and artists. Features user profiles, event management, and social interaction capabilities."
-    },
-    "laBasica": {
-      "name": "La Basica",
-      "description": "A music education and collaboration platform. Built to help musicians learn, practice, and collaborate with others in real-time."
-    }
+    "title": "Projects",
+    "subtitle": "This list contains the projects I have worked on. Each one represents a different challenge and learning opportunity.",
+    "espacioVinaDesc": "Espacio Viña is a wine e-commerce built with PHP featuring a complete admin dashboard. It includes a product catalog, order management, and an administration panel for the business.",
+    "migaClubDesc": "Miga Club is a landing page for a music club with an admin dashboard. Built with vanilla HTML, CSS, and JavaScript, featuring responsive design and animations.",
+    "laBasicaDesc": "La Básica is an online pastry shop with a shopping cart and admin dashboard. Built with React and TypeScript, featuring a modern and fluid UI.",
+    "portfolioDesc": "This personal portfolio, built with React, TypeScript, and Vite. Minimalist design inspired by benobi.one aesthetics with multilanguage support.",
+    "monitoreoDesc": "An environmental monitoring project built with Python for UTN. A system for collecting and visualizing environmental data."
   },
   "contact": {
-    "title": "Contact Me",
-    "description": "Feel free to reach out to me through any of the social platforms below. I'm always open to new opportunities and connections."
+    "pageTitle": "Contact",
+    "thankYou": "Thank you for visiting!"
   },
   "nav": {
-    "home": "Home",
     "about": "About",
     "projects": "Projects",
-    "contact": "Contact",
-    "articles": "Articles",
-    "github": "GitHub"
-  },
-  "buttons": {
-    "viewProjects": "View Projects"
+    "contact": "Contact"
   }
 }

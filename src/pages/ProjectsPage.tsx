@@ -1,164 +1,147 @@
-import { ExternalLink } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 
 const GITHUB_USER = "francokaddour";
 
-interface StaticProject {
-  icon: string;
-  name: string;
+interface ProjectData {
+  nameKey: string;
+  year: string;
+  descKey: string;
   tech: string;
-  description: string;
+  images: string[];
   url: string;
   websiteUrl?: string;
-  images?: string[];
 }
+
+const projects: ProjectData[] = [
+  {
+    nameKey: "Espacio Viña",
+    year: "2024",
+    descKey: "projects.espacioVinaDesc",
+    tech: "PHP",
+    images: ["/img/1espacio-vina.jpeg", "/img/2espacio-vina.jpeg"],
+    url: `https://github.com/${GITHUB_USER}/espacio-vina`,
+    websiteUrl: "https://www.espaciovina.com/",
+  },
+  {
+    nameKey: "Miga Club",
+    year: "2024",
+    descKey: "projects.migaClubDesc",
+    tech: "HTML / CSS / JS",
+    images: ["/img/1miga-club.jpeg", "/img/2miga-club.jpeg"],
+    url: `https://github.com/${GITHUB_USER}/miga-club`,
+    websiteUrl: "https://miga-club.vercel.app/",
+  },
+  {
+    nameKey: "La Básica",
+    year: "2025",
+    descKey: "projects.laBasicaDesc",
+    tech: "React / TypeScript",
+    images: ["/img/1la-basica.jpeg", "/img/2la-basica.jpeg"],
+    url: `https://github.com/${GITHUB_USER}/la-basica-pasteleria`,
+    websiteUrl: "https://la-basica-pasteleria.vercel.app/",
+  },
+  {
+    nameKey: "Portfolio Web",
+    year: "2025",
+    descKey: "projects.portfolioDesc",
+    tech: "React / TypeScript / Vite",
+    images: [],
+    url: `https://github.com/${GITHUB_USER}/portfolio-web-franco-kaddour`,
+  },
+  {
+    nameKey: "Monitoreo Ambiental",
+    year: "2025",
+    descKey: "projects.monitoreoDesc",
+    tech: "Python",
+    images: [],
+    url: `https://github.com/${GITHUB_USER}/monitoreo-ambiental`,
+  },
+];
 
 const ProjectsPage = () => {
   const { t } = useTranslation();
 
-  const slugify = (s: string) =>
-    s
-      .toLowerCase()
-      .replace(/á/g, "a")
-      .replace(/é/g, "e")
-      .replace(/í/g, "i")
-      .replace(/ó/g, "o")
-      .replace(/ú/g, "u")
-      .replace(/ñ/g, "n")
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/(^-|-$)/g, "");
-
-  const imagesFor = (name: string, count = 4) => {
-    const base = slugify(name);
-    const imgs: string[] = [];
-    for (let i = 1; i <= count; i++) {
-      imgs.push(`/img/${i}${base}.jpeg`);
-    }
-    return imgs;
-  };
-
-  const projects: StaticProject[] = [
-    {
-      icon: "🍷",
-      name: "Espacio Vina",
-      tech: "PHP",
-      description: "E-commerce desarrollado en PHP con dashboard administrativo.",
-      url: `https://github.com/${GITHUB_USER}/espacio-vina`,
-      websiteUrl: "https://www.espaciovina.com/",
-      images: imagesFor("Espacio Vina"),
-    },
-    {
-      icon: "🎵",
-      name: "Miga Club",
-      tech: "HTML / CSS / JS",
-      description: "Landing page con dashboard administrativo.",
-      url: `https://github.com/${GITHUB_USER}/miga-club`,
-      websiteUrl: "https://miga-club.vercel.app/",
-      images: imagesFor("Miga Club"),
-    },
-    {
-      icon: "🎂",
-      name: "La Básica",
-      tech: "React / TypeScript",
-      description: "Tienda e-commerce con dashboard (React + TypeScript).",
-      url: `https://github.com/${GITHUB_USER}/la-basica-pasteleria`,
-      websiteUrl: "https://la-basica-pasteleria.vercel.app/",
-      images: imagesFor("La Básica", 3),
-    },
-    {
-      icon: "💼",
-      name: "Portfolio Web",
-      tech: "React / TypeScript",
-      description: "Este portfolio (sitio actual).",
-      url: `https://github.com/${GITHUB_USER}/portfolio-web`,
-      images: [],
-    },
-    {
-      icon: "🛰️",
-      name: "Monitoreo Ambiental",
-      tech: "Python",
-      description: "Proyecto de monitoreo ambiental en Python.",
-      url: `https://github.com/${GITHUB_USER}/monitoreo-ambiental`,
-      images: [],
-    },
-  ];
-
-  const getSrcSet = (src: string) => {
-    const extMatch = src.match(/\.([a-zA-Z0-9]+)$/);
-    const ext = extMatch ? extMatch[1] : "png";
-    const base = src.replace(new RegExp(`\\.${ext}$`), "");
-    const variants = [
-      { w: 480, file: `${base}-480.webp` },
-      { w: 800, file: `${base}-800.webp` },
-      { w: 1200, file: `${base}-1200.webp` },
-    ];
-    return variants.map((v) => `${v.file} ${v.w}w`).join(", ");
-  };
-
   return (
-    <div className="max-w-5xl mx-auto px-2 sm:px-4 md:px-8 py-4 sm:py-6 md:py-12">
-      <h1 className="text-xl sm:text-2xl md:text-4xl font-sans font-bold text-primary mb-2 sm:mb-3">{t('projects.title')}</h1>
-      <p className="font-mono text-[10px] sm:text-[12px] md:text-[14px] text-foreground mb-4 sm:mb-6 md:mb-10 max-w-2xl">{t('projects.description')}</p>
+    <div className="page-enter max-w-[780px] mx-auto px-6 py-12 md:py-16">
+      {/* Page title */}
+      <h1 className="text-[24px] md:text-[30px] font-bold tracking-[0.18em] uppercase mb-3">
+        {t("projects.title")}
+      </h1>
+      <p className="text-[14px] md:text-[15px] leading-[1.8] text-muted-foreground mb-12">
+        {t("projects.subtitle")}
+      </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 md:gap-5">
+      {/* Projects list */}
+      <div className="space-y-14">
         {projects.map((project) => (
-          <div
-            key={project.name}
-            className={`bg-card border border-border rounded-lg p-3 sm:p-4 md:p-6 hover:border-primary/50 transition-colors relative ${
-              project.name === "Monitoreo Ambiental" ? "md:col-span-2 lg:col-span-2" : ""
-            }`}
-          >
-            <div className="flex items-start justify-between mb-3">
-              <h3 className="text-sm sm:text-base md:text-lg font-sans font-bold text-primary">{project.name}</h3>
+          <article key={project.nameKey}>
+            {/* Project title */}
+            <h2 className="text-[17px] md:text-[20px] font-bold tracking-[0.12em] uppercase mb-4">
               <a
-                href={project.url}
+                href={project.websiteUrl || project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-primary hover:underline text-xs sm:text-sm md:text-base"
-                onClick={(e) => e.stopPropagation()}
+                className="text-foreground no-underline hover:text-primary transition-colors"
               >
-                Ver repo
-                <ExternalLink className="w-3 h-3" />
+                {project.nameKey} ({project.year})
               </a>
-            </div>
+            </h2>
 
-            <div className="mb-4 relative">
-              {project.images && project.images.length > 0 ? (
+            {/* Image + description row */}
+            <div className={`flex flex-col ${project.images.length > 0 ? "md:flex-row" : ""} gap-5`}>
+              {/* Image(s) */}
+              {project.images.length > 0 && (
                 <a
                   href={project.websiteUrl || project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block"
+                  className="shrink-0 md:w-[260px] block"
                 >
-                  <Carousel>
-                    <CarouselContent>
-                      {project.images.map((src, i) => (
-                        <CarouselItem key={i}>
-                          <img
-                            src={src}
-                            alt={`${project.name} screenshot ${i + 1}`}
-                            className="w-full object-cover aspect-video rounded-md cursor-pointer"
-                            loading="lazy"
-                            onError={(e) => {
-                              (e.target as HTMLImageElement).src = "/placeholder.svg";
-                            }}
-                          />
-                        </CarouselItem>
-                      ))}
-                    </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
-                  </Carousel>
+                  <img
+                    src={project.images[0]}
+                    alt={`${project.nameKey} screenshot`}
+                    className="w-full rounded shadow-md hover:shadow-lg transition-shadow object-cover aspect-video"
+                    loading="lazy"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = "none";
+                    }}
+                  />
                 </a>
-              ) : (
-                <div className="text-3xl">{project.icon}</div>
               )}
-            </div>
 
-            <p className="text-[10px] sm:text-[11px] md:text-[13px] font-mono text-muted-foreground mb-1 sm:mb-2">{project.description}</p>
-            <div className="text-[9px] sm:text-[10px] md:text-[12px] text-muted-foreground">Tecnología: {project.tech}</div>
-          </div>
+              {/* Description */}
+              <div className="flex-1">
+                <p className="text-[14px] md:text-[15px] leading-[1.8] mb-3">
+                  {t(project.descKey)}
+                </p>
+                <p className="text-[13px] text-muted-foreground">
+                  Tech: <strong>{project.tech}</strong>
+                  {" · "}
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-bold"
+                  >
+                    GitHub
+                  </a>
+                  {project.websiteUrl && (
+                    <>
+                      {" · "}
+                      <a
+                        href={project.websiteUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-bold"
+                      >
+                        Live
+                      </a>
+                    </>
+                  )}
+                </p>
+              </div>
+            </div>
+          </article>
         ))}
       </div>
     </div>
