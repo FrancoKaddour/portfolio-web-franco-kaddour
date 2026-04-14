@@ -8,7 +8,7 @@ const HomePage = () => {
     <div className="page-enter max-w-[780px] mx-auto px-6 py-12 md:py-20">
       {/* Profile photo */}
       <div className="flex justify-center mb-8">
-        <div className="w-44 h-44 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-foreground/10 shadow-lg">
+        <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden">
           <img
             src="/img/profile.jpg"
             alt="Franco Kaddour"
@@ -18,46 +18,70 @@ const HomePage = () => {
       </div>
 
       {/* Name */}
-      <h1 className="text-center text-[28px] md:text-[36px] font-bold tracking-[0.2em] uppercase mb-8">
+      <h1 className="text-center text-[26px] md:text-[34px] font-bold tracking-[0.2em] uppercase mb-8 text-foreground">
         {t("home.firstName")} {t("home.lastName")}
       </h1>
 
       {/* Bio */}
-      <p className="text-[14px] md:text-[16px] leading-[1.8] mb-6">
+      <p className="text-[14px] md:text-[16px] leading-[1.8] mb-6 text-foreground">
         {t("home.bio")}
       </p>
 
       {/* Currently working on */}
-      <p className="text-[14px] md:text-[16px] leading-[1.8] mb-2">
+      <p className="text-[14px] md:text-[16px] leading-[1.8] mb-2 text-foreground">
         <strong>{t("home.currentlyLabel")}</strong>{" "}
-        <a href="https://www.espaciovina.com/" target="_blank" rel="noopener noreferrer" className="font-bold">
+        <a
+          href="https://www.espaciovina.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold text-foreground no-underline hover:underline"
+        >
           Espacio Viña
         </a>
         {" · "}
-        <a href="https://miga-club.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-bold">
+        <a
+          href="https://miga-club.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold text-foreground no-underline hover:underline"
+        >
           Miga Club
         </a>
         {" · "}
-        <a href="https://la-basica-pasteleria.vercel.app/" target="_blank" rel="noopener noreferrer" className="font-bold">
+        <a
+          href="https://la-basica-pasteleria.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold text-foreground no-underline hover:underline"
+        >
           La Básica
         </a>
       </p>
 
       {/* Studying */}
-      <p className="text-[14px] md:text-[16px] leading-[1.8] mb-10">
+      <p className="text-[14px] md:text-[16px] leading-[1.8] mb-10 text-foreground">
         <strong>{t("home.studyingLabel")}</strong>{" "}
-        <span>{t("home.studyingValue")}</span>
+        <span className="text-foreground/70">{t("home.studyingValue")}</span>
       </p>
 
       {/* Arrow links */}
       <div className="flex flex-col gap-2">
-        <Link to="/about" className="text-[14px] md:text-[15px] font-bold no-underline hover:underline">
+        <Link
+          to="/about"
+          className="text-[14px] md:text-[15px] font-bold text-foreground no-underline hover:underline"
+        >
           → {t("home.linkAbout")}
         </Link>
-        <Link to="/projects" className="text-[14px] md:text-[15px] font-bold no-underline hover:underline">
+        <Link
+          to="/projects"
+          className="text-[14px] md:text-[15px] font-bold text-foreground no-underline hover:underline"
+        >
           → {t("home.linkProjects")}
         </Link>
-        <Link to="/contact" className="text-[14px] md:text-[15px] font-bold no-underline hover:underline">
+        <Link
+          to="/contact"
+          className="text-[14px] md:text-[15px] font-bold text-foreground no-underline hover:underline"
+        >
           → {t("home.linkContact")}
         </Link>
       </div>

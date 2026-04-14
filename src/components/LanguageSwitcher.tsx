@@ -15,16 +15,16 @@ export function LanguageSwitcher() {
         <span key={lang.code} className="flex items-center gap-1.5">
           <button
             onClick={() => i18n.changeLanguage(lang.code)}
-            className={`text-[11px] tracking-[0.1em] uppercase transition-colors cursor-pointer ${
+            className={`text-[11px] tracking-[0.1em] uppercase cursor-pointer transition-opacity ${
               i18n.language === lang.code
-                ? "text-primary font-bold"
-                : "text-foreground/50 hover:text-foreground"
+                ? "text-foreground font-bold"
+                : "text-foreground/40 hover:text-foreground"
             }`}
           >
             {lang.label}
           </button>
           {i < langs.length - 1 && (
-            <span className="text-foreground/30 text-[11px]">·</span>
+            <span className="text-foreground/25 text-[11px]">·</span>
           )}
         </span>
       ))}

@@ -64,10 +64,10 @@ const ProjectsPage = () => {
   return (
     <div className="page-enter max-w-[780px] mx-auto px-6 py-12 md:py-16">
       {/* Page title */}
-      <h1 className="text-[24px] md:text-[30px] font-bold tracking-[0.18em] uppercase mb-3">
+      <h1 className="text-[24px] md:text-[30px] font-bold tracking-[0.18em] uppercase mb-3 text-foreground">
         {t("projects.title")}
       </h1>
-      <p className="text-[14px] md:text-[15px] leading-[1.8] text-muted-foreground mb-12">
+      <p className="text-[14px] md:text-[15px] leading-[1.8] text-foreground/50 mb-12">
         {t("projects.subtitle")}
       </p>
 
@@ -81,7 +81,7 @@ const ProjectsPage = () => {
                 href={project.websiteUrl || project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground no-underline hover:text-primary transition-colors"
+                className="text-foreground no-underline hover:underline"
               >
                 {project.nameKey} ({project.year})
               </a>
@@ -89,7 +89,7 @@ const ProjectsPage = () => {
 
             {/* Image + description row */}
             <div className={`flex flex-col ${project.images.length > 0 ? "md:flex-row" : ""} gap-5`}>
-              {/* Image(s) */}
+              {/* Image(s) — color images, no filter */}
               {project.images.length > 0 && (
                 <a
                   href={project.websiteUrl || project.url}
@@ -100,7 +100,7 @@ const ProjectsPage = () => {
                   <img
                     src={project.images[0]}
                     alt={`${project.nameKey} screenshot`}
-                    className="w-full rounded shadow-md hover:shadow-lg transition-shadow object-cover aspect-video"
+                    className="w-full rounded-sm shadow-sm hover:shadow-md transition-shadow object-cover aspect-video"
                     loading="lazy"
                     onError={(e) => {
                       (e.target as HTMLImageElement).style.display = "none";
@@ -111,17 +111,17 @@ const ProjectsPage = () => {
 
               {/* Description */}
               <div className="flex-1">
-                <p className="text-[14px] md:text-[15px] leading-[1.8] mb-3">
+                <p className="text-[14px] md:text-[15px] leading-[1.8] mb-3 text-foreground">
                   {t(project.descKey)}
                 </p>
-                <p className="text-[13px] text-muted-foreground">
-                  Tech: <strong>{project.tech}</strong>
+                <p className="text-[13px] text-foreground/50">
+                  <span className="font-bold text-foreground">{project.tech}</span>
                   {" · "}
                   <a
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-bold"
+                    className="text-foreground/70 hover:text-foreground font-bold no-underline hover:underline"
                   >
                     GitHub
                   </a>
@@ -132,7 +132,7 @@ const ProjectsPage = () => {
                         href={project.websiteUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-bold"
+                        className="text-foreground/70 hover:text-foreground font-bold no-underline hover:underline"
                       >
                         Live
                       </a>

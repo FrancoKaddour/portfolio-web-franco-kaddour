@@ -4,36 +4,36 @@
 
 @layer base {
   :root {
-    /* Benobi.one inspired light palette */
-    --background: 214 25% 94%;      /* #edf1f5 */
-    --foreground: 232 30% 14%;      /* #1a1a2e */
+    /* Pure black & white — benobi.one style */
+    --background: 0 0% 100%;        /* #ffffff */
+    --foreground: 0 0% 7%;          /* #121212 */
 
-    --card: 210 20% 98%;            /* #f7f9fb */
-    --card-foreground: 232 30% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
 
-    --popover: 210 20% 98%;
-    --popover-foreground: 232 30% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
 
-    --primary: 193 30% 41%;         /* #4a7c89 teal accent */
+    --primary: 0 0% 7%;             /* black — links, active states */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 214 20% 88%;
-    --secondary-foreground: 232 30% 14%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 7%;
 
-    --muted: 214 15% 85%;
-    --muted-foreground: 215 10% 45%;
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 42%;   /* gray for secondary text */
 
-    --accent: 193 30% 41%;
+    --accent: 0 0% 7%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 18% 78%;          /* #b8c4ce */
-    --input: 210 18% 78%;
-    --ring: 193 30% 41%;
+    --border: 0 0% 88%;             /* very light gray border */
+    --input: 0 0% 88%;
+    --ring: 0 0% 7%;
 
-    --radius: 0.25rem;
+    --radius: 0.15rem;
   }
 }
 
@@ -52,14 +52,29 @@
     overflow-x: hidden;
   }
 
+  /* All links: black, no color — benobi style */
+  a {
+    color: hsl(var(--foreground));
+    transition: opacity 0.15s ease;
+  }
+
+  a:visited {
+    color: hsl(var(--foreground));
+  }
+
+  a:hover {
+    color: hsl(var(--foreground));
+    opacity: 0.65;
+  }
+
   ::selection {
-    background-color: hsl(193 30% 41% / 0.2);
-    color: hsl(232 30% 14%);
+    background-color: hsl(0 0% 7% / 0.12);
+    color: hsl(var(--foreground));
   }
 
   ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
   }
 
   ::-webkit-scrollbar-track {
@@ -67,21 +82,12 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: hsl(210 18% 78%);
-    border-radius: 4px;
+    background: hsl(0 0% 80%);
+    border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(210 15% 65%);
-  }
-
-  a {
-    @apply text-primary;
-    transition: color 0.2s ease;
-  }
-
-  a:hover {
-    color: hsl(193 35% 32%);
+    background: hsl(0 0% 65%);
   }
 }
 
@@ -89,7 +95,7 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(6px);
   }
   to {
     opacity: 1;
@@ -98,5 +104,5 @@
 }
 
 .page-enter {
-  animation: fadeIn 0.4s ease-out;
+  animation: fadeIn 0.35s ease-out;
 }

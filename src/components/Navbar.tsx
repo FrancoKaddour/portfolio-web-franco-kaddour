@@ -16,12 +16,15 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="w-full border-b-[3px] border-primary/60 bg-background/80 backdrop-blur-sm sticky top-0 z-50">
+    <nav className="w-full border-b border-black/12 bg-white sticky top-0 z-50">
       <div className="max-w-[780px] mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo / Name */}
         <Link
           to="/"
-          className="text-[13px] sm:text-[15px] font-bold tracking-[0.15em] uppercase text-foreground no-underline hover:text-primary transition-colors"
+          className="text-[13px] sm:text-[14px] font-bold tracking-[0.15em] uppercase text-foreground no-underline"
+          style={{ opacity: 1 }}
+          onMouseEnter={e => (e.currentTarget.style.opacity = '0.55')}
+          onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
         >
           Franco Kaddour
         </Link>
@@ -32,10 +35,10 @@ export function Navbar() {
             <Link
               key={link.path}
               to={link.path}
-              className={`text-[12px] sm:text-[13px] tracking-[0.12em] uppercase no-underline transition-colors ${
+              className={`text-[12px] tracking-[0.12em] uppercase no-underline transition-opacity ${
                 location.pathname === link.path
-                  ? "text-primary font-bold"
-                  : "text-foreground/70 hover:text-primary"
+                  ? "text-foreground font-bold"
+                  : "text-foreground/50 hover:text-foreground hover:opacity-100"
               }`}
             >
               {t(link.key)}
@@ -56,22 +59,22 @@ export function Navbar() {
 
       {/* Mobile dropdown */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-border bg-background px-6 py-4 flex flex-col gap-3">
+        <div className="md:hidden border-t border-black/10 bg-white px-6 py-4 flex flex-col gap-3">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
               onClick={() => setMobileOpen(false)}
-              className={`text-[13px] tracking-[0.12em] uppercase no-underline transition-colors ${
+              className={`text-[13px] tracking-[0.12em] uppercase no-underline ${
                 location.pathname === link.path
-                  ? "text-primary font-bold"
-                  : "text-foreground/70 hover:text-primary"
+                  ? "text-foreground font-bold"
+                  : "text-foreground/50"
               }`}
             >
               {t(link.key)}
             </Link>
           ))}
-          <div className="pt-2 border-t border-border">
+          <div className="pt-2 border-t border-black/10">
             <LanguageSwitcher />
           </div>
         </div>
