@@ -13,6 +13,7 @@ const HomePage = () => {
             src="/img/profile.jpg"
             alt="Franco Kaddour"
             className="w-full h-full object-cover grayscale"
+            style={{ objectPosition: '80% center' }}
           />
         </div>
       </div>
