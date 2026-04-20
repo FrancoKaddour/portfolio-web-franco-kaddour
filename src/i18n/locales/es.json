@@ -2,10 +2,10 @@
   "home": {
     "firstName": "Franco",
     "lastName": "Kaddour",
-    "bio": "Desarrollador web autodidacta con dos años de práctica en proyectos reales. Aprendí React, TypeScript y Node.js construyendo e-commerces y plataformas para clientes — directamente en producción. También me encargo del diseño: paletas, tipografías, identidad visual. Actualmente curso Ingeniería en Sistemas en la UTN.",
+    "bio": "Desarrollador web autodidacta con dos años de práctica en proyectos reales. Aprendí React, TypeScript y Node.js construyendo e-commerces y plataformas para clientes — directamente en producción. También me encargo del diseño: paletas, tipografías, identidad visual. Actualmente curso la Tecnicatura Universitaria en Programación en la UTN.",
     "currentlyLabel": "Trabajando en:",
     "studyingLabel": "Estudiando:",
-    "studyingValue": "Ingeniería en Sistemas — UTN (Universidad Tecnológica Nacional)",
+    "studyingValue": "Tecnicatura Universitaria en Programación — UTN (Universidad Tecnológica Nacional)",
     "linkAbout": "Más sobre Franco Kaddour",
     "linkProjects": "Ver proyectos",
     "linkContact": "Contacto"
@@ -13,7 +13,7 @@
   "about": {
     "pageTitle": "About",
     "webDevTitle": "Desarrollo Web",
-    "webDevDesc1": "Construyo aplicaciones web con React, TypeScript y Node.js. Empecé de forma autodidacta y llevo dos años trabajando en proyectos reales para clientes — sin cursos de relleno, directamente en producción. Además del código, me encargo del diseño: paletas de colores, tipografías e identidad visual. Actualmente curso Ingeniería en Sistemas en la UTN para profundizar la base teórica que el trabajo independiente no siempre da.",
+    "webDevDesc1": "Construyo aplicaciones web con React, TypeScript y Node.js. Empecé de forma autodidacta y llevo dos años trabajando en proyectos reales para clientes — sin cursos de relleno, directamente en producción. Además del código, me encargo del diseño: paletas de colores, tipografías e identidad visual. Actualmente curso la Tecnicatura Universitaria en Programación (TUPaD) en la UTN para profundizar la base teórica que el trabajo independiente no siempre da.",
     "webDevCurrently": "Actualmente trabajando en:",
     "projectEspacioVina": "E-commerce de home & deco con catálogo, gestión de pedidos y panel administrativo. Proyecto en par con Nico Alvez — yo me encargué del frontend y de las decisiones de diseño: paleta de colores y tipografía. Fue la primera vez que trabajé con otra persona y que toqué backend real en PHP.",
     "projectMigaClub": "Landing page y dashboard para un club de sándwiches de miga. Proyecto individual con responsabilidad completa de marca: logo, paleta de colores, tipografía, ilustración del frente del local y todos los gráficos del sitio. Construido en HTML, CSS y JavaScript vanilla — decisión deliberada para mantenerlo sin dependencias.",
@@ -26,11 +26,11 @@
     "techDesign": "Diseño: Identidad visual, UI/UX, responsive design, accesibilidad web",
     "techAI": "IA: Claude (desarrollo), GPT y Gemini (documentación y edición) — como aceleradores, no como sustitutos",
     "educationTitle": "Formación",
-    "educationUTN": "Ingeniería en Sistemas — UTN (Universidad Tecnológica Nacional), en curso",
+    "educationUTN": "Tecnicatura Universitaria en Programación (TUPaD) — UTN, en curso",
     "educationSelfTaught": "Autodidacta en desarrollo web: dos años construyendo proyectos reales para clientes",
     "shortBioTitle": "Bio",
     "shortBio1": "Franco Kaddour es desarrollador web de Buenos Aires, Argentina. Lleva dos años construyendo aplicaciones con React, TypeScript y Node.js — siempre en proyectos reales para clientes.",
-    "shortBio2": "Trabaja de forma independiente y se encarga tanto del desarrollo como del diseño: paletas, tipografías e identidad visual. Estudia Ingeniería en Sistemas en la UTN.",
+    "shortBio2": "Trabaja de forma independiente y se encarga tanto del desarrollo como del diseño: paletas, tipografías e identidad visual. Estudia la Tecnicatura Universitaria en Programación (TUPaD) en la UTN.",
     "headshotTitle": "Foto",
     "contactSectionTitle": "Contacto",
     "thankYou": "Gracias por visitar."

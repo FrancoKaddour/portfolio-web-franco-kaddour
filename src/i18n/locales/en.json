@@ -2,10 +2,10 @@
   "home": {
     "firstName": "Franco",
     "lastName": "Kaddour",
-    "bio": "Self-taught web developer with two years of hands-on practice. Learned React, TypeScript, and Node.js building e-commerces and platforms for real clients — in production, not tutorials. I also handle design: color palettes, typography, visual identity. Currently studying Systems Engineering at UTN.",
+    "bio": "Self-taught web developer with two years of hands-on practice. Learned React, TypeScript, and Node.js building e-commerces and platforms for real clients — in production, not tutorials. I also handle design: color palettes, typography, visual identity. Currently studying the University Technical Degree in Programming at UTN.",
     "currentlyLabel": "Working on:",
     "studyingLabel": "Studying:",
-    "studyingValue": "Systems Engineering — UTN (Universidad Tecnológica Nacional)",
+    "studyingValue": "University Technical Degree in Programming — UTN (Universidad Tecnológica Nacional)",
     "linkAbout": "More about Franco Kaddour",
     "linkProjects": "See projects",
     "linkContact": "Contact"
@@ -13,7 +13,7 @@
   "about": {
     "pageTitle": "About",
     "webDevTitle": "Web Development",
-    "webDevDesc1": "I build web applications with React, TypeScript, and Node.js. Self-taught from the start, I've spent two years working on real client projects — straight into production. Beyond the code, I handle design: color palettes, typography, and visual identity. Currently studying Systems Engineering at UTN to build the theoretical foundation that freelance work doesn't always provide.",
+    "webDevDesc1": "I build web applications with React, TypeScript, and Node.js. Self-taught from the start, I've spent two years working on real client projects — straight into production. Beyond the code, I handle design: color palettes, typography, and visual identity. Currently studying the University Technical Degree in Programming (TUPaD) at UTN to build the theoretical foundation that freelance work doesn't always provide.",
     "webDevCurrently": "Currently working on:",
     "projectEspacioVina": "Home & deco e-commerce with product catalog, order management, and admin panel. Pair project with Nico Alvez — I handled the frontend and all design decisions: color palette and typography. First time working with another developer and touching a real backend: PHP from scratch.",
     "projectMigaClub": "Landing page and dashboard for a miga sandwich club. Full brand ownership: logo, color palette, typography, illustrated storefront, and all site graphics. Built with vanilla HTML, CSS, and JavaScript — a deliberate choice to keep it dependency-free.",
@@ -26,11 +26,11 @@
     "techDesign": "Design: Visual identity, UI/UX, responsive design, web accessibility",
     "techAI": "AI: Claude (development), GPT and Gemini (documentation and editing) — as accelerators, not substitutes",
     "educationTitle": "Education",
-    "educationUTN": "Systems Engineering — UTN (Universidad Tecnológica Nacional), in progress",
+    "educationUTN": "University Technical Degree in Programming (TUPaD) — UTN, in progress",
     "educationSelfTaught": "Self-taught in web development: two years building real client projects",
     "shortBioTitle": "Bio",
     "shortBio1": "Franco Kaddour is a web developer from Buenos Aires, Argentina. He's spent two years building applications with React, TypeScript, and Node.js — always on real client projects.",
-    "shortBio2": "He works independently and handles both development and design: color palettes, typography, and visual identity. Studies Systems Engineering at UTN.",
+    "shortBio2": "He works independently and handles both development and design: color palettes, typography, and visual identity. Studies the University Technical Degree in Programming (TUPaD) at UTN.",
     "headshotTitle": "Photo",
     "contactSectionTitle": "Contact",
     "thankYou": "Thanks for visiting."
