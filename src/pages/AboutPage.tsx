@@ -106,11 +106,33 @@ const AboutPage = () => {
         </h2>
         <p className="text-[14px] md:text-[15px] leading-[1.8]">
           Email:{" "}
-          <a href="mailto:francokaddour@gmail.com" className="font-bold">
+          <a href="mailto:francokaddour@gmail.com" className="font-bold hover:underline">
             francokaddour@gmail.com
           </a>
         </p>
-        <p className="text-[14px] md:text-[15px] leading-[1.8] mt-4">
+        <p className="text-[14px] md:text-[15px] leading-[1.8] mt-2">
+          GitHub:{" "}
+          <a
+            href="https://github.com/FrancoKaddour"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold hover:underline"
+          >
+            github.com/FrancoKaddour
+          </a>
+        </p>
+        <p className="text-[14px] md:text-[15px] leading-[1.8] mt-2">
+          LinkedIn:{" "}
+          <a
+            href="https://www.linkedin.com/in/francokaddour/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold hover:underline"
+          >
+            linkedin.com/in/francokaddour
+          </a>
+        </p>
+        <p className="text-[14px] md:text-[15px] leading-[1.8] mt-6">
           {t("about.thankYou")}
         </p>
       </section>
