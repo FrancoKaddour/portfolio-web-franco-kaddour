@@ -40,6 +40,7 @@ export function Navbar() {
             <Link
               key={link.path}
               to={link.path}
+              aria-current={location.pathname === link.path ? "page" : undefined}
               className={`text-[12px] tracking-[0.12em] uppercase no-underline transition-opacity ${
                 location.pathname === link.path
                   ? "text-foreground font-bold"
@@ -72,7 +73,8 @@ export function Navbar() {
               key={link.path}
               to={link.path}
               onClick={() => setMobileOpen(false)}
-              className={`text-[13px] tracking-[0.12em] uppercase no-underline py-2 ${
+              aria-current={location.pathname === link.path ? "page" : undefined}
+              className={`text-[13px] tracking-[0.12em] uppercase no-underline py-2 transition-opacity ${
                 location.pathname === link.path
                   ? "text-foreground font-bold"
                   : "text-foreground/50"
