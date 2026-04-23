@@ -24,6 +24,9 @@ export function Footer() {
             <Linkedin className="w-5 h-5" />
           </a>
         </div>
+        <p className="text-[11px] text-foreground/30 tracking-[0.1em]">
+          © {new Date().getFullYear()} Franco Kaddour
+        </p>
       </div>
     </footer>
   );
