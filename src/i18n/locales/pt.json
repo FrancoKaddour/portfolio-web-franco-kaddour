@@ -42,7 +42,7 @@
     "migaClubDesc": "Landing page e dashboard para um clube de sanduíches de miga. Responsabilidade total de marca: logo, paleta de cores, tipografia, ilustração da fachada do local e gráficos do site. Construído em HTML, CSS e JavaScript vanilla — sem frameworks, sem dependências.",
     "laBasicaDesc": "Loja online de confeitaria com carrinho de compras e painel administrativo. Design e desenvolvimento de ponta a ponta: paleta de cores, tipografia, animações e experiência de compra completa. React e TypeScript com tipagem estrita desde o início.",
     "portfolioDesc": "Este portfólio. React, TypeScript e Vite. Design minimalista com suporte para três idiomas.",
-    "monitoreoDesc": "Sistema de monitoramento ambiental em Python para a UTN. Coleta e visualização de dados de sensores ambientais."
+    "monitoreoDesc": "Sistema de monitoramento ambiental em Python — projeto integrador da TUPaD UTN. Coleta de dados de sensores, processamento e visualização com gráficos em tempo real."
   },
   "contact": {
     "pageTitle": "Contato",

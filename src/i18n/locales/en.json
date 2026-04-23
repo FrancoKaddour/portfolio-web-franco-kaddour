@@ -42,7 +42,7 @@
     "migaClubDesc": "Landing page and dashboard for a miga sandwich club. Full brand ownership: logo, color palette, typography, illustrated storefront, and all site graphics. Built with vanilla HTML, CSS, and JavaScript — no frameworks, no dependencies.",
     "laBasicaDesc": "Online pastry shop with shopping cart and admin dashboard. End-to-end design and development: color palette, typography, animations, and complete shopping experience. React and TypeScript with strict typing from the start.",
     "portfolioDesc": "This portfolio. React, TypeScript, and Vite. Minimalist design with three-language support.",
-    "monitoreoDesc": "Environmental monitoring system in Python for UTN. Collection and visualization of environmental sensor data."
+    "monitoreoDesc": "Environmental monitoring system in Python — integrative project for the TUPaD UTN program. Sensor data collection, processing, and real-time chart visualization."
   },
   "contact": {
     "pageTitle": "Contact",
