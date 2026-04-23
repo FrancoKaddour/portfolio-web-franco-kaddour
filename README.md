@@ -1,49 +1,44 @@
-# Portfolio Web - Franco Kaddour
+# Portfolio — Franco Kaddour
 
-A beautiful VS Code-themed developer portfolio built with React, TypeScript, and Tailwind CSS.
+Portfolio personal de Franco Kaddour, desarrollador web de Buenos Aires, Argentina.
 
-## Features
+## Stack
 
-- Modern VS Code inspired design
-- Fully responsive layout
-- Dark theme support
-- Project showcase
-- Contact information
-- Tech stack display
+- **React 18** + **TypeScript**
+- **Vite** — build tool
+- **Tailwind CSS** — estilos
+- **shadcn/ui** — componentes UI
+- **React Router** — navegación SPA
+- **i18next** — soporte multiidioma (ES / EN / PT)
 
-## Getting Started
+## Características
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Diseño minimalista, tipografía pesada
+- Soporte para 3 idiomas (español, inglés, portugués)
+- Navegación con scroll-to-top automático
+- Totalmente responsive
+- SEO: meta tags, Open Graph, JSON-LD
 
-Follow these steps to run locally:
+## Desarrollo local
 
 ```sh
-# Step 1: Clone the repository
-git clone https://github.com/FrancoKaddour/vs-code-portfolio-replica.git
+# Clonar el repo
+git clone https://github.com/FrancoKaddour/portfolio-web-franco-kaddour.git
+cd portfolio-web-franco-kaddour
 
-# Step 2: Navigate to the project directory
-cd vs-code-portfolio-replica
-
-# Step 3: Install dependencies
+# Instalar dependencias
 npm install
 
-# Step 4: Start the development server
+# Servidor de desarrollo
 npm run dev
 ```
 
-## Technologies
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-- React Router
-
-## Building for Production
+## Build
 
 ```sh
 npm run build
 ```
+
+## Deploy
+
+Deploy automático en [Vercel](https://vercel.com) desde la rama `main`.
