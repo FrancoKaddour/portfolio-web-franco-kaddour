@@ -49,6 +49,7 @@ const AboutPage = () => {
           <li>{t("about.techBackend")}</li>
           <li>{t("about.techTools")}</li>
           <li>{t("about.techDesign")}</li>
+          <li>{t("about.techAI")}</li>
         </ul>
       </section>
 
