@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
@@ -15,16 +15,21 @@ export function Navbar() {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
+
   return (
-    <nav className="w-full border-b border-black/12 bg-white sticky top-0 z-50">
+    <nav aria-label="Navegación principal" className="w-full border-b border-black/12 bg-white sticky top-0 z-50">
       <div className="max-w-[780px] mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo / Name */}
         <Link
           to="/"
-          className="text-[13px] sm:text-[14px] font-bold tracking-[0.15em] uppercase text-foreground no-underline"
-          style={{ opacity: 1 }}
-          onMouseEnter={e => (e.currentTarget.style.opacity = '0.55')}
-          onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+          className="text-[13px] sm:text-[14px] font-bold tracking-[0.15em] uppercase text-foreground no-underline hover:opacity-55 transition-opacity"
         >
           Franco Kaddour
         </Link>
@@ -50,8 +55,10 @@ export function Navbar() {
         {/* Mobile menu toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-foreground p-1"
-          aria-label="Toggle menu"
+          aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-menu"
+          className="md:hidden text-foreground p-3 -mr-3 min-w-[44px] min-h-[44px] flex items-center justify-center"
         >
           {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
@@ -59,13 +66,13 @@ export function Navbar() {
 
       {/* Mobile dropdown */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-black/10 bg-white px-6 py-4 flex flex-col gap-3">
+        <div id="mobile-menu" className="md:hidden border-t border-black/10 bg-white px-6 py-4 flex flex-col gap-3">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
               onClick={() => setMobileOpen(false)}
-              className={`text-[13px] tracking-[0.12em] uppercase no-underline ${
+              className={`text-[13px] tracking-[0.12em] uppercase no-underline py-2 ${
                 location.pathname === link.path
                   ? "text-foreground font-bold"
                   : "text-foreground/50"

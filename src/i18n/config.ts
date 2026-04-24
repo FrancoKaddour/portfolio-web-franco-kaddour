@@ -19,4 +19,13 @@ i18n
     },
   });
 
+// Sync <html lang> attribute with active language
+i18n.on('languageChanged', (lng) => {
+  document.documentElement.lang = lng;
+  localStorage.setItem('language', lng);
+});
+
+// Set initial lang attribute
+document.documentElement.lang = i18n.language || 'es';
+
 export default i18n;

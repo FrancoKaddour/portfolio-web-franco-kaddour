@@ -11,9 +11,13 @@ const HomePage = () => {
         <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden">
           <img
             src="/img/profile.jpg"
-            alt="Franco Kaddour"
+            alt="Foto de perfil de Franco Kaddour"
             className="w-full h-full object-cover grayscale"
             style={{ objectPosition: '80% center' }}
+            fetchPriority="high"
+            decoding="async"
+            width={176}
+            height={176}
           />
         </div>
       </div>

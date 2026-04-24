@@ -15,7 +15,7 @@
     "webDevTitle": "Desenvolvimento Web",
     "webDevDesc1": "Construo aplicações web com React, TypeScript e Node.js. Me concentro em interfaces limpas, código manutenível e experiências de usuário intuitivas. Trabalho tanto em frontend quanto backend, criando produtos completos do zero.",
     "webDevCurrently": "Atualmente estou focado em:",
-    "projectEspacioVina": "E-commerce de vinhos desenvolvido em PHP com dashboard administrativo, catálogo de produtos e sistema de gestão completo.",
+    "projectEspacioVina": "E-commerce de home & deco desenvolvido em PHP com dashboard administrativo, catálogo de produtos e sistema de gestão completo.",
     "projectMigaClub": "Landing page para um clube de música com dashboard administrativo, construída com HTML, CSS e JavaScript.",
     "projectLaBasica": "Loja de confeitaria com carrinho de compras e dashboard, desenvolvida com React e TypeScript.",
     "projectPortfolio": "Este site, construído com React, TypeScript e Vite. Design inspirado na estética minimalista.",
@@ -29,7 +29,7 @@
     "educationSelfTaught": "Autodidata em desenvolvimento web com projetos reais para clientes",
     "shortBioTitle": "Bio Curta",
     "shortBio1": "Franco Kaddour é um desenvolvedor web de Buenos Aires, Argentina. Ele constrói aplicações web com React, TypeScript e Node.js, focando em interfaces limpas e experiências de usuário de qualidade.",
-    "shortBio2": "Atualmente estuda Tecnicatura em Programação na UTN enquanto trabalha em projetos reais como Espacio Viña, Miga Club e La Básica.",
+    "shortBio2": "Atualmente estuda Tecnicatura em Programação na UTN enquanto trabalha em projetos reais como Espacio Vina, Miga Club e La Básica.",
     "headshotTitle": "Foto",
     "contactSectionTitle": "Contato",
     "thankYou": "Obrigado pela visita!"
@@ -37,7 +37,7 @@
   "projects": {
     "title": "Projetos",
     "subtitle": "Esta lista contém os projetos em que trabalhei. Cada um representa um desafio diferente e uma oportunidade de aprendizado.",
-    "espacioVinaDesc": "Espacio Viña é um e-commerce de vinhos desenvolvido em PHP com um dashboard administrativo completo. Inclui catálogo de produtos, gestão de pedidos e painel de administração para o negócio.",
+    "espacioVinaDesc": "Espacio Vina é um e-commerce de home & deco desenvolvido em PHP com um dashboard administrativo completo. Inclui catálogo de produtos, gestão de pedidos e painel de administração para o negócio.",
     "migaClubDesc": "Miga Club é uma landing page para um clube de música com dashboard administrativo. Construída com HTML, CSS e JavaScript vanilla, com design responsivo e animações.",
     "laBasicaDesc": "La Básica é uma loja de confeitaria online com carrinho de compras e dashboard administrativo. Desenvolvida com React e TypeScript, com UI moderna e fluida.",
     "portfolioDesc": "Este portfólio pessoal, construído com React, TypeScript e Vite. Design minimalista inspirado na estética do benobi.one com suporte a múltiplos idiomas.",

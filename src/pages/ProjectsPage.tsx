@@ -1,9 +1,10 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-const GITHUB_USER = "francokaddour";
+const GITHUB_USER = "FrancoKaddour";
 
 interface ProjectData {
-  nameKey: string;
+  name: string;
   year: string;
   descKey: string;
   tech: string;
@@ -14,7 +15,7 @@ interface ProjectData {
 
 const projects: ProjectData[] = [
   {
-    nameKey: "Espacio Viña",
+    name: "Espacio Vina",
     year: "2024",
     descKey: "projects.espacioVinaDesc",
     tech: "PHP",
@@ -23,7 +24,7 @@ const projects: ProjectData[] = [
     websiteUrl: "https://www.espaciovina.com/",
   },
   {
-    nameKey: "Miga Club",
+    name: "Miga Club",
     year: "2024",
     descKey: "projects.migaClubDesc",
     tech: "HTML / CSS / JS",
@@ -32,7 +33,7 @@ const projects: ProjectData[] = [
     websiteUrl: "https://miga-club.vercel.app/",
   },
   {
-    nameKey: "La Básica",
+    name: "La Básica",
     year: "2025",
     descKey: "projects.laBasicaDesc",
     tech: "React / TypeScript",
@@ -41,7 +42,7 @@ const projects: ProjectData[] = [
     websiteUrl: "https://la-basica-pasteleria.vercel.app/",
   },
   {
-    nameKey: "Portfolio Web",
+    name: "Portfolio Web",
     year: "2025",
     descKey: "projects.portfolioDesc",
     tech: "React / TypeScript / Vite",
@@ -49,7 +50,7 @@ const projects: ProjectData[] = [
     url: `https://github.com/${GITHUB_USER}/portfolio-web-franco-kaddour`,
   },
   {
-    nameKey: "Monitoreo Ambiental",
+    name: "Monitoreo Ambiental",
     year: "2025",
     descKey: "projects.monitoreoDesc",
     tech: "Python",
@@ -57,6 +58,20 @@ const projects: ProjectData[] = [
     url: `https://github.com/${GITHUB_USER}/monitoreo-ambiental`,
   },
 ];
+
+function ProjectImage({ src, alt }: { src: string; alt: string }) {
+  const [hasError, setHasError] = useState(false);
+  if (hasError) return null;
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className="w-full rounded-sm shadow-sm hover:shadow-md transition-shadow object-cover aspect-video"
+      loading="lazy"
+      onError={() => setHasError(true)}
+    />
+  );
+}
 
 const ProjectsPage = () => {
   const { t } = useTranslation();
@@ -74,7 +89,7 @@ const ProjectsPage = () => {
       {/* Projects list */}
       <div className="space-y-14">
         {projects.map((project) => (
-          <article key={project.nameKey}>
+          <article key={project.name}>
             {/* Project title */}
             <h2 className="text-[17px] md:text-[20px] font-bold tracking-[0.12em] uppercase mb-4">
               <a
@@ -83,7 +98,7 @@ const ProjectsPage = () => {
                 rel="noopener noreferrer"
                 className="text-foreground no-underline hover:underline"
               >
-                {project.nameKey} ({project.year})
+                {project.name} ({project.year})
               </a>
             </h2>
 
@@ -96,15 +111,12 @@ const ProjectsPage = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="shrink-0 md:w-[260px] block"
+                  aria-label={`Ver ${project.name}`}
+                  tabIndex={-1}
                 >
-                  <img
+                  <ProjectImage
                     src={project.images[0]}
-                    alt={`${project.nameKey} screenshot`}
-                    className="w-full rounded-sm shadow-sm hover:shadow-md transition-shadow object-cover aspect-video"
-                    loading="lazy"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = "none";
-                    }}
+                    alt={`${project.name} — captura de pantalla`}
                   />
                 </a>
               )}

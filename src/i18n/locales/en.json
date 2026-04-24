@@ -15,7 +15,7 @@
     "webDevTitle": "Web Development",
     "webDevDesc1": "I build web applications with React, TypeScript, and Node.js. I focus on clean interfaces, maintainable code, and intuitive user experiences. I work on both frontend and backend, creating complete products from scratch.",
     "webDevCurrently": "Currently I'm focused on:",
-    "projectEspacioVina": "A wine e-commerce built with PHP featuring an admin dashboard, product catalog, and full management system.",
+    "projectEspacioVina": "A home & deco e-commerce built with PHP featuring an admin dashboard, product catalog, and full management system.",
     "projectMigaClub": "A landing page for a music club with an admin dashboard, built with HTML, CSS, and JavaScript.",
     "projectLaBasica": "A pastry shop with shopping cart and admin dashboard, built with React and TypeScript.",
     "projectPortfolio": "This site, built with React, TypeScript, and Vite. Design inspired by minimalist aesthetics.",
@@ -29,7 +29,7 @@
     "educationSelfTaught": "Self-taught web developer with real-world client projects",
     "shortBioTitle": "Short Bio",
     "shortBio1": "Franco Kaddour is a web developer from Buenos Aires, Argentina. He builds web applications with React, TypeScript, and Node.js, focusing on clean interfaces and quality user experiences.",
-    "shortBio2": "He is currently studying Software Engineering at UTN while working on real projects like Espacio Viña, Miga Club, and La Básica.",
+    "shortBio2": "He is currently studying Software Engineering at UTN while working on real projects like Espacio Vina, Miga Club, and La Básica.",
     "headshotTitle": "Headshot",
     "contactSectionTitle": "Contact",
     "thankYou": "Thank you for visiting!"
@@ -37,7 +37,7 @@
   "projects": {
     "title": "Projects",
     "subtitle": "This list contains the projects I have worked on. Each one represents a different challenge and learning opportunity.",
-    "espacioVinaDesc": "Espacio Viña is a wine e-commerce built with PHP featuring a complete admin dashboard. It includes a product catalog, order management, and an administration panel for the business.",
+    "espacioVinaDesc": "Espacio Vina is a home & deco e-commerce built with PHP featuring a complete admin dashboard. It includes a product catalog, order management, and an administration panel for the business.",
     "migaClubDesc": "Miga Club is a landing page for a music club with an admin dashboard. Built with vanilla HTML, CSS, and JavaScript, featuring responsive design and animations.",
     "laBasicaDesc": "La Básica is an online pastry shop with a shopping cart and admin dashboard. Built with React and TypeScript, featuring a modern and fluid UI.",
     "portfolioDesc": "This personal portfolio, built with React, TypeScript, and Vite. Minimalist design inspired by benobi.one aesthetics with multilanguage support.",

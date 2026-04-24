@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -48,7 +50,9 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Courier New', 'Courier', 'Lucida Console', monospace;
+    font-family: 'Courier Prime', 'Courier New', 'Courier', monospace;
+    font-weight: 400;
+    font-size: 15px;
     overflow-x: hidden;
   }
 
@@ -89,6 +93,13 @@
   ::-webkit-scrollbar-thumb:hover {
     background: hsl(0 0% 65%);
   }
+
+  /* Focus visible — keyboard navigation */
+  :focus-visible {
+    outline: 2px solid hsl(var(--foreground));
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
 }
 
 /* Fade-in animation for page transitions */
@@ -105,4 +116,10 @@
 
 .page-enter {
   animation: fadeIn 0.35s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter {
+    animation: none;
+  }
 }
