@@ -16,7 +16,7 @@
     "webDevDesc1": "Construo aplicações web com React, TypeScript e Node.js. Me concentro em interfaces limpas, código manutenível e experiências de usuário intuitivas. Trabalho tanto em frontend quanto backend, criando produtos completos do zero.",
     "webDevCurrently": "Atualmente estou focado em:",
     "projectEspacioVina": "E-commerce de home & deco desenvolvido em PHP com dashboard administrativo, catálogo de produtos e sistema de gestão completo.",
-    "projectMigaClub": "Landing page para um clube de música com dashboard administrativo, construída com HTML, CSS e JavaScript.",
+    "projectMigaClub": "Landing page para um clube de sanduíches de miga com dashboard administrativo, construída com HTML, CSS e JavaScript.",
     "projectLaBasica": "Loja de confeitaria com carrinho de compras e dashboard, desenvolvida com React e TypeScript.",
     "projectPortfolio": "Este site, construído com React, TypeScript e Vite. Design inspirado na estética minimalista.",
     "techTitle": "Tecnologias",
@@ -38,9 +38,9 @@
     "title": "Projetos",
     "subtitle": "Esta lista contém os projetos em que trabalhei. Cada um representa um desafio diferente e uma oportunidade de aprendizado.",
     "espacioVinaDesc": "Espacio Vina é um e-commerce de home & deco desenvolvido em PHP com um dashboard administrativo completo. Inclui catálogo de produtos, gestão de pedidos e painel de administração para o negócio.",
-    "migaClubDesc": "Miga Club é uma landing page para um clube de música com dashboard administrativo. Construída com HTML, CSS e JavaScript vanilla, com design responsivo e animações.",
+    "migaClubDesc": "Miga Club é uma landing page para um clube de sanduíches de miga com dashboard administrativo. Construída com HTML, CSS e JavaScript vanilla, com design responsivo e animações.",
     "laBasicaDesc": "La Básica é uma loja de confeitaria online com carrinho de compras e dashboard administrativo. Desenvolvida com React e TypeScript, com UI moderna e fluida.",
-    "portfolioDesc": "Este portfólio pessoal, construído com React, TypeScript e Vite. Design minimalista inspirado na estética do benobi.one com suporte a múltiplos idiomas.",
+    "portfolioDesc": "Este portfólio pessoal, construído com React, TypeScript e Vite. Design minimalista com suporte a múltiplos idiomas.",
     "monitoreoDesc": "Projeto de monitoramento ambiental desenvolvido em Python para a UTN. Sistema de coleta e visualização de dados ambientais."
   },
   "contact": {

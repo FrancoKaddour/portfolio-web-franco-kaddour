@@ -41,7 +41,7 @@ const HomePage = () => {
           rel="noopener noreferrer"
           className="font-bold text-foreground no-underline hover:underline"
         >
-          Espacio Viña
+          Espacio Vina
         </a>
         {" · "}
         <a

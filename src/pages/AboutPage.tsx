@@ -23,7 +23,7 @@ const AboutPage = () => {
         </p>
         <ul className="list-disc pl-6 space-y-2 text-[14px] md:text-[15px] leading-[1.7]">
           <li>
-            <strong>Espacio Viña</strong> — {t("about.projectEspacioVina")}
+            <strong>Espacio Vina</strong> — {t("about.projectEspacioVina")}
           </li>
           <li>
             <strong>Miga Club</strong> — {t("about.projectMigaClub")}
