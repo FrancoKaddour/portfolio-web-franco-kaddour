@@ -66,7 +66,7 @@ function ProjectImage({ src, alt }: { src: string; alt: string }) {
     <img
       src={src}
       alt={alt}
-      className="w-full rounded-sm shadow-sm hover:shadow-md transition-shadow object-cover aspect-video"
+      className="w-full rounded shadow-sm hover:shadow-md transition-shadow object-cover aspect-video"
       loading="lazy"
       onError={() => setHasError(true)}
     />
@@ -87,7 +87,7 @@ const ProjectsPage = () => {
       </p>
 
       {/* Projects list */}
-      <div className="space-y-14">
+      <div className="space-y-16">
         {projects.map((project) => (
           <article key={project.name}>
             {/* Project title */}
