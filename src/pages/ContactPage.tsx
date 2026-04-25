@@ -44,6 +44,10 @@ const ContactPage = () => {
             linkedin.com/in/francokaddour
           </a>
         </p>
+
+        <p className="text-foreground/50">
+          Buenos Aires, Argentina
+        </p>
       </div>
 
       <p className="text-[14px] md:text-[15px] leading-[1.8] mt-10 text-foreground/60">
