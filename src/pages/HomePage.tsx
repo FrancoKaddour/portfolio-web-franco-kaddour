@@ -69,6 +69,11 @@ const HomePage = () => {
         <span className="text-foreground/70">{t("home.studyingValue")}</span>
       </p>
 
+      {/* Available */}
+      <p className="text-[13px] md:text-[14px] leading-[1.8] mb-8 text-foreground/50">
+        {t("home.availableLabel")}
+      </p>
+
       {/* Arrow links */}
       <div className="flex flex-col gap-2">
         <Link
