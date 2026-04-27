@@ -23,7 +23,7 @@ const HomePage = () => {
       </div>
 
       {/* Name */}
-      <h1 className="text-center text-[26px] md:text-[34px] font-bold tracking-[0.2em] uppercase mb-8 text-foreground">
+      <h1 className="text-center text-[24px] md:text-[34px] font-bold tracking-[0.2em] uppercase mb-8 text-foreground">
         {t("home.firstName")} {t("home.lastName")}
       </h1>
 
