@@ -11,7 +11,7 @@ const HomePage = () => {
         <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden">
           <img
             src="/img/profile.jpg"
-            alt="Foto de perfil de Franco Kaddour"
+            alt="Franco Kaddour — desarrollador web, Buenos Aires"
             className="w-full h-full object-cover grayscale"
             style={{ objectPosition: '80% center' }}
             fetchPriority="high"
