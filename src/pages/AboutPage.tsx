@@ -64,6 +64,9 @@ const AboutPage = () => {
           <li>{t("about.educationUTN")}</li>
           <li>{t("about.educationSelfTaught")}</li>
         </ul>
+        <p className="text-[13px] md:text-[14px] leading-[1.7] mt-3 text-foreground/50">
+          {t("about.educationNote")}
+        </p>
       </section>
 
       <hr className="border-border mb-10" />
