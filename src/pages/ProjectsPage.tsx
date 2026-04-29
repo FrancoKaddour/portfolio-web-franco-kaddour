@@ -133,7 +133,7 @@ const ProjectsPage = () => {
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-foreground/70 hover:text-foreground font-bold no-underline hover:underline"
+                    className="text-foreground/70 hover:text-foreground font-bold no-underline hover:underline transition-colors"
                   >
                     GitHub
                   </a>
@@ -144,7 +144,7 @@ const ProjectsPage = () => {
                         href={project.websiteUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-foreground/70 hover:text-foreground font-bold no-underline hover:underline"
+                        className="text-foreground/70 hover:text-foreground font-bold no-underline hover:underline transition-colors"
                       >
                         Live
                       </a>
