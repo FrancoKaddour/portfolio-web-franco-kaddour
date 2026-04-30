@@ -11,7 +11,7 @@ const AboutPage = () => {
       </h1>
 
       {/* Web Development */}
-      <section className="mb-10">
+      <section className="mb-12" id="web-dev">
         <h2 className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
           {t("about.webDevTitle")}
         </h2>
@@ -40,7 +40,7 @@ const AboutPage = () => {
       <hr className="border-border mb-10" />
 
       {/* Tech Stack */}
-      <section className="mb-10">
+      <section className="mb-12" id="tech">
         <h2 className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
           {t("about.techTitle")}
         </h2>
@@ -56,7 +56,7 @@ const AboutPage = () => {
       <hr className="border-border mb-10" />
 
       {/* Education */}
-      <section className="mb-10">
+      <section className="mb-12" id="education">
         <h2 className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
           {t("about.educationTitle")}
         </h2>
