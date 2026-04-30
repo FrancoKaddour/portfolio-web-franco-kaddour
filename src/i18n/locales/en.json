@@ -39,7 +39,7 @@
   },
   "projects": {
     "title": "Projects",
-    "subtitle": "Projects I've worked on. Each one represented a different problem and a distinct technical decision.",
+    "subtitle": "Projects I've worked on. Each one represented a different problem and a distinct technical decision. All in production.",
     "espacioVinaDesc": "Home & deco e-commerce with product catalog, order management, and admin panel. Pair project with Nico Alvez — I handled the frontend and design decisions: color palette and typography. First time working with a real backend: PHP from scratch.",
     "migaClubDesc": "Landing page and dashboard for a miga sandwich club. Full brand ownership: logo, color palette, typography, illustrated storefront, and all site graphics. Built with vanilla HTML, CSS, and JavaScript — no frameworks, no dependencies.",
     "laBasicaDesc": "Online pastry shop with shopping cart and admin dashboard. End-to-end design and development: color palette, typography, animations, and complete shopping experience. React and TypeScript with strict typing from the start.",
