@@ -82,7 +82,7 @@ const ProjectsPage = () => {
       <h1 className="text-[24px] md:text-[30px] font-bold tracking-[0.18em] uppercase mb-3 text-foreground">
         {t("projects.title")}
       </h1>
-      <p className="text-[14px] md:text-[15px] leading-[1.8] text-foreground/50 mb-12">
+      <p className="text-[13px] md:text-[14px] leading-[1.8] text-foreground/40 mb-12">
         {t("projects.subtitle")}
       </p>
 
