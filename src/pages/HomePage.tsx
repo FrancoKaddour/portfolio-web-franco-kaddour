@@ -94,6 +94,14 @@ const HomePage = () => {
         >
           → {t("home.linkContact")}
         </Link>
+        <a
+          href="https://github.com/FrancoKaddour"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[14px] md:text-[15px] font-bold text-foreground/50 no-underline hover:underline hover:text-foreground"
+        >
+          → GitHub
+        </a>
       </div>
     </div>
   );
