@@ -72,7 +72,7 @@ const AboutPage = () => {
       <hr className="border-border mb-10" />
 
       {/* Short Bio */}
-      <section className="mb-10">
+      <section className="mb-12" id="bio">
         <h2 className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
           {t("about.shortBioTitle")}
         </h2>
