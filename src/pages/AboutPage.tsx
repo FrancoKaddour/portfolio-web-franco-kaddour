@@ -91,11 +91,13 @@ const AboutPage = () => {
         <h2 className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
           {t("about.headshotTitle")}
         </h2>
-        <div className="max-w-sm">
+        <div className="max-w-[280px]">
           <img
             src="/img/profile.jpg"
-            alt="Franco Kaddour"
+            alt="Franco Kaddour — desarrollador web, Buenos Aires"
             className="w-full rounded shadow-md grayscale"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </section>
