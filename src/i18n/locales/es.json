@@ -48,7 +48,11 @@
   },
   "contact": {
     "pageTitle": "Contacto",
-    "thankYou": "Gracias por visitar."
+    "thankYou": "Gracias por visitar.",
+    "emailLabel": "Email",
+    "githubLabel": "GitHub",
+    "linkedinLabel": "LinkedIn",
+    "locationLabel": "Buenos Aires, Argentina"
   },
   "nav": {
     "about": "About",

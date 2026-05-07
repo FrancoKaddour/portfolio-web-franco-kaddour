@@ -12,41 +12,41 @@ const ContactPage = () => {
 
       <div className="text-[14px] md:text-[15px] leading-[1.8] space-y-4 text-foreground">
         <p>
-          Email:{" "}
+          {t("contact.emailLabel")}:{" "}
           <a
             href="mailto:francokaddour@gmail.com"
-            className="font-bold text-foreground no-underline hover:underline"
+            className="font-bold text-foreground no-underline hover:underline transition-opacity"
           >
             francokaddour@gmail.com
           </a>
         </p>
 
         <p>
-          GitHub:{" "}
+          {t("contact.githubLabel")}:{" "}
           <a
             href="https://github.com/FrancoKaddour"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-bold text-foreground no-underline hover:underline"
+            className="font-bold text-foreground no-underline hover:underline transition-opacity"
           >
             github.com/FrancoKaddour
           </a>
         </p>
 
         <p>
-          LinkedIn:{" "}
+          {t("contact.linkedinLabel")}:{" "}
           <a
             href="https://www.linkedin.com/in/francokaddour/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-bold text-foreground no-underline hover:underline"
+            className="font-bold text-foreground no-underline hover:underline transition-opacity"
           >
             linkedin.com/in/francokaddour
           </a>
         </p>
 
         <p className="text-foreground/50">
-          Buenos Aires, Argentina
+          {t("contact.locationLabel")}
         </p>
       </div>
 
