@@ -64,9 +64,9 @@ const HomePage = () => {
       </p>
 
       {/* Studying */}
-      <p className="text-[14px] md:text-[16px] leading-[1.8] mb-10 text-foreground">
+      <p className="text-[14px] md:text-[15px] leading-[1.8] mb-6 text-foreground">
         <strong>{t("home.studyingLabel")}</strong>{" "}
-        <span className="text-foreground/70">{t("home.studyingValue")}</span>
+        <span className="text-foreground/60">{t("home.studyingValue")}</span>
       </p>
 
       {/* Available */}
