@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { memo, useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 
 const GITHUB_USER = "FrancoKaddour";
+const BASE_URL = "https://francokaddour.vercel.app";
 
 interface ProjectData {
   name: string;
@@ -59,8 +61,15 @@ const projects: ProjectData[] = [
   },
 ];
 
-function ProjectImage({ src, alt }: { src: string; alt: string }) {
+interface ProjectImageProps {
+  src: string;
+  alt: string;
+}
+
+const ProjectImage = memo(function ProjectImage({ src, alt }: ProjectImageProps) {
   const [hasError, setHasError] = useState(false);
+  const handleError = useCallback(() => setHasError(true), []);
+
   if (hasError) return null;
   return (
     <img
@@ -68,95 +77,126 @@ function ProjectImage({ src, alt }: { src: string; alt: string }) {
       alt={alt}
       className="w-full rounded shadow-sm hover:shadow-md transition-shadow object-cover aspect-video"
       loading="lazy"
-      onError={() => setHasError(true)}
+      decoding="async"
+      onError={handleError}
     />
   );
-}
+});
 
 const ProjectsPage = () => {
   const { t } = useTranslation();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Proyectos de Franco Kaddour",
+    "description": t("projects.subtitle"),
+    "itemListElement": projects
+      .filter((p) => p.websiteUrl)
+      .map((p, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": p.name,
+          "url": p.websiteUrl,
+          "applicationCategory": "WebApplication",
+          "author": {
+            "@type": "Person",
+            "name": "Franco Kaddour",
+          },
+        },
+      })),
+  };
+
   return (
-    <div className="page-enter max-w-[780px] mx-auto px-6 py-12 md:py-16">
-      {/* Page title */}
-      <h1 className="text-[24px] md:text-[30px] font-bold tracking-[0.18em] uppercase mb-3 text-foreground">
-        {t("projects.title")}
-      </h1>
-      <p className="text-[13px] md:text-[14px] leading-[1.8] text-foreground/40 mb-12">
-        {t("projects.subtitle")}
-      </p>
+    <>
+      <Helmet>
+        <title>{t("projects.title")} — Franco Kaddour</title>
+        <meta name="description" content={t("projects.subtitle")} />
+        <link rel="canonical" href={`${BASE_URL}/projects`} />
+        <link rel="alternate" hrefLang="es" href={`${BASE_URL}/projects`} />
+        <link rel="alternate" hrefLang="en" href={`${BASE_URL}/projects`} />
+        <link rel="alternate" hrefLang="pt" href={`${BASE_URL}/projects`} />
+        <link rel="alternate" hrefLang="x-default" href={`${BASE_URL}/projects`} />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      </Helmet>
 
-      {/* Projects list */}
-      <div className="space-y-16">
-        {projects.map((project) => (
-          <article key={project.name}>
-            {/* Project title */}
-            <h2 className="text-[17px] md:text-[20px] font-bold tracking-[0.12em] uppercase mb-4">
-              <a
-                href={project.websiteUrl || project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground no-underline hover:underline"
-              >
-                {project.name} ({project.year})
-              </a>
-            </h2>
+      <div className="page-enter max-w-[780px] mx-auto px-6 py-12 md:py-16">
+        <h1 className="text-[24px] md:text-[30px] font-bold tracking-[0.18em] uppercase mb-3 text-foreground">
+          {t("projects.title")}
+        </h1>
+        <p className="text-[13px] md:text-[14px] leading-[1.8] text-foreground/40 mb-12">
+          {t("projects.subtitle")}
+        </p>
 
-            {/* Image + description row */}
-            <div className={`flex flex-col ${project.images.length > 0 ? "md:flex-row" : ""} gap-5`}>
-              {/* Image(s) — color images, no filter */}
-              {project.images.length > 0 && (
+        <div className="space-y-16">
+          {projects.map((project) => (
+            <article key={project.name} aria-label={project.name}>
+              <h2 className="text-[17px] md:text-[20px] font-bold tracking-[0.12em] uppercase mb-4">
                 <a
                   href={project.websiteUrl || project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="shrink-0 md:w-[260px] block"
-                  aria-label={`Ver ${project.name}`}
-                  tabIndex={-1}
+                  className="text-foreground no-underline hover:underline"
                 >
-                  <ProjectImage
-                    src={project.images[0]}
-                    alt={`${project.name} — captura de pantalla`}
-                  />
+                  {project.name} ({project.year})
                 </a>
-              )}
+              </h2>
 
-              {/* Description */}
-              <div className="flex-1">
-                <p className="text-[14px] md:text-[15px] leading-[1.8] mb-3 text-foreground">
-                  {t(project.descKey)}
-                </p>
-                <p className="text-[13px] text-foreground/50">
-                  <span className="font-bold text-foreground">{project.tech}</span>
-                  {" · "}
+              <div className={`flex flex-col ${project.images.length > 0 ? "md:flex-row" : ""} gap-5`}>
+                {project.images.length > 0 && (
                   <a
-                    href={project.url}
+                    href={project.websiteUrl || project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-foreground/70 hover:text-foreground font-bold no-underline hover:underline transition-colors"
+                    className="shrink-0 md:w-[260px] block"
+                    aria-label={`Ver ${project.name}`}
+                    tabIndex={-1}
                   >
-                    GitHub
+                    <ProjectImage
+                      src={project.images[0]}
+                      alt={`${project.name} — captura de pantalla`}
+                    />
                   </a>
-                  {project.websiteUrl && (
-                    <>
-                      {" · "}
-                      <a
-                        href={project.websiteUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-foreground/70 hover:text-foreground font-bold no-underline hover:underline transition-colors"
-                      >
-                        Live
-                      </a>
-                    </>
-                  )}
-                </p>
+                )}
+
+                <div className="flex-1">
+                  <p className="text-[14px] md:text-[15px] leading-[1.8] mb-3 text-foreground">
+                    {t(project.descKey)}
+                  </p>
+                  <p className="text-[13px] text-foreground/50">
+                    <span className="font-bold text-foreground">{project.tech}</span>
+                    {" · "}
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-foreground/70 hover:text-foreground font-bold no-underline hover:underline transition-colors"
+                    >
+                      GitHub
+                    </a>
+                    {project.websiteUrl && (
+                      <>
+                        {" · "}
+                        <a
+                          href={project.websiteUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-foreground/70 hover:text-foreground font-bold no-underline hover:underline transition-colors"
+                        >
+                          Live
+                        </a>
+                      </>
+                    )}
+                  </p>
+                </div>
               </div>
-            </div>
-          </article>
-        ))}
+            </article>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

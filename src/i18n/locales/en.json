@@ -33,6 +33,7 @@
     "shortBioTitle": "Bio",
     "shortBio1": "Franco Kaddour is a web developer from Buenos Aires, Argentina. He's spent two years building applications with React, TypeScript, and Node.js — always on real client projects.",
     "shortBio2": "He works independently and handles both development and design: color palettes, typography, and visual identity. Studies the University Technical Degree in Programming (TUPaD) at UTN.",
+    "testimonialsTitle": "What they say",
     "headshotTitle": "Photo",
     "contactSectionTitle": "Contact",
     "thankYou": "Thanks for visiting."
@@ -52,7 +53,18 @@
     "emailLabel": "Email",
     "githubLabel": "GitHub",
     "linkedinLabel": "LinkedIn",
-    "locationLabel": "Buenos Aires, Argentina"
+    "locationLabel": "Buenos Aires, Argentina — UTC-3",
+    "formTitle": "Send a message",
+    "formName": "Name",
+    "formEmail": "Email",
+    "formMessage": "Message",
+    "formSend": "Send message",
+    "formSending": "Sending...",
+    "formSuccess": "Message sent! I'll reply within 24 hours.",
+    "formError": "Something went wrong. You can email me directly at francokaddour@gmail.com",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your@email.com",
+    "messagePlaceholder": "Tell me about your project..."
   },
   "nav": {
     "about": "About",

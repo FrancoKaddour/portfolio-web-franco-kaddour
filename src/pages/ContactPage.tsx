@@ -1,59 +1,213 @@
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
+
+const BASE_URL = "https://francokaddour.vercel.app";
+
+// TODO: Create a free form at formspree.io and replace with your endpoint
+// Example: https://formspree.io/f/xkgwbqpz
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+
+const schema = z.object({
+  name: z.string().min(2, "Mínimo 2 caracteres"),
+  email: z.string().email("Email inválido"),
+  message: z.string().min(10, "Mínimo 10 caracteres"),
+});
+
+type FormData = z.infer<typeof schema>;
 
 const ContactPage = () => {
   const { t } = useTranslation();
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<FormData>({ resolver: zodResolver(schema) });
+
+  const onSubmit = async (data: FormData) => {
+    setStatus("sending");
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (res.ok) {
+        setStatus("success");
+        reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  };
 
   return (
-    <div className="page-enter max-w-[780px] mx-auto px-6 py-12 md:py-16">
-      {/* Page title */}
-      <h1 className="text-[24px] md:text-[30px] font-bold tracking-[0.18em] uppercase mb-10 text-foreground">
-        {t("contact.pageTitle")}
-      </h1>
+    <>
+      <Helmet>
+        <title>{t("contact.pageTitle")} — Franco Kaddour</title>
+        <meta name="description" content="Contacto con Franco Kaddour, desarrollador web de Buenos Aires. Disponible para nuevos proyectos." />
+        <link rel="canonical" href={`${BASE_URL}/contact`} />
+        <link rel="alternate" hrefLang="es" href={`${BASE_URL}/contact`} />
+        <link rel="alternate" hrefLang="en" href={`${BASE_URL}/contact`} />
+        <link rel="alternate" hrefLang="pt" href={`${BASE_URL}/contact`} />
+        <link rel="alternate" hrefLang="x-default" href={`${BASE_URL}/contact`} />
+      </Helmet>
 
-      <div className="text-[14px] md:text-[15px] leading-[1.8] space-y-4 text-foreground">
-        <p>
-          {t("contact.emailLabel")}:{" "}
-          <a
-            href="mailto:francokaddour@gmail.com"
-            className="font-bold text-foreground no-underline hover:underline transition-opacity"
-          >
-            francokaddour@gmail.com
-          </a>
-        </p>
+      <div className="page-enter max-w-[780px] mx-auto px-6 py-12 md:py-16">
+        <h1 className="text-[24px] md:text-[30px] font-bold tracking-[0.18em] uppercase mb-10 text-foreground">
+          {t("contact.pageTitle")}
+        </h1>
 
-        <p>
-          {t("contact.githubLabel")}:{" "}
-          <a
-            href="https://github.com/FrancoKaddour"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-bold text-foreground no-underline hover:underline transition-opacity"
-          >
-            github.com/FrancoKaddour
-          </a>
-        </p>
+        {/* Contact links */}
+        <div className="text-[14px] md:text-[15px] leading-[1.8] space-y-2 text-foreground mb-10">
+          <p>
+            {t("contact.emailLabel")}:{" "}
+            <a
+              href="mailto:francokaddour@gmail.com"
+              className="font-bold text-foreground no-underline hover:underline"
+            >
+              francokaddour@gmail.com
+            </a>
+          </p>
+          <p>
+            {t("contact.githubLabel")}:{" "}
+            <a
+              href="https://github.com/FrancoKaddour"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-foreground no-underline hover:underline"
+            >
+              github.com/FrancoKaddour
+            </a>
+          </p>
+          <p>
+            {t("contact.linkedinLabel")}:{" "}
+            <a
+              href="https://www.linkedin.com/in/francokaddour/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-foreground no-underline hover:underline"
+            >
+              linkedin.com/in/francokaddour
+            </a>
+          </p>
+          <p className="text-foreground/50">{t("contact.locationLabel")}</p>
+        </div>
 
-        <p>
-          {t("contact.linkedinLabel")}:{" "}
-          <a
-            href="https://www.linkedin.com/in/francokaddour/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-bold text-foreground no-underline hover:underline transition-opacity"
-          >
-            linkedin.com/in/francokaddour
-          </a>
-        </p>
+        <hr className="border-border mb-10" />
 
-        <p className="text-foreground/50">
-          {t("contact.locationLabel")}
-        </p>
+        {/* Contact form */}
+        <section aria-label={t("contact.formTitle")}>
+          <h2 className="text-[18px] md:text-[20px] font-bold tracking-[0.15em] uppercase mb-8">
+            {t("contact.formTitle")}
+          </h2>
+
+          {status === "success" ? (
+            <p className="text-[14px] leading-[1.8] text-foreground border-l-2 border-foreground/30 pl-4">
+              {t("contact.formSuccess")}
+            </p>
+          ) : (
+            <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-6">
+              {/* Name */}
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-[12px] tracking-[0.12em] uppercase text-foreground/50 mb-2"
+                >
+                  {t("contact.formName")}
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  autoComplete="name"
+                  placeholder={t("contact.namePlaceholder")}
+                  {...register("name")}
+                  className="w-full border-b border-border bg-transparent py-2 text-[14px] text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-foreground transition-colors"
+                  aria-invalid={errors.name ? "true" : undefined}
+                  aria-describedby={errors.name ? "name-error" : undefined}
+                />
+                {errors.name && (
+                  <p id="name-error" role="alert" className="text-[12px] text-destructive mt-1">
+                    {errors.name.message}
+                  </p>
+                )}
+              </div>
+
+              {/* Email */}
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-[12px] tracking-[0.12em] uppercase text-foreground/50 mb-2"
+                >
+                  {t("contact.formEmail")}
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  autoComplete="email"
+                  placeholder={t("contact.emailPlaceholder")}
+                  {...register("email")}
+                  className="w-full border-b border-border bg-transparent py-2 text-[14px] text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-foreground transition-colors"
+                  aria-invalid={errors.email ? "true" : undefined}
+                  aria-describedby={errors.email ? "email-error" : undefined}
+                />
+                {errors.email && (
+                  <p id="email-error" role="alert" className="text-[12px] text-destructive mt-1">
+                    {errors.email.message}
+                  </p>
+                )}
+              </div>
+
+              {/* Message */}
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-[12px] tracking-[0.12em] uppercase text-foreground/50 mb-2"
+                >
+                  {t("contact.formMessage")}
+                </label>
+                <textarea
+                  id="message"
+                  rows={5}
+                  placeholder={t("contact.messagePlaceholder")}
+                  {...register("message")}
+                  className="w-full border-b border-border bg-transparent py-2 text-[14px] text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-foreground transition-colors resize-none"
+                  aria-invalid={errors.message ? "true" : undefined}
+                  aria-describedby={errors.message ? "message-error" : undefined}
+                />
+                {errors.message && (
+                  <p id="message-error" role="alert" className="text-[12px] text-destructive mt-1">
+                    {errors.message.message}
+                  </p>
+                )}
+              </div>
+
+              {status === "error" && (
+                <p role="alert" className="text-[13px] text-destructive">
+                  {t("contact.formError")}
+                </p>
+              )}
+
+              <button
+                type="submit"
+                disabled={status === "sending"}
+                className="text-[13px] font-bold tracking-[0.12em] uppercase text-foreground hover:opacity-60 transition-opacity disabled:opacity-40"
+              >
+                {status === "sending" ? t("contact.formSending") : `→ ${t("contact.formSend")}`}
+              </button>
+            </form>
+          )}
+        </section>
       </div>
-
-      <p className="text-[14px] md:text-[15px] leading-[1.8] mt-10 text-foreground/60">
-        {t("contact.thankYou")}
-      </p>
-    </div>
+    </>
   );
 };
 
