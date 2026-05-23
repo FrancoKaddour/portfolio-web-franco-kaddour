@@ -369,13 +369,6 @@ const ProjectsPage = () => {
         <meta property="og:image:height" content="500" />
         <meta property="og:locale" content="es_AR" />
         <meta property="og:site_name" content="Franco Kaddour Portfolio" />
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={`${BASE_URL}/projects`} />
-        <meta name="twitter:title" content="Proyectos — Franco Kaddour | Desarrollador Web" />
-        <meta name="twitter:description" content={t("meta.projectsDescription")} />
-        <meta name="twitter:image" content={`${BASE_URL}/img/labasica.webp`} />
-        <meta name="twitter:creator" content="@FrancoKaddour" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

@@ -34,13 +34,6 @@ const AboutPage = () => {
         <meta property="og:image:height" content="932" />
         <meta property="og:locale" content="es_AR" />
         <meta property="og:site_name" content="Franco Kaddour Portfolio" />
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={`${BASE_URL}/about`} />
-        <meta name="twitter:title" content="About — Franco Kaddour | Desarrollador Web" />
-        <meta name="twitter:description" content={t("meta.aboutDescription")} />
-        <meta name="twitter:image" content={`${BASE_URL}/img/profile.jpg`} />
-        <meta name="twitter:creator" content="@FrancoKaddour" />
       </Helmet>
 
       <div className="page-enter max-w-[780px] mx-auto px-6 py-12 md:py-16">
