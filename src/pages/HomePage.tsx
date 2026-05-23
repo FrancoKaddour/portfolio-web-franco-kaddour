@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
-
-const BASE_URL = "https://francokaddour.vercel.app";
+import { BASE_URL, GITHUB_URL } from "@/lib/constants";
 
 const HomePage = () => {
   const { t } = useTranslation();
@@ -22,7 +21,7 @@ const HomePage = () => {
       <div className="page-enter max-w-[780px] mx-auto px-6 py-12 md:py-20">
         {/* Profile photo */}
         <div className="flex justify-center mb-8">
-          <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden">
+          <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden ring-1 ring-foreground/10">
             <img
               src="/img/profile.jpg"
               alt="Franco Kaddour — desarrollador web, Buenos Aires"
@@ -68,7 +67,7 @@ const HomePage = () => {
           </a>
           {" · "}
           <a
-            href="https://la-basica-pasteleria.vercel.app/"
+            href="https://labasicapasteleria.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="font-bold text-foreground no-underline hover:underline"
@@ -83,39 +82,53 @@ const HomePage = () => {
           <span className="text-foreground/60">{t("home.studyingValue")}</span>
         </p>
 
-        {/* Available badge */}
-        <p className="text-[13px] md:text-[14px] leading-[1.8] mb-8 text-foreground/50">
-          {t("home.availableLabel")}
-        </p>
+        {/* Available badge — animated green dot */}
+        <div className="inline-flex items-center gap-2 border border-foreground/15 px-3 py-1.5 mb-8">
+          <span
+            className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse shrink-0"
+            aria-hidden="true"
+          />
+          <span className="text-[11px] md:text-[12px] tracking-[0.14em] uppercase text-foreground/65 font-mono">
+            {t("home.availableLabel")}
+          </span>
+        </div>
 
         {/* Arrow links */}
         <nav aria-label="Links rápidos">
           <div className="flex flex-col gap-2">
             <Link
               to="/about"
-              className="text-[14px] md:text-[15px] font-bold text-foreground no-underline hover:underline"
+              className="text-[14px] md:text-[15px] font-bold text-foreground no-underline hover:underline min-h-[44px] flex items-center"
             >
               → {t("home.linkAbout")}
             </Link>
             <Link
               to="/projects"
-              className="text-[14px] md:text-[15px] font-bold text-foreground no-underline hover:underline"
+              className="text-[14px] md:text-[15px] font-bold text-foreground no-underline hover:underline min-h-[44px] flex items-center"
             >
               → {t("home.linkProjects")}
             </Link>
             <Link
               to="/contact"
-              className="text-[14px] md:text-[15px] font-bold text-foreground no-underline hover:underline"
+              className="text-[14px] md:text-[15px] font-bold text-foreground no-underline hover:underline min-h-[44px] flex items-center"
             >
               → {t("home.linkContact")}
             </Link>
             <a
-              href="https://github.com/FrancoKaddour"
+              href={GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[14px] md:text-[15px] font-bold text-foreground/50 no-underline hover:underline hover:text-foreground"
+              className="text-[14px] md:text-[15px] font-bold text-foreground/50 no-underline hover:underline hover:text-foreground min-h-[44px] flex items-center"
             >
               → GitHub
+            </a>
+            <a
+              href="/cv-franco-kaddour.pdf"
+              download
+              className="text-[14px] md:text-[15px] font-bold text-foreground/50 no-underline hover:underline hover:text-foreground min-h-[44px] flex items-center"
+              aria-label="Descargar curriculum vitae en PDF"
+            >
+              → {t("home.linkCV")}
             </a>
           </div>
         </nav>

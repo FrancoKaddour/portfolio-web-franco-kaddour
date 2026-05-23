@@ -4,12 +4,14 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
+import { BASE_URL, EMAIL, GITHUB_URL, LINKEDIN_URL } from "@/lib/constants";
 
-const BASE_URL = "https://francokaddour.vercel.app";
-
-// TODO: Create a free form at formspree.io and replace with your endpoint
-// Example: https://formspree.io/f/xkgwbqpz
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+// Setup: copiar .env.example como .env.local y completar VITE_FORMSPREE_ID
+// Crear un form gratis en https://formspree.io para obtener el ID
+const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID as string | undefined;
+const FORMSPREE_ENDPOINT = FORMSPREE_ID
+  ? `https://formspree.io/f/${FORMSPREE_ID}`
+  : null;
 
 const schema = z.object({
   name: z.string().min(2, "Mínimo 2 caracteres"),
@@ -31,6 +33,10 @@ const ContactPage = () => {
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
   const onSubmit = async (data: FormData) => {
+    if (!FORMSPREE_ENDPOINT) {
+      setStatus("error");
+      return;
+    }
     setStatus("sending");
     try {
       const res = await fetch(FORMSPREE_ENDPOINT, {
@@ -71,7 +77,7 @@ const ContactPage = () => {
           <p>
             {t("contact.emailLabel")}:{" "}
             <a
-              href="mailto:francokaddour@gmail.com"
+              href={`mailto:${EMAIL}`}
               className="font-bold text-foreground no-underline hover:underline"
             >
               francokaddour@gmail.com
@@ -80,7 +86,7 @@ const ContactPage = () => {
           <p>
             {t("contact.githubLabel")}:{" "}
             <a
-              href="https://github.com/FrancoKaddour"
+              href={GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="font-bold text-foreground no-underline hover:underline"
@@ -91,7 +97,7 @@ const ContactPage = () => {
           <p>
             {t("contact.linkedinLabel")}:{" "}
             <a
-              href="https://www.linkedin.com/in/francokaddour/"
+              href={LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="font-bold text-foreground no-underline hover:underline"

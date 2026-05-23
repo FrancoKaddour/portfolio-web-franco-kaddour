@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
-
-const BASE_URL = "https://francokaddour.vercel.app";
+import { BASE_URL, EMAIL, GITHUB_URL, LINKEDIN_URL } from "@/lib/constants";
 
 // TODO: Reemplazar con testimonios reales de tus clientes
 const testimonials = [
@@ -159,14 +158,14 @@ const AboutPage = () => {
           </h2>
           <p className="text-[14px] md:text-[15px] leading-[1.8]">
             Email:{" "}
-            <a href="mailto:francokaddour@gmail.com" className="font-bold hover:underline">
-              francokaddour@gmail.com
+            <a href={`mailto:${EMAIL}`} className="font-bold hover:underline">
+              {EMAIL}
             </a>
           </p>
           <p className="text-[14px] md:text-[15px] leading-[1.8] mt-2">
             GitHub:{" "}
             <a
-              href="https://github.com/FrancoKaddour"
+              href={GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="font-bold hover:underline"
@@ -177,7 +176,7 @@ const AboutPage = () => {
           <p className="text-[14px] md:text-[15px] leading-[1.8] mt-2">
             LinkedIn:{" "}
             <a
-              href="https://www.linkedin.com/in/francokaddour/"
+              href={LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="font-bold hover:underline"
