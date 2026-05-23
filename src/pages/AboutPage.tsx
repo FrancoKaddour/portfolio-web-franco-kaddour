@@ -17,13 +17,30 @@ const AboutPage = () => {
   return (
     <>
       <Helmet>
-        <title>{t("about.pageTitle")} — Franco Kaddour</title>
-        <meta name="description" content="Desarrollador web de Buenos Aires. React, TypeScript, Node.js. Proyectos reales en e-commerce y aplicaciones web. Estudiante UTN." />
+        <title>About — Franco Kaddour | Desarrollador Web React TypeScript</title>
+        <meta name="description" content={t("meta.aboutDescription")} />
         <link rel="canonical" href={`${BASE_URL}/about`} />
         <link rel="alternate" hrefLang="es" href={`${BASE_URL}/about`} />
         <link rel="alternate" hrefLang="en" href={`${BASE_URL}/about`} />
         <link rel="alternate" hrefLang="pt" href={`${BASE_URL}/about`} />
         <link rel="alternate" hrefLang="x-default" href={`${BASE_URL}/about`} />
+        {/* Open Graph */}
+        <meta property="og:type" content="profile" />
+        <meta property="og:url" content={`${BASE_URL}/about`} />
+        <meta property="og:title" content="About — Franco Kaddour | Desarrollador Web" />
+        <meta property="og:description" content={t("meta.aboutDescription")} />
+        <meta property="og:image" content={`${BASE_URL}/img/profile.jpg`} />
+        <meta property="og:image:width" content="1024" />
+        <meta property="og:image:height" content="932" />
+        <meta property="og:locale" content="es_AR" />
+        <meta property="og:site_name" content="Franco Kaddour Portfolio" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={`${BASE_URL}/about`} />
+        <meta name="twitter:title" content="About — Franco Kaddour | Desarrollador Web" />
+        <meta name="twitter:description" content={t("meta.aboutDescription")} />
+        <meta name="twitter:image" content={`${BASE_URL}/img/profile.jpg`} />
+        <meta name="twitter:creator" content="@FrancoKaddour" />
       </Helmet>
 
       <div className="page-enter max-w-[780px] mx-auto px-6 py-12 md:py-16">

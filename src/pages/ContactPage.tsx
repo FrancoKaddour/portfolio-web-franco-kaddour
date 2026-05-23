@@ -58,13 +58,30 @@ const ContactPage = () => {
   return (
     <>
       <Helmet>
-        <title>{t("contact.pageTitle")} — Franco Kaddour</title>
-        <meta name="description" content="Contacto con Franco Kaddour, desarrollador web de Buenos Aires. Disponible para nuevos proyectos." />
+        <title>Contacto — Franco Kaddour | Desarrollador Web Buenos Aires</title>
+        <meta name="description" content={t("meta.contactDescription")} />
         <link rel="canonical" href={`${BASE_URL}/contact`} />
         <link rel="alternate" hrefLang="es" href={`${BASE_URL}/contact`} />
         <link rel="alternate" hrefLang="en" href={`${BASE_URL}/contact`} />
         <link rel="alternate" hrefLang="pt" href={`${BASE_URL}/contact`} />
         <link rel="alternate" hrefLang="x-default" href={`${BASE_URL}/contact`} />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${BASE_URL}/contact`} />
+        <meta property="og:title" content="Contacto — Franco Kaddour | Desarrollador Web" />
+        <meta property="og:description" content={t("meta.contactDescription")} />
+        <meta property="og:image" content={`${BASE_URL}/img/profile.jpg`} />
+        <meta property="og:image:width" content="1024" />
+        <meta property="og:image:height" content="932" />
+        <meta property="og:locale" content="es_AR" />
+        <meta property="og:site_name" content="Franco Kaddour Portfolio" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content={`${BASE_URL}/contact`} />
+        <meta name="twitter:title" content="Contacto — Franco Kaddour | Desarrollador Web" />
+        <meta name="twitter:description" content={t("meta.contactDescription")} />
+        <meta name="twitter:image" content={`${BASE_URL}/img/profile.jpg`} />
+        <meta name="twitter:creator" content="@FrancoKaddour" />
       </Helmet>
 
       <div className="page-enter max-w-[780px] mx-auto px-6 py-12 md:py-16">
@@ -121,7 +138,7 @@ const ContactPage = () => {
               {t("contact.formSuccess")}
             </p>
           ) : (
-            <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-6">
+            <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-6" aria-label={t("contact.formTitle")}>
               {/* Name */}
               <div>
                 <label

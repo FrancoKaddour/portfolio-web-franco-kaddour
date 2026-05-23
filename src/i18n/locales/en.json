@@ -67,6 +67,12 @@
     "emailPlaceholder": "your@email.com",
     "messagePlaceholder": "Tell me about your project..."
   },
+  "meta": {
+    "homeDescription": "Portfolio of Franco Kaddour, web developer from Buenos Aires. React, TypeScript and Node.js. Real-world projects in e-commerce and web applications.",
+    "aboutDescription": "Web developer from Buenos Aires with two years of experience in React, TypeScript and Node.js. Real client projects. TUPaD UTN student.",
+    "projectsDescription": "Web projects by Franco Kaddour: e-commerce, landing pages and React applications. All in production.",
+    "contactDescription": "Contact Franco Kaddour, web developer from Buenos Aires. Available for new projects. Reply within 24 hours."
+  },
   "nav": {
     "about": "About",
     "projects": "Projects",

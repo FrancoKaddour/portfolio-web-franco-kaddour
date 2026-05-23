@@ -352,13 +352,30 @@ const ProjectsPage = () => {
   return (
     <>
       <Helmet>
-        <title>{t("projects.title")} — Franco Kaddour</title>
-        <meta name="description" content={t("projects.subtitle")} />
+        <title>Proyectos — Franco Kaddour | React TypeScript E-commerce</title>
+        <meta name="description" content={t("meta.projectsDescription")} />
         <link rel="canonical" href={`${BASE_URL}/projects`} />
         <link rel="alternate" hrefLang="es" href={`${BASE_URL}/projects`} />
         <link rel="alternate" hrefLang="en" href={`${BASE_URL}/projects`} />
         <link rel="alternate" hrefLang="pt" href={`${BASE_URL}/projects`} />
         <link rel="alternate" hrefLang="x-default" href={`${BASE_URL}/projects`} />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${BASE_URL}/projects`} />
+        <meta property="og:title" content="Proyectos — Franco Kaddour | Desarrollador Web" />
+        <meta property="og:description" content={t("meta.projectsDescription")} />
+        <meta property="og:image" content={`${BASE_URL}/img/labasica.webp`} />
+        <meta property="og:image:width" content="800" />
+        <meta property="og:image:height" content="500" />
+        <meta property="og:locale" content="es_AR" />
+        <meta property="og:site_name" content="Franco Kaddour Portfolio" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={`${BASE_URL}/projects`} />
+        <meta name="twitter:title" content="Proyectos — Franco Kaddour | Desarrollador Web" />
+        <meta name="twitter:description" content={t("meta.projectsDescription")} />
+        <meta name="twitter:image" content={`${BASE_URL}/img/labasica.webp`} />
+        <meta name="twitter:creator" content="@FrancoKaddour" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
