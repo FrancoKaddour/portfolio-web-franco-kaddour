@@ -17,14 +17,9 @@ describe("AboutPage", () => {
     expect(headings.length).toBeGreaterThanOrEqual(6);
   });
 
-  it("renders the testimonial quote", () => {
-    const blockquote = screen.getByRole("blockquote");
-    expect(blockquote).toBeInTheDocument();
-    expect(blockquote).toHaveTextContent(/Franco/i);
-  });
-
-  it("renders testimonial author attribution", () => {
-    expect(screen.getByText(/Nico Alvez/i)).toBeInTheDocument();
+  it("renders CoderHouse courses in education section", () => {
+    const items = screen.getAllByText(/CoderHouse/i);
+    expect(items.length).toBeGreaterThanOrEqual(2);
   });
 
   it("renders profile photo", () => {

@@ -2,15 +2,6 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { BASE_URL, EMAIL, GITHUB_URL, LINKEDIN_URL } from "@/lib/constants";
 
-// TODO: Reemplazar con testimonios reales de tus clientes
-const testimonials = [
-  {
-    quote: "Franco entregó el e-commerce de Espacio Vina en tiempo y forma. Se encargó del frontend y del diseño completo — paleta, tipografía, identidad visual. El resultado superó nuestras expectativas.",
-    author: "Nico Alvez",
-    role: "Co-fundador, Espacio Vina",
-  },
-];
-
 const AboutPage = () => {
   const { t } = useTranslation();
 
@@ -93,11 +84,10 @@ const AboutPage = () => {
           </h2>
           <ul className="list-disc pl-6 space-y-2 text-[14px] md:text-[15px] leading-[1.7]">
             <li>{t("about.educationUTN")}</li>
+            <li>{t("about.educationCoderHouseWeb")}</li>
+            <li>{t("about.educationCoderHouseJS")}</li>
             <li>{t("about.educationSelfTaught")}</li>
           </ul>
-          <p className="text-[13px] md:text-[14px] leading-[1.7] mt-3 text-foreground/50">
-            {t("about.educationNote")}
-          </p>
         </section>
 
         <hr className="border-border mb-10" />
@@ -113,30 +103,6 @@ const AboutPage = () => {
           <p className="text-[14px] md:text-[15px] leading-[1.8]">
             {t("about.shortBio2")}
           </p>
-        </section>
-
-        <hr className="border-border mb-10" />
-
-        {/* Testimonials */}
-        <section className="mb-12" id="testimonials">
-          <h2 className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-6">
-            {t("about.testimonialsTitle")}
-          </h2>
-          <div className="space-y-6">
-            {testimonials.map((item, i) => (
-              <figure key={i} className="border-l-2 border-foreground/20 pl-5">
-                <blockquote>
-                  <p className="text-[14px] md:text-[15px] leading-[1.8] text-foreground/80 italic mb-3">
-                    "{item.quote}"
-                  </p>
-                </blockquote>
-                <figcaption className="text-[13px] text-foreground/50">
-                  — <strong className="text-foreground/70">{item.author}</strong>
-                  {item.role && `, ${item.role}`}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
         </section>
 
         <hr className="border-border mb-10" />
