@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
-import { BASE_URL, GITHUB_URL } from "@/lib/constants";
+import { BASE_URL, GITHUB_URL, LINKEDIN_URL } from "@/lib/constants";
 
 const HomePage = () => {
   const { t } = useTranslation();
@@ -36,9 +36,14 @@ const HomePage = () => {
         </div>
 
         {/* Name */}
-        <h1 className="text-center text-[24px] md:text-[34px] font-bold tracking-[0.2em] uppercase mb-6 text-foreground">
+        <h1 className="text-center text-[24px] md:text-[34px] font-bold tracking-[0.2em] uppercase mb-2 text-foreground">
           {t("home.firstName")} {t("home.lastName")}
         </h1>
+
+        {/* Tagline */}
+        <p className="text-center text-[11px] md:text-[12px] tracking-[0.18em] uppercase text-foreground/40 font-mono mb-6">
+          {t("home.tagline")}
+        </p>
 
         {/* Bio */}
         <p className="text-[14px] md:text-[16px] leading-[1.8] mb-6 text-foreground">
@@ -121,6 +126,14 @@ const HomePage = () => {
               className="text-[14px] md:text-[15px] font-bold text-foreground/50 no-underline hover:underline hover:text-foreground min-h-[44px] flex items-center"
             >
               → GitHub
+            </a>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[14px] md:text-[15px] font-bold text-foreground/50 no-underline hover:underline hover:text-foreground min-h-[44px] flex items-center"
+            >
+              → LinkedIn
             </a>
             <a
               href="/cv-franco-kaddour.pdf"

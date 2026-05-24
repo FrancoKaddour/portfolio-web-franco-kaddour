@@ -2,20 +2,21 @@
   "home": {
     "firstName": "Franco",
     "lastName": "Kaddour",
-    "bio": "Self-taught web developer with two years of hands-on practice. Learned React, TypeScript, and Node.js building e-commerces and platforms for real clients — in production, not tutorials. I also handle design: color palettes, typography, visual identity. Currently studying the University Technical Degree in Programming at UTN.",
+    "tagline": "Web Development · Business-Oriented Solutions",
+    "bio": "I build web applications that solve real business problems. Two years developing e-commerces and platforms for real clients — in production, with full ownership of the outcome. Not just code: design, visual identity, and user experience. My approach combines software engineering with a practical business mindset.",
     "currentlyLabel": "Working on:",
     "studyingLabel": "Studying:",
     "studyingValue": "University Technical Degree in Programming — UTN (Universidad Tecnológica Nacional)",
     "availableLabel": "Available for new projects.",
     "linkAbout": "More about Franco Kaddour",
     "linkProjects": "See projects",
-    "linkContact": "Contact",
+    "linkContact": "Let's talk about your project",
     "linkCV": "Download CV"
   },
   "about": {
     "pageTitle": "About",
     "webDevTitle": "Web Development",
-    "webDevDesc1": "I build web applications with React, TypeScript, and Node.js. Self-taught from the start, I've spent two years working on real client projects — straight into production. Beyond the code, I handle design: color palettes, typography, and visual identity. Currently studying the University Technical Degree in Programming (TUPaD) at UTN to build the theoretical foundation that freelance work doesn't always provide.",
+    "webDevDesc1": "I build web applications that solve real business problems. Two years developing e-commerces and platforms for real clients — straight into production, with full ownership of the outcome. My approach combines software engineering with a practical business mindset: I understand both the technical architecture and the impact the software has on the client's operations. Beyond the code, I handle the full design: visual identity, user experience, and brand communication.",
     "webDevCurrently": "Currently working on:",
     "projectEspacioVina": "Home & deco e-commerce with product catalog, order management, and admin panel. Pair project with Nico Alvez — I handled the frontend and all design decisions: color palette and typography. First time working with another developer and touching a real backend: PHP from scratch.",
     "projectMigaClub": "Landing page and dashboard for a miga sandwich club. Full brand ownership: logo, color palette, typography, illustrated storefront, and all site graphics. Built with vanilla HTML, CSS, and JavaScript — a deliberate choice to keep it dependency-free.",
@@ -43,9 +44,9 @@
   "projects": {
     "title": "Projects",
     "subtitle": "Projects I've worked on. Each one represented a different problem and a distinct technical decision. All in production.",
-    "espacioVinaDesc": "Home & deco e-commerce with product catalog, order management, and admin panel. Pair project with Nico Alvez — I handled the frontend and design decisions: color palette and typography. First time working with a real backend: PHP from scratch.",
-    "migaClubDesc": "Landing page and dashboard for a miga sandwich club. Full brand ownership: logo, color palette, typography, illustrated storefront, and all site graphics. Built with vanilla HTML, CSS, and JavaScript — no frameworks, no dependencies.",
-    "laBasicaDesc": "Online pastry shop with shopping cart and admin dashboard. End-to-end design and development: color palette, typography, animations, and complete shopping experience. React and TypeScript with strict typing from the start.",
+    "espacioVinaDesc": "The client had no digital system — every order was manual. I built the full frontend of their e-commerce: product catalog, order management, and admin panel. I also handled the entire visual identity. First time working with a real backend (PHP + MySQL) in collaboration with another developer.",
+    "migaClubDesc": "The client needed to stand out in a crowded market without an agency budget. Solution: full visual identity from scratch — logo, palette, typography, illustrations, and website. Result: coherent brand across web and social. Built with vanilla HTML/CSS/JS — no frameworks, maximum load speed.",
+    "laBasicaDesc": "The pastry shop managed orders via WhatsApp: operational chaos and frustrated customers. I built a complete online store with catalog, cart, and admin panel to centralize operations. React + TypeScript with strict typing to handle catalog variations without silent errors. End-to-end design and development.",
     "portfolioDesc": "This portfolio. React, TypeScript, and Vite. Minimalist design with three-language support.",
     "monitoreoDesc": "Environmental monitoring system in Python — integrative project for the TUPaD UTN program. Sensor data collection, processing, and real-time chart visualization."
   },

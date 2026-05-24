@@ -2,20 +2,21 @@
   "home": {
     "firstName": "Franco",
     "lastName": "Kaddour",
-    "bio": "Desenvolvedor web autodidata com dois anos de prática em projetos reais. Aprendi React, TypeScript e Node.js construindo e-commerces e plataformas para clientes — direto em produção. Também cuido do design: paletas de cores, tipografia, identidade visual. Atualmente curso a Tecnicatura Universitária em Programação na UTN.",
+    "tagline": "Desenvolvimento Web · Soluções com visão de negócios",
+    "bio": "Construo aplicações web que resolvem problemas reais de negócio. Dois anos desenvolvendo e-commerces e plataformas para clientes reais — direto em produção, com responsabilidade total sobre o resultado. Não só código: design, identidade visual e experiência do usuário. Minha abordagem combina engenharia de software com uma visão prática dos negócios.",
     "currentlyLabel": "Trabalhando em:",
     "studyingLabel": "Estudando:",
     "studyingValue": "Tecnicatura Universitária em Programação — UTN (Universidad Tecnológica Nacional)",
     "availableLabel": "Disponível para novos projetos.",
     "linkAbout": "Mais sobre Franco Kaddour",
     "linkProjects": "Ver projetos",
-    "linkContact": "Contato",
+    "linkContact": "Vamos falar sobre seu projeto",
     "linkCV": "Baixar CV"
   },
   "about": {
     "pageTitle": "About",
     "webDevTitle": "Desenvolvimento Web",
-    "webDevDesc1": "Construo aplicações web com React, TypeScript e Node.js. Comecei de forma autodidata e tenho dois anos trabalhando em projetos reais para clientes — direto em produção. Além do código, cuido do design: paletas de cores, tipografia e identidade visual. Atualmente curso a Tecnicatura Universitária em Programação (TUPaD) na UTN para aprofundar a base teórica que o trabalho independente nem sempre oferece.",
+    "webDevDesc1": "Construo aplicações web que resolvem problemas reais de negócio. Dois anos desenvolvendo e-commerces e plataformas para clientes — direto em produção, com responsabilidade total sobre o resultado. Minha abordagem combina engenharia de software com uma visão prática dos negócios: entendo tanto a arquitetura técnica quanto o impacto que o software tem na operação do cliente. Além do código, cuido do design completo: identidade visual, experiência do usuário e comunicação de marca.",
     "webDevCurrently": "Atualmente trabalhando em:",
     "projectEspacioVina": "E-commerce de home & deco com catálogo de produtos, gestão de pedidos e painel administrativo. Projeto em dupla com Nico Alvez — eu fiquei responsável pelo frontend e pelas decisões de design: paleta de cores e tipografia. Primeira vez trabalhando com outra pessoa e tocando um backend real: PHP do zero.",
     "projectMigaClub": "Landing page e dashboard para um clube de sanduíches de miga. Responsabilidade total de marca: logo, paleta de cores, tipografia, ilustração da fachada do local e todos os gráficos do site. Construído em HTML, CSS e JavaScript vanilla — sem frameworks, sem dependências.",
@@ -43,9 +44,9 @@
   "projects": {
     "title": "Projetos",
     "subtitle": "Projetos em que trabalhei. Cada um representou um problema diferente e uma decisão técnica distinta. Todos em produção.",
-    "espacioVinaDesc": "E-commerce de home & deco com catálogo de produtos, gestão de pedidos e painel administrativo. Projeto em dupla com Nico Alvez — fui responsável pelo frontend e pelas decisões de design: paleta de cores e tipografia. Primeira vez com backend real: PHP do zero.",
-    "migaClubDesc": "Landing page e dashboard para um clube de sanduíches de miga. Responsabilidade total de marca: logo, paleta de cores, tipografia, ilustração da fachada do local e gráficos do site. Construído em HTML, CSS e JavaScript vanilla — sem frameworks, sem dependências.",
-    "laBasicaDesc": "Loja online de confeitaria com carrinho de compras e painel administrativo. Design e desenvolvimento de ponta a ponta: paleta de cores, tipografia, animações e experiência de compra completa. React e TypeScript com tipagem estrita desde o início.",
+    "espacioVinaDesc": "O cliente não tinha sistema digital — cada pedido era manual. Desenvolvi o frontend completo do e-commerce: catálogo de produtos, gestão de pedidos e painel administrativo. Também cuidei de toda a identidade visual. Primeira vez trabalhando com backend real (PHP + MySQL) em colaboração com outro desenvolvedor.",
+    "migaClubDesc": "O cliente precisava se destacar em um mercado saturado sem orçamento para agência. Solução: identidade visual completa do zero — logo, paleta, tipografia, ilustrações e site. Resultado: marca coerente na web e nas redes. Construído em HTML/CSS/JS vanilla — sem frameworks, máxima velocidade de carregamento.",
+    "laBasicaDesc": "A confeitaria gerenciava pedidos pelo WhatsApp: caos operacional e clientes insatisfeitos. Desenvolvi uma loja online completa com catálogo, carrinho e painel de administração para centralizar a operação. React + TypeScript com tipagem estrita para lidar com variações do catálogo sem erros silenciosos. Design e desenvolvimento de ponta a ponta.",
     "portfolioDesc": "Este portfólio. React, TypeScript e Vite. Design minimalista com suporte para três idiomas.",
     "monitoreoDesc": "Sistema de monitoramento ambiental em Python — projeto integrador da TUPaD UTN. Coleta de dados de sensores, processamento e visualização com gráficos em tempo real."
   },
