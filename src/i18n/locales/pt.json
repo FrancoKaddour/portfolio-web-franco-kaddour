@@ -3,7 +3,7 @@
     "firstName": "Franco",
     "lastName": "Kaddour",
     "tagline": "Desenvolvimento Web · Soluções com visão de negócios",
-    "bio": "Construo aplicações web que resolvem problemas reais de negócio. Dois anos desenvolvendo e-commerces e plataformas para clientes reais — direto em produção, com responsabilidade total sobre o resultado. Não só código: design, identidade visual e experiência do usuário. Minha abordagem combina engenharia de software com uma visão prática dos negócios.",
+    "bio": "Construo aplicações web que resolvem problemas concretos de negócio. Dois anos desenvolvendo e-commerces e plataformas com responsabilidade total sobre o resultado. Não só código: design, identidade visual e experiência do usuário.",
     "currentlyLabel": "Trabalhando em:",
     "studyingLabel": "Estudando:",
     "studyingValue": "Tecnicatura Universitária em Programação — UTN (Universidad Tecnológica Nacional)",
@@ -48,7 +48,7 @@
     "subtitle": "Projetos em que trabalhei. Cada um representou um problema diferente e uma decisão técnica distinta. Todos em produção.",
     "espacioVinaDesc": "O cliente não tinha sistema digital — cada pedido era manual. Desenvolvi o frontend completo do e-commerce: catálogo de produtos, gestão de pedidos e painel administrativo. Também cuidei de toda a identidade visual. Primeira vez trabalhando com backend real (PHP + MySQL) em colaboração com outro desenvolvedor.",
     "migaClubDesc": "O cliente precisava se destacar em um mercado saturado sem orçamento para agência. Solução: identidade visual completa do zero — logo, paleta, tipografia, ilustrações e site. Resultado: marca coerente na web e nas redes. Construído em HTML/CSS/JS vanilla — sem frameworks, máxima velocidade de carregamento.",
-    "laBasicaDesc": "A confeitaria gerenciava pedidos pelo WhatsApp: caos operacional e clientes insatisfeitos. Desenvolvi uma loja online completa com catálogo, carrinho e painel de administração para centralizar a operação. React + TypeScript com tipagem estrita para lidar com variações do catálogo sem erros silenciosos. Design e desenvolvimento de ponta a ponta.",
+    "laBasicaDesc": "A confeitaria não tinha presença web à altura do seu produto. Desenhei e desenvolvi uma loja online completa — identidade visual, catálogo de produtos, carrinho e painel administrativo. React + TypeScript com tipagem estrita para gerenciar as variações do catálogo com solidez. Design e desenvolvimento de ponta a ponta.",
     "portfolioDesc": "Este portfólio. React, TypeScript e Vite. Design minimalista com suporte para três idiomas.",
     "monitoreoDesc": "Sistema de monitoramento ambiental em Python — projeto integrador da TUPaD UTN. Coleta de dados de sensores, processamento e visualização com gráficos em tempo real."
   },
