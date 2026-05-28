@@ -1,6 +1,18 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
-import { BASE_URL, EMAIL, GITHUB_URL, LINKEDIN_URL } from "@/lib/constants";
+import { BASE_URL, EMAIL, GITHUB_URL, GITHUB_USER, LINKEDIN_URL } from "@/lib/constants";
+
+interface UTNSubject {
+  name: string;
+  repo: string;
+}
+
+const utnSubjects: UTNSubject[] = [
+  { name: "Matemática I",                repo: "UTN-TUPAD-Matematica1" },
+  { name: "Organización Empresarial",    repo: "UTN-TUPAD-OrganizacionEmpresarial" },
+  { name: "Arquitectura y Sist. Op.",    repo: "UTN-TUPAD-AySO" },
+  { name: "Programación I",             repo: "UTN-TUPAD-Programacion1" },
+];
 
 const AboutPage = () => {
   const { t } = useTranslation();
@@ -87,6 +99,34 @@ const AboutPage = () => {
             <li>{t("about.educationCoderHouseWeb")}</li>
             <li>{t("about.educationCoderHouseJS")}</li>
             <li>{t("about.educationSelfTaught")}</li>
+          </ul>
+        </section>
+
+        <hr className="border-border mb-10" />
+
+        {/* UTN — Materias */}
+        <section className="mb-12" id="utn-materias">
+          <h2 className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-1">
+            {t("about.utnTitle")}
+          </h2>
+          <p className="text-[13px] text-foreground/40 font-mono mb-6">
+            {t("about.utnSubtitle")}
+          </p>
+          <ul className="space-y-2">
+            {utnSubjects.map((s) => (
+              <li key={s.repo} className="flex items-baseline justify-between gap-4 text-[14px] leading-[1.7]">
+                <span className="text-foreground">{s.name}</span>
+                <a
+                  href={`https://github.com/${GITHUB_USER}/${s.repo}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[12px] font-mono text-foreground/40 hover:text-foreground transition-colors no-underline shrink-0"
+                  aria-label={`Repositorio GitHub de ${s.name}`}
+                >
+                  {s.repo} ↗
+                </a>
+              </li>
+            ))}
           </ul>
         </section>
 
