@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1200" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1200px;
+    height: 630px;
+    background: #0d1117;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Subtle grid background */
+  .grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Glow effects */
+  .glow-left {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(56,189,248,0.07) 0%, transparent 70%);
+    top: -100px;
+    left: -100px;
+  }
+  .glow-right {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 70%);
+    bottom: -80px;
+    right: 50px;
+  }
+
+  /* Layout */
+  .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 72px;
+    gap: 60px;
+  }
+
+  /* Left side */
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    color: #38bdf8;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .eyebrow::before { content: '> '; opacity: 0.6; }
+
+  .name {
+    font-size: 72px;
+    font-weight: 900;
+    color: #f0f6fc;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 14px;
+  }
+
+  .role {
+    font-size: 26px;
+    font-weight: 600;
+    color: #8b949e;
+    letter-spacing: -0.01em;
+    margin-bottom: 36px;
+  }
+
+  /* Stack pills */
+  .stack {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.02em;
+    border: 1px solid;
+  }
+
+  .pill-js {
+    background: rgba(234,179,8,0.1);
+    border-color: rgba(234,179,8,0.3);
+    color: #eab308;
+  }
+  .pill-react {
+    background: rgba(56,189,248,0.1);
+    border-color: rgba(56,189,248,0.3);
+    color: #38bdf8;
+  }
+  .pill-ai {
+    background: rgba(139,92,246,0.1);
+    border-color: rgba(139,92,246,0.3);
+    color: #a78bfa;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0.8;
+  }
+
+  /* Divider line */
+  .divider {
+    width: 1px;
+    height: 380px;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.08) 20%, rgba(255,255,255,0.08) 80%, transparent);
+    flex-shrink: 0;
+  }
+
+  /* Right side — code window */
+  .right {
+    width: 400px;
+    flex-shrink: 0;
+  }
+
+  .code-window {
+    background: #161b22;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+
+  .window-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 16px;
+    background: #1c2128;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .dot-red   { width: 10px; height: 10px; border-radius: 50%; background: #ff5f57; }
+  .dot-yellow{ width: 10px; height: 10px; border-radius: 50%; background: #febc2e; }
+  .dot-green { width: 10px; height: 10px; border-radius: 50%; background: #28c840; }
+
+  .file-name {
+    margin-left: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #8b949e;
+  }
+
+  .code-body {
+    padding: 20px 20px 20px 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    line-height: 1.75;
+  }
+
+  .ln { color: rgba(255,255,255,0.15); user-select: none; margin-right: 16px; font-size: 11px; }
+  .kw { color: #ff7b72; } /* keyword */
+  .fn { color: #d2a8ff; } /* function */
+  .str{ color: #a5d6ff; } /* string */
+  .cm { color: #8b949e; font-style: italic; } /* comment */
+  .op { color: #79c0ff; } /* operator / type */
+  .pl { color: #ffa657; } /* plain / variable */
+  .pn { color: #e6edf3; } /* punctuation */
+
+  /* URL footer */
+  .url-footer {
+    position: absolute;
+    bottom: 36px;
+    left: 72px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: rgba(255,255,255,0.2);
+    letter-spacing: 0.04em;
+  }
+
+  /* Top-right logo mark */
+  .logo-mark {
+    position: absolute;
+    top: 36px;
+    right: 60px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: rgba(255,255,255,0.15);
+    letter-spacing: 0.08em;
+  }
+</style>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="glow-left"></div>
+<div class="glow-right"></div>
+
+<span class="logo-mark">FK</span>
+
+<div class="container">
+  <!-- Left -->
+  <div class="left">
+    <div class="eyebrow">portfolio</div>
+    <div class="name">Franco<br>Kaddour</div>
+    <div class="role">Software Developer</div>
+    <div class="stack">
+      <span class="pill pill-js"><span class="dot"></span>JavaScript</span>
+      <span class="pill pill-react"><span class="dot"></span>React</span>
+      <span class="pill pill-ai"><span class="dot"></span>AI-Assisted Dev</span>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="divider"></div>
+
+  <!-- Right — code terminal -->
+  <div class="right">
+    <div class="code-window">
+      <div class="window-bar">
+        <div class="dot-red"></div>
+        <div class="dot-yellow"></div>
+        <div class="dot-green"></div>
+        <span class="file-name">portfolio.tsx</span>
+      </div>
+      <div class="code-body">
+        <div><span class="ln">1</span><span class="kw">const</span> <span class="pl">dev</span> <span class="op">=</span> <span class="pn">{</span></div>
+        <div><span class="ln">2</span>&nbsp;&nbsp;<span class="pl">name</span><span class="pn">:</span> <span class="str">"Franco"</span><span class="pn">,</span></div>
+        <div><span class="ln">3</span>&nbsp;&nbsp;<span class="pl">stack</span><span class="pn">:</span> <span class="pn">[</span></div>
+        <div><span class="ln">4</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"React"</span><span class="pn">,</span></div>
+        <div><span class="ln">5</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"TypeScript"</span><span class="pn">,</span></div>
+        <div><span class="ln">6</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"Node.js"</span><span class="pn">,</span></div>
+        <div><span class="ln">7</span>&nbsp;&nbsp;<span class="pn">],</span></div>
+        <div><span class="ln">8</span>&nbsp;&nbsp;<span class="fn">build</span><span class="pn">:</span> <span class="pn">(</span><span class="pl">idea</span><span class="pn">)</span> <span class="op">=&gt;</span></div>
+        <div><span class="ln">9</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">ship</span><span class="pn">(</span><span class="pl">idea</span><span class="pn">),</span></div>
+        <div><span class="ln">10</span><span class="pn">}</span></div>
+        <div><span class="ln">11</span></div>
+        <div><span class="ln">12</span><span class="cm">// ready to work</span></div>
+        <div><span class="ln">13</span><span class="fn">export</span> <span class="kw">default</span> <span class="pl">dev</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="url-footer">portfolio-web-franco-kaddour.vercel.app</div>
+
+</body>
+</html>

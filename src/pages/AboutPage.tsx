@@ -32,9 +32,9 @@ const AboutPage = () => {
         <meta property="og:url" content={`${BASE_URL}/about`} />
         <meta property="og:title" content="About — Franco Kaddour | Desarrollador Web" />
         <meta property="og:description" content={t("meta.aboutDescription")} />
-        <meta property="og:image" content={`${BASE_URL}/img/profile.jpg`} />
-        <meta property="og:image:width" content="1024" />
-        <meta property="og:image:height" content="932" />
+        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="es_AR" />
         <meta property="og:site_name" content="Franco Kaddour Portfolio" />
       </Helmet>
