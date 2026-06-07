@@ -70,7 +70,7 @@ const ContactPage = () => {
         <meta property="og:url" content={`${BASE_URL}/contact`} />
         <meta property="og:title" content="Contacto — Franco Kaddour | Desarrollador Web" />
         <meta property="og:description" content={t("meta.contactDescription")} />
-        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta property="og:image" content={`${BASE_URL}/og.webp`} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="es_AR" />

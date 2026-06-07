@@ -21,7 +21,7 @@ const HomePage = () => {
         <meta property="og:url" content={BASE_URL} />
         <meta property="og:title" content="Franco Kaddour | Desarrollador Web — React, TypeScript, Node.js" />
         <meta property="og:description" content="Portfolio de Franco Kaddour, desarrollador web de Buenos Aires especializado en React, TypeScript y Node.js. Proyectos reales en e-commerce y aplicaciones web." />
-        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+        <meta property="og:image" content={`${BASE_URL}/og.webp`} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="es_AR" />
