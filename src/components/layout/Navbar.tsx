@@ -46,13 +46,13 @@ export function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
               aria-current={location.pathname === link.path ? "page" : undefined}
-              className={`text-[12px] tracking-[0.12em] uppercase no-underline transition-opacity ${
+              className={`text-[12px] tracking-[0.12em] uppercase no-underline transition-opacity min-h-[44px] flex items-center ${
                 location.pathname === link.path
                   ? "text-foreground font-bold"
                   : "text-foreground/50 hover:text-foreground hover:opacity-100"
@@ -77,7 +77,7 @@ export function Navbar() {
           aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={mobileOpen}
           aria-controls="mobile-menu"
-          className="md:hidden text-foreground p-3 -mr-3 min-w-[44px] min-h-[44px] flex items-center justify-center"
+          className="lg:hidden text-foreground p-3 -mr-3 min-w-[44px] min-h-[44px] flex items-center justify-center"
         >
           {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
@@ -87,7 +87,7 @@ export function Navbar() {
       {mobileOpen && (
         <div
           id="mobile-menu"
-          className="md:hidden border-t border-border bg-background px-6 py-4 flex flex-col gap-3"
+          className="lg:hidden border-t border-border bg-background px-6 py-4 flex flex-col gap-3"
         >
           {navLinks.map((link) => (
             <Link
@@ -95,7 +95,7 @@ export function Navbar() {
               to={link.path}
               onClick={closeMobile}
               aria-current={location.pathname === link.path ? "page" : undefined}
-              className={`text-[13px] tracking-[0.12em] uppercase no-underline py-2 transition-opacity ${
+              className={`text-[13px] tracking-[0.12em] uppercase no-underline py-3 min-h-[44px] flex items-center transition-opacity ${
                 location.pathname === link.path
                   ? "text-foreground font-bold"
                   : "text-foreground/50"

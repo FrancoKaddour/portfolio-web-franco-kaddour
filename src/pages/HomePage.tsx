@@ -12,18 +12,14 @@ const HomePage = () => {
         <title>Franco Kaddour | Desarrollador Web — React, TypeScript, Node.js</title>
         <meta name="description" content="Portfolio de Franco Kaddour, desarrollador web de Buenos Aires especializado en React, TypeScript y Node.js. Proyectos reales en e-commerce y aplicaciones web." />
         <link rel="canonical" href={BASE_URL} />
-        <link rel="alternate" hrefLang="es" href={BASE_URL} />
-        <link rel="alternate" hrefLang="en" href={BASE_URL} />
-        <link rel="alternate" hrefLang="pt" href={BASE_URL} />
-        <link rel="alternate" hrefLang="x-default" href={BASE_URL} />
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={BASE_URL} />
         <meta property="og:title" content="Franco Kaddour | Desarrollador Web — React, TypeScript, Node.js" />
         <meta property="og:description" content="Portfolio de Franco Kaddour, desarrollador web de Buenos Aires especializado en React, TypeScript y Node.js. Proyectos reales en e-commerce y aplicaciones web." />
         <meta property="og:image" content={`${BASE_URL}/og.webp`} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image:width" content="1374" />
+        <meta property="og:image:height" content="740" />
         <meta property="og:locale" content="es_AR" />
         <meta property="og:site_name" content="Franco Kaddour Portfolio" />
       </Helmet>
@@ -51,7 +47,7 @@ const HomePage = () => {
         </h1>
 
         {/* Tagline */}
-        <p className="text-center text-[11px] md:text-[12px] tracking-[0.18em] uppercase text-foreground/40 font-mono mb-6">
+        <p className="text-center text-[11px] md:text-[12px] tracking-[0.1em] sm:tracking-[0.18em] uppercase text-foreground/55 font-mono mb-6">
           {t("home.tagline")}
         </p>
 

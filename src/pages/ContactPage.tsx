@@ -6,8 +6,6 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { BASE_URL, EMAIL, GITHUB_URL, LINKEDIN_URL } from "@/lib/constants";
 
-// Setup: copiar .env.example como .env.local y completar VITE_FORMSPREE_ID
-// Crear un form gratis en https://formspree.io para obtener el ID
 const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID as string | undefined;
 const FORMSPREE_ENDPOINT = FORMSPREE_ID
   ? `https://formspree.io/f/${FORMSPREE_ID}`
@@ -61,18 +59,14 @@ const ContactPage = () => {
         <title>Contacto — Franco Kaddour | Desarrollador Web Buenos Aires</title>
         <meta name="description" content={t("meta.contactDescription")} />
         <link rel="canonical" href={`${BASE_URL}/contact`} />
-        <link rel="alternate" hrefLang="es" href={`${BASE_URL}/contact`} />
-        <link rel="alternate" hrefLang="en" href={`${BASE_URL}/contact`} />
-        <link rel="alternate" hrefLang="pt" href={`${BASE_URL}/contact`} />
-        <link rel="alternate" hrefLang="x-default" href={`${BASE_URL}/contact`} />
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${BASE_URL}/contact`} />
         <meta property="og:title" content="Contacto — Franco Kaddour | Desarrollador Web" />
         <meta property="og:description" content={t("meta.contactDescription")} />
         <meta property="og:image" content={`${BASE_URL}/og.webp`} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image:width" content="1374" />
+        <meta property="og:image:height" content="740" />
         <meta property="og:locale" content="es_AR" />
         <meta property="og:site_name" content="Franco Kaddour Portfolio" />
       </Helmet>
@@ -84,8 +78,8 @@ const ContactPage = () => {
 
         {/* Contact links */}
         <div className="text-[14px] md:text-[15px] leading-[1.8] space-y-2 text-foreground mb-10">
-          <p>
-            {t("contact.emailLabel")}:{" "}
+          <p className="flex flex-wrap items-baseline gap-x-1">
+            <span>{t("contact.emailLabel")}:</span>
             <a
               href={`mailto:${EMAIL}`}
               className="font-bold text-foreground no-underline hover:underline"
@@ -93,8 +87,8 @@ const ContactPage = () => {
               francokaddour@gmail.com
             </a>
           </p>
-          <p>
-            {t("contact.githubLabel")}:{" "}
+          <p className="flex flex-wrap items-baseline gap-x-1">
+            <span>{t("contact.githubLabel")}:</span>
             <a
               href={GITHUB_URL}
               target="_blank"
@@ -104,8 +98,8 @@ const ContactPage = () => {
               github.com/FrancoKaddour
             </a>
           </p>
-          <p>
-            {t("contact.linkedinLabel")}:{" "}
+          <p className="flex flex-wrap items-baseline gap-x-1">
+            <span>{t("contact.linkedinLabel")}:</span>
             <a
               href={LINKEDIN_URL}
               target="_blank"
@@ -215,7 +209,7 @@ const ContactPage = () => {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="text-[13px] font-bold tracking-[0.12em] uppercase text-foreground hover:opacity-60 transition-opacity disabled:opacity-40"
+                className="text-[13px] font-bold tracking-[0.12em] uppercase text-foreground hover:opacity-60 transition-opacity disabled:opacity-40 min-h-[44px] flex items-center"
               >
                 {status === "sending" ? t("contact.formSending") : `→ ${t("contact.formSend")}`}
               </button>

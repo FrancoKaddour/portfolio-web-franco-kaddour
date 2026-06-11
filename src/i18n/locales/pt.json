@@ -73,9 +73,13 @@
   },
   "meta": {
     "homeDescription": "Portfólio de Franco Kaddour, desenvolvedor web de Buenos Aires. React, TypeScript e Node.js. Projetos reais em e-commerce e aplicações web.",
-    "aboutDescription": "Desenvolvedor web de Buenos Aires com dois anos de experiência em React, TypeScript e Node.js. Projetos reais para clientes. Estudante TUPaD UTN.",
-    "projectsDescription": "Projetos web de Franco Kaddour: e-commerce, landing pages e aplicações React. Todos em produção.",
-    "contactDescription": "Entre em contato com Franco Kaddour, desenvolvedor web de Buenos Aires. Disponível para novos projetos. Resposta em menos de 24 horas."
+    "aboutDescription": "Franco Kaddour — desenvolvedor web de Buenos Aires. React, TypeScript, Node.js. Dois anos construindo e-commerces e aplicações para clientes. Estudante de Programação na UTN.",
+    "projectsDescription": "Projetos de Franco Kaddour: La Básica, Miga Club, Espacio Vina. E-commerces React em produção, design e desenvolvimento de ponta a ponta.",
+    "contactDescription": "Entre em contato com Franco Kaddour, desenvolvedor web de Buenos Aires. Disponível para novos projetos. Respondo em menos de 24 horas."
+  },
+  "notFound": {
+    "message": "Página não encontrada",
+    "back": "Voltar ao início"
   },
   "nav": {
     "about": "About",

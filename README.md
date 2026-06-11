@@ -7,36 +7,35 @@ Portfolio personal de Franco Kaddour, desarrollador web de Buenos Aires, Argenti
 - **React 18** + **TypeScript**
 - **Vite** — build tool
 - **Tailwind CSS** — estilos
-- **shadcn/ui** — componentes UI
 - **React Router** — navegación SPA
 - **i18next** — soporte multiidioma (ES / EN / PT)
-
-## Características
-
-- Diseño minimalista, tipografía pesada
-- Soporte para 3 idiomas (español, inglés, portugués)
-- Navegación con scroll-to-top automático
-- Totalmente responsive
-- SEO: meta tags, Open Graph, JSON-LD
+- **react-hook-form** + **Zod** — formulario de contacto
+- **next-themes** — modo claro / oscuro
 
 ## Desarrollo local
 
 ```sh
-# Clonar el repo
 git clone https://github.com/FrancoKaddour/portfolio-web-franco-kaddour.git
 cd portfolio-web-franco-kaddour
-
-# Instalar dependencias
 npm install
-
-# Servidor de desarrollo
+cp .env.example .env.local
 npm run dev
 ```
 
-## Build
+## Variables de entorno
+
+| Variable | Descripción |
+|---|---|
+| `VITE_FORMSPREE_ID` | ID del formulario en formspree.io |
+| `VITE_GA_ID` | ID de Google Analytics 4 |
+
+## Scripts
 
 ```sh
-npm run build
+npm run dev       # Desarrollo
+npm run build     # Build de producción
+npm run test      # Tests
+npm run lint      # Linter
 ```
 
 ## Deploy

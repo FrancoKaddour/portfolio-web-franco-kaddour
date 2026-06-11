@@ -1,0 +1,245 @@
+import { memo, useCallback, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { ExternalLink } from "lucide-react";
+import type { Project } from "@/types";
+
+// --- Helpers ---
+
+interface ProjectImageProps {
+  src: string;
+  alt: string;
+  className?: string;
+}
+
+const ProjectImage = memo(function ProjectImage({ src, alt, className }: ProjectImageProps) {
+  const [hasError, setHasError] = useState(false);
+  const handleError = useCallback(() => setHasError(true), []);
+
+  if (hasError) return null;
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className={className}
+      loading="lazy"
+      decoding="async"
+      onError={handleError}
+    />
+  );
+});
+
+function TerminalPlaceholder({ tech }: { tech: string[] }) {
+  return (
+    <div className="w-full aspect-video bg-foreground/[0.03] border-b border-foreground/10 flex flex-col justify-center px-6 font-mono select-none">
+      <span className="text-foreground/25 text-[12px] mb-1">$ run project</span>
+      <span className="text-foreground/40 text-[13px]">
+        &gt; {tech[0]}{tech[1] ? ` · ${tech[1]}` : ""}
+      </span>
+      <span className="text-foreground/20 text-[11px] mt-2">[ source: GitHub ]</span>
+    </div>
+  );
+}
+
+function TechBadge({ label }: { label: string }) {
+  return (
+    <span className="border border-foreground/20 text-foreground/60 text-[10px] tracking-[0.08em] uppercase px-2 py-0.5 font-mono">
+      {label}
+    </span>
+  );
+}
+
+function ProjectLinks({ url, websiteUrl }: { url: string; websiteUrl?: string }) {
+  return (
+    <div className="flex items-center gap-4 mt-auto pt-4">
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-1.5 text-[12px] text-foreground/50 hover:text-foreground transition-colors no-underline font-mono tracking-[0.06em]"
+        aria-label="Ver código en GitHub"
+      >
+        GitHub
+      </a>
+      {websiteUrl && (
+        <a
+          href={websiteUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-1.5 text-[12px] text-foreground/50 hover:text-foreground transition-colors no-underline font-mono tracking-[0.06em]"
+          aria-label="Ver sitio en vivo"
+        >
+          <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
+          Live
+        </a>
+      )}
+    </div>
+  );
+}
+
+// --- Cards ---
+
+export function FeaturedCard({ project }: { project: Project }) {
+  const { t } = useTranslation();
+  const href = project.websiteUrl || project.url;
+
+  return (
+    <article
+      aria-label={project.name}
+      className="group border border-foreground/10 hover:border-foreground/25 transition-colors duration-300 flex flex-col"
+    >
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block overflow-hidden"
+        tabIndex={-1}
+        aria-hidden="true"
+      >
+        {project.image ? (
+          <ProjectImage
+            src={project.image}
+            alt={`${project.name} — captura de pantalla`}
+            className="w-full aspect-video object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
+          />
+        ) : (
+          <TerminalPlaceholder tech={project.tech} />
+        )}
+      </a>
+
+      <div className="flex flex-col flex-1 px-5 py-5">
+        <div className="flex items-start justify-between mb-3 gap-4">
+          <div>
+            <span className="text-[10px] text-foreground/30 font-mono tracking-[0.15em] uppercase">
+              {project.id} · {project.year}
+            </span>
+            <h2 className="text-[16px] md:text-[18px] font-bold tracking-[0.1em] uppercase mt-0.5">
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground no-underline hover:underline"
+              >
+                {project.name}
+              </a>
+            </h2>
+          </div>
+          <span className="shrink-0 border border-foreground/20 text-foreground/50 text-[9px] tracking-[0.15em] uppercase px-2 py-0.5 font-mono mt-1">
+            Featured
+          </span>
+        </div>
+
+        <p className="text-[13px] md:text-[14px] leading-[1.8] text-foreground/70 mb-4 flex-1">
+          {t(project.descKey)}
+        </p>
+
+        <div className="flex flex-wrap gap-1.5 mb-1">
+          {project.tech.map((tag) => (
+            <TechBadge key={tag} label={tag} />
+          ))}
+        </div>
+
+        <ProjectLinks url={project.url} websiteUrl={project.websiteUrl} />
+      </div>
+    </article>
+  );
+}
+
+export function RegularCard({ project }: { project: Project }) {
+  const { t } = useTranslation();
+  const href = project.websiteUrl || project.url;
+
+  return (
+    <article
+      aria-label={project.name}
+      className="group border border-foreground/10 hover:border-foreground/25 transition-colors duration-300 flex flex-col"
+    >
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block overflow-hidden"
+        tabIndex={-1}
+        aria-hidden="true"
+      >
+        {project.image ? (
+          <ProjectImage
+            src={project.image}
+            alt={`${project.name} — captura de pantalla`}
+            className="w-full aspect-video object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
+          />
+        ) : (
+          <TerminalPlaceholder tech={project.tech} />
+        )}
+      </a>
+
+      <div className="flex flex-col flex-1 px-5 py-5">
+        <span className="text-[10px] text-foreground/30 font-mono tracking-[0.15em] uppercase mb-1">
+          {project.id} · {project.year}
+        </span>
+        <h2 className="text-[15px] md:text-[16px] font-bold tracking-[0.1em] uppercase mb-3">
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground no-underline hover:underline"
+          >
+            {project.name}
+          </a>
+        </h2>
+
+        <p className="text-[13px] leading-[1.8] text-foreground/70 mb-4 flex-1">
+          {t(project.descKey)}
+        </p>
+
+        <div className="flex flex-wrap gap-1.5 mb-1">
+          {project.tech.map((tag) => (
+            <TechBadge key={tag} label={tag} />
+          ))}
+        </div>
+
+        <ProjectLinks url={project.url} websiteUrl={project.websiteUrl} />
+      </div>
+    </article>
+  );
+}
+
+export function CompactCard({ project }: { project: Project }) {
+  const { t } = useTranslation();
+
+  return (
+    <article
+      aria-label={project.name}
+      className="group border border-foreground/10 hover:border-foreground/25 transition-colors duration-300 flex flex-col px-5 py-5"
+    >
+      <TerminalPlaceholder tech={project.tech} />
+
+      <div className="flex flex-col flex-1 mt-5">
+        <span className="text-[10px] text-foreground/30 font-mono tracking-[0.15em] uppercase mb-1">
+          {project.id} · {project.year}
+        </span>
+        <h2 className="text-[15px] font-bold tracking-[0.1em] uppercase mb-3">
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground no-underline hover:underline"
+          >
+            {project.name}
+          </a>
+        </h2>
+
+        <p className="text-[13px] leading-[1.8] text-foreground/70 mb-4 flex-1">
+          {t(project.descKey)}
+        </p>
+
+        <div className="flex flex-wrap gap-1.5 mb-1">
+          {project.tech.map((tag) => (
+            <TechBadge key={tag} label={tag} />
+          ))}
+        </div>
+
+        <ProjectLinks url={project.url} websiteUrl={project.websiteUrl} />
+      </div>
+    </article>
+  );
+}

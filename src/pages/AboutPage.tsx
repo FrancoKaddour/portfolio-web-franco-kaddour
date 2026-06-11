@@ -23,18 +23,14 @@ const AboutPage = () => {
         <title>About — Franco Kaddour | Desarrollador Web React TypeScript</title>
         <meta name="description" content={t("meta.aboutDescription")} />
         <link rel="canonical" href={`${BASE_URL}/about`} />
-        <link rel="alternate" hrefLang="es" href={`${BASE_URL}/about`} />
-        <link rel="alternate" hrefLang="en" href={`${BASE_URL}/about`} />
-        <link rel="alternate" hrefLang="pt" href={`${BASE_URL}/about`} />
-        <link rel="alternate" hrefLang="x-default" href={`${BASE_URL}/about`} />
         {/* Open Graph */}
         <meta property="og:type" content="profile" />
         <meta property="og:url" content={`${BASE_URL}/about`} />
         <meta property="og:title" content="About — Franco Kaddour | Desarrollador Web" />
         <meta property="og:description" content={t("meta.aboutDescription")} />
         <meta property="og:image" content={`${BASE_URL}/og.webp`} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image:width" content="1374" />
+        <meta property="og:image:height" content="740" />
         <meta property="og:locale" content="es_AR" />
         <meta property="og:site_name" content="Franco Kaddour Portfolio" />
       </Helmet>
@@ -112,15 +108,15 @@ const AboutPage = () => {
           <p className="text-[13px] text-foreground/40 font-mono mb-6">
             {t("about.utnSubtitle")}
           </p>
-          <ul className="space-y-2">
+          <ul className="space-y-3">
             {utnSubjects.map((s) => (
-              <li key={s.repo} className="flex items-baseline justify-between gap-4 text-[14px] leading-[1.7]">
+              <li key={s.repo} className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 md:gap-4 text-[14px] leading-[1.7]">
                 <span className="text-foreground">{s.name}</span>
                 <a
                   href={`https://github.com/${GITHUB_USER}/${s.repo}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[12px] font-mono text-foreground/40 hover:text-foreground transition-colors no-underline shrink-0"
+                  className="text-[12px] font-mono text-foreground/40 hover:text-foreground transition-colors no-underline truncate"
                   aria-label={`Repositorio GitHub de ${s.name}`}
                 >
                   {s.repo} ↗

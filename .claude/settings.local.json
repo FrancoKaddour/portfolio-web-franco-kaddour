@@ -9,7 +9,14 @@
       "Bash(cp img/labasica.png public/img/labasica.png)",
       "Bash(cp img/migaclub.png public/img/migaclub.png)",
       "Bash(rm public/img/1espacio-vina.jpeg public/img/1la-basica.jpeg public/img/1miga-club.jpeg public/img/2espacio-vina.jpeg public/img/2la-basica.jpeg public/img/2miga-club.jpeg public/img/3espacio-vina.jpeg public/img/3la-basica.jpeg public/img/3miga-club.jpeg public/img/4espacio-vina.jpeg public/img/4miga-club.jpeg)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(mv src/components/Layout.tsx src/components/layout/Layout.tsx)",
+      "Bash(mv src/components/Navbar.tsx src/components/layout/Navbar.tsx)",
+      "Bash(mv src/components/Footer.tsx src/components/layout/Footer.tsx)",
+      "Bash(mv src/components/LanguageSwitcher.tsx src/components/layout/LanguageSwitcher.tsx)",
+      "Bash(rm -f public/placeholder.svg public/img/labasica.png public/img/migaclub.png public/img/espaciovina.png public/og-image.png)",
+      "Bash(rm -rf public/logos)"
     ]
   }
 }

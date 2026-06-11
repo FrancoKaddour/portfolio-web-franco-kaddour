@@ -3,7 +3,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { ThemeProvider } from "next-themes";
-import { Layout } from "./components/Layout";
+import { Layout } from "./components/layout/Layout";
 import ErrorBoundary from "./components/ErrorBoundary";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
