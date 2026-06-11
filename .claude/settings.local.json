@@ -16,7 +16,10 @@
       "Bash(mv src/components/Footer.tsx src/components/layout/Footer.tsx)",
       "Bash(mv src/components/LanguageSwitcher.tsx src/components/layout/LanguageSwitcher.tsx)",
       "Bash(rm -f public/placeholder.svg public/img/labasica.png public/img/migaclub.png public/img/espaciovina.png public/og-image.png)",
-      "Bash(rm -rf public/logos)"
+      "Bash(rm -rf public/logos)",
+      "Bash(mv src/components/ErrorBoundary.tsx src/components/layout/ErrorBoundary.tsx)",
+      "Bash(rm src/hooks/use-mobile.tsx)",
+      "Bash(npm test:*)"
     ]
   }
 }

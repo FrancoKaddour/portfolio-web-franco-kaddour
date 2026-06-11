@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { Footer } from "@/components/Footer";
+import { Footer } from "@/components/layout/Footer";
 import { renderWithProviders, screen } from "./utils";
 import { GITHUB_URL, LINKEDIN_URL } from "@/lib/constants";
 

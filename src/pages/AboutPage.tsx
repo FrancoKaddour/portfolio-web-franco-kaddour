@@ -150,7 +150,7 @@ const AboutPage = () => {
           </h2>
           <div className="max-w-[280px]">
             <img
-              src="/img/profile.jpg"
+              src="/img/profile.webp"
               alt="Franco Kaddour — desarrollador web, Buenos Aires"
               className="w-full rounded shadow-md grayscale"
               loading="lazy"

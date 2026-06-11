@@ -15,7 +15,7 @@ describe("HomePage", () => {
   it("renders the profile photo with correct alt text", () => {
     const img = screen.getByAltText(/Franco Kaddour/i);
     expect(img).toBeInTheDocument();
-    expect(img).toHaveAttribute("src", "/img/profile.jpg");
+    expect(img).toHaveAttribute("src", "/img/profile.webp");
   });
 
   it("renders the availability badge", () => {

@@ -25,7 +25,7 @@ describe("AboutPage", () => {
   it("renders profile photo", () => {
     const img = screen.getByRole("img", { name: /Franco Kaddour/i });
     expect(img).toBeInTheDocument();
-    expect(img).toHaveAttribute("src", "/img/profile.jpg");
+    expect(img).toHaveAttribute("src", "/img/profile.webp");
   });
 
   it("renders email contact link", () => {

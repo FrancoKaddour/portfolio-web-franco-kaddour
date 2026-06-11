@@ -29,7 +29,7 @@ const HomePage = () => {
         <div className="flex justify-center mb-8">
           <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden ring-1 ring-foreground/10">
             <img
-              src="/img/profile.jpg"
+              src="/img/profile.webp"
               alt="Franco Kaddour — desarrollador web, Buenos Aires"
               className="w-full h-full object-cover"
               style={{ objectPosition: "80% center" }}

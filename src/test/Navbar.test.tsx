@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { Navbar } from "@/components/Navbar";
+import { Navbar } from "@/components/layout/Navbar";
 import { renderWithProviders, screen, fireEvent } from "./utils";
 
 describe("Navbar", () => {
