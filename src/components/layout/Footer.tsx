@@ -25,7 +25,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="text-foreground/40 hover:text-foreground transition-opacity"
-            aria-label="GitHub"
+            aria-label="Ver perfil de GitHub de Franco Kaddour"
           >
             <GitHubIcon className="w-5 h-5" />
           </a>
@@ -34,7 +34,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="text-foreground/40 hover:text-foreground transition-opacity"
-            aria-label="LinkedIn"
+            aria-label="Ver perfil de LinkedIn de Franco Kaddour"
           >
             <Linkedin className="w-5 h-5" />
           </a>
