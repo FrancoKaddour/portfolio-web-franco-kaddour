@@ -129,17 +129,19 @@ const HomePage = () => {
               href={GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Ver perfil de GitHub de Franco Kaddour (abre en nueva pestaña)"
               className="text-[14px] md:text-[15px] font-bold text-foreground/50 no-underline hover:underline hover:text-foreground min-h-[44px] flex items-center"
             >
-              → GitHub
+              → {t("home.linkGithub")}
             </a>
             <a
               href={LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Ver perfil de LinkedIn de Franco Kaddour (abre en nueva pestaña)"
               className="text-[14px] md:text-[15px] font-bold text-foreground/50 no-underline hover:underline hover:text-foreground min-h-[44px] flex items-center"
             >
-              → LinkedIn
+              → {t("home.linkLinkedin")}
             </a>
             <a
               href="/cv-franco-kaddour.pdf"
