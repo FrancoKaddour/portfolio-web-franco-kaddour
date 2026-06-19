@@ -10,7 +10,7 @@ const HomePage = () => {
     <>
       <Helmet>
         <title>Franco Kaddour | Desarrollador Web — React, TypeScript, Node.js</title>
-        <meta name="description" content="Portfolio de Franco Kaddour, desarrollador web de Buenos Aires especializado en React, TypeScript y Node.js. Proyectos reales en e-commerce y aplicaciones web." />
+        <meta name="description" content="Franco Kaddour — desarrollador web de Buenos Aires. React, TypeScript, Node.js. Dos años construyendo e-commerces y aplicaciones para clientes reales." />
         <link rel="canonical" href={BASE_URL} />
         {/* Open Graph */}
         <meta property="og:type" content="website" />
