@@ -15,9 +15,12 @@ const NotFound = () => {
         <p className="text-[60px] md:text-[80px] font-bold tracking-[0.2em] text-foreground/20 mb-4" aria-hidden="true">
           404
         </p>
-        <h1 className="text-[18px] font-bold tracking-[0.1em] uppercase text-foreground mb-8 text-center">
+        <h1 className="text-[18px] font-bold tracking-[0.1em] uppercase text-foreground mb-4 text-center">
           {t("notFound.message")}
         </h1>
+        <p className="text-[14px] text-foreground/40 mb-8 text-center">
+          {t("notFound.subtitle")}
+        </p>
         <Link
           to="/"
           className="text-[14px] font-bold tracking-[0.1em] uppercase no-underline hover:underline"
