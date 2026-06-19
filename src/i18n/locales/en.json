@@ -11,7 +11,9 @@
     "linkAbout": "More about Franco Kaddour",
     "linkProjects": "See projects",
     "linkContact": "Let's talk about your project",
-    "linkCV": "Download CV"
+    "linkCV": "Download CV",
+    "linkGithub": "GitHub ↗",
+    "linkLinkedin": "LinkedIn ↗"
   },
   "about": {
     "pageTitle": "About",
