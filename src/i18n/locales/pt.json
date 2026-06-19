@@ -80,6 +80,7 @@
   },
   "notFound": {
     "message": "Página não encontrada",
+    "subtitle": "A URL que você procura não existe ou foi movida.",
     "back": "Voltar ao início"
   },
   "nav": {
