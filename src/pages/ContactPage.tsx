@@ -76,6 +76,10 @@ const ContactPage = () => {
           {t("contact.pageTitle")}
         </h1>
 
+        <p className="text-[14px] md:text-[15px] leading-[1.8] mb-10 text-foreground/60">
+          {t("contact.introText")}
+        </p>
+
         {/* Contact links */}
         <div className="text-[14px] md:text-[15px] leading-[1.8] space-y-2 text-foreground mb-10">
           <p className="flex flex-wrap items-baseline gap-x-1">
