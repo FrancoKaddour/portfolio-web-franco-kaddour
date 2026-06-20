@@ -16,7 +16,7 @@ export function LanguageSwitcher() {
   const { i18n } = useTranslation();
 
   return (
-    <div className="flex items-center gap-1.5" role="group" aria-label="Seleccionar idioma">
+    <div className="flex items-center gap-1.5" role="group" aria-label="Seleccionar idioma del sitio">
       {langs.map((lang, i) => (
         <span key={lang.code} className="flex items-center gap-1.5">
           <button
