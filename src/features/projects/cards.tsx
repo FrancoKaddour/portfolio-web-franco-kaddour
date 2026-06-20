@@ -48,7 +48,7 @@ function TechBadge({ label }: { label: string }) {
   );
 }
 
-function ProjectLinks({ url, websiteUrl }: { url: string; websiteUrl?: string }) {
+function ProjectLinks({ url, websiteUrl, projectName }: { url: string; websiteUrl?: string; projectName: string }) {
   return (
     <div className="flex items-center gap-4 mt-auto pt-4">
       <a
@@ -56,7 +56,7 @@ function ProjectLinks({ url, websiteUrl }: { url: string; websiteUrl?: string })
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center gap-1.5 text-[12px] text-foreground/50 hover:text-foreground transition-colors no-underline font-mono tracking-[0.06em]"
-        aria-label="Ver código en GitHub"
+        aria-label={`Ver código de ${projectName} en GitHub`}
       >
         GitHub
       </a>
@@ -66,7 +66,7 @@ function ProjectLinks({ url, websiteUrl }: { url: string; websiteUrl?: string })
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-1.5 text-[12px] text-foreground/50 hover:text-foreground transition-colors no-underline font-mono tracking-[0.06em]"
-          aria-label="Ver sitio en vivo"
+          aria-label={`Ver ${projectName} en vivo`}
         >
           <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
           Live
@@ -138,7 +138,7 @@ export function FeaturedCard({ project }: { project: Project }) {
           ))}
         </div>
 
-        <ProjectLinks url={project.url} websiteUrl={project.websiteUrl} />
+        <ProjectLinks url={project.url} websiteUrl={project.websiteUrl} projectName={project.name} />
       </div>
     </article>
   );
@@ -197,7 +197,7 @@ export function RegularCard({ project }: { project: Project }) {
           ))}
         </div>
 
-        <ProjectLinks url={project.url} websiteUrl={project.websiteUrl} />
+        <ProjectLinks url={project.url} websiteUrl={project.websiteUrl} projectName={project.name} />
       </div>
     </article>
   );
@@ -238,7 +238,7 @@ export function CompactCard({ project }: { project: Project }) {
           ))}
         </div>
 
-        <ProjectLinks url={project.url} websiteUrl={project.websiteUrl} />
+        <ProjectLinks url={project.url} websiteUrl={project.websiteUrl} projectName={project.name} />
       </div>
     </article>
   );
