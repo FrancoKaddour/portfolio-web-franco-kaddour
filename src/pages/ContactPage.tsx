@@ -81,8 +81,8 @@ const ContactPage = () => {
         </p>
 
         {/* Contact links */}
-        <div className="text-[14px] md:text-[15px] leading-[1.8] space-y-2 text-foreground mb-10">
-          <p className="flex flex-wrap items-baseline gap-x-1">
+        <ul className="text-[14px] md:text-[15px] leading-[1.8] space-y-2 text-foreground mb-10 list-none p-0 m-0">
+          <li className="flex flex-wrap items-baseline gap-x-1">
             <span>{t("contact.emailLabel")}:</span>
             <a
               href={`mailto:${EMAIL}`}
@@ -90,8 +90,8 @@ const ContactPage = () => {
             >
               francokaddour@gmail.com
             </a>
-          </p>
-          <p className="flex flex-wrap items-baseline gap-x-1">
+          </li>
+          <li className="flex flex-wrap items-baseline gap-x-1">
             <span>{t("contact.githubLabel")}:</span>
             <a
               href={GITHUB_URL}
@@ -101,8 +101,8 @@ const ContactPage = () => {
             >
               github.com/FrancoKaddour
             </a>
-          </p>
-          <p className="flex flex-wrap items-baseline gap-x-1">
+          </li>
+          <li className="flex flex-wrap items-baseline gap-x-1">
             <span>{t("contact.linkedinLabel")}:</span>
             <a
               href={LINKEDIN_URL}
@@ -112,9 +112,9 @@ const ContactPage = () => {
             >
               linkedin.com/in/francokaddour
             </a>
-          </p>
-          <p className="text-foreground/50">{t("contact.locationLabel")}</p>
-        </div>
+          </li>
+          <li className="text-foreground/50">{t("contact.locationLabel")}</li>
+        </ul>
 
         <hr className="border-border mb-10" />
 
