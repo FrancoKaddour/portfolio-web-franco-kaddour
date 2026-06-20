@@ -25,6 +25,8 @@ export default defineConfig({
           "vendor-router": ["react-router-dom"],
           "vendor-i18n": ["i18next", "react-i18next"],
           "vendor-radix": ["@radix-ui/react-tooltip"],
+          "vendor-forms": ["react-hook-form", "@hookform/resolvers", "zod"],
+          "vendor-ui": ["lucide-react", "next-themes"],
         },
       },
     },
