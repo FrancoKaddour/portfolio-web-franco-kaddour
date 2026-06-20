@@ -61,7 +61,7 @@ const ProjectsPage = () => {
         </p>
 
         {featured.length > 0 && (
-          <section aria-label="Proyectos destacados" className="mb-6">
+          <section aria-label={t("projects.featuredLabel")} className="mb-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {featured.map((p) => (
                 <FeaturedCard key={p.id} project={p} />
@@ -81,9 +81,9 @@ const ProjectsPage = () => {
         )}
 
         {compact.length > 0 && (
-          <section aria-label="Otros proyectos">
+          <section aria-label={t("projects.otherLabel")}>
             <p className="text-[11px] tracking-[0.18em] uppercase text-foreground/30 font-mono mb-4">
-              Other
+              {t("projects.otherLabel")}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {compact.map((p) => (
