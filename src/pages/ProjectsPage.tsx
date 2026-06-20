@@ -71,7 +71,7 @@ const ProjectsPage = () => {
         )}
 
         {regular.length > 0 && (
-          <section aria-label="Proyectos" className="mb-6">
+          <section aria-label={t("projects.title")} className="mb-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {regular.map((p) => (
                 <RegularCard key={p.id} project={p} />
