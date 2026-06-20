@@ -104,6 +104,8 @@ export function FeaturedCard({ project }: { project: Project }) {
             src={project.image}
             alt={`${project.name} — captura de pantalla`}
             className="w-full aspect-video object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
+            width={600}
+            height={338}
           />
         ) : (
           <TerminalPlaceholder tech={project.tech} />
@@ -170,6 +172,8 @@ export function RegularCard({ project }: { project: Project }) {
             src={project.image}
             alt={`${project.name} — captura de pantalla`}
             className="w-full aspect-video object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
+            width={600}
+            height={338}
           />
         ) : (
           <TerminalPlaceholder tech={project.tech} />
