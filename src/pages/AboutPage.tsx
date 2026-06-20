@@ -41,8 +41,8 @@ const AboutPage = () => {
         </h1>
 
         {/* Web Development */}
-        <section className="mb-12" id="web-dev">
-          <h2 className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
+        <section className="mb-12" id="web-dev" aria-labelledby="web-dev-heading">
+          <h2 id="web-dev-heading" className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
             {t("about.webDevTitle")}
           </h2>
           <p className="text-[14px] md:text-[15px] leading-[1.8] mb-4">
@@ -70,8 +70,8 @@ const AboutPage = () => {
         <hr className="border-border mb-10" />
 
         {/* Tech Stack */}
-        <section className="mb-12" id="tech">
-          <h2 className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
+        <section className="mb-12" id="tech" aria-labelledby="tech-heading">
+          <h2 id="tech-heading" className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
             {t("about.techTitle")}
           </h2>
           <ul className="list-disc pl-6 space-y-2 text-[14px] md:text-[15px] leading-[1.7]">
@@ -86,8 +86,8 @@ const AboutPage = () => {
         <hr className="border-border mb-10" />
 
         {/* Education */}
-        <section className="mb-12" id="education">
-          <h2 className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
+        <section className="mb-12" id="education" aria-labelledby="education-heading">
+          <h2 id="education-heading" className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
             {t("about.educationTitle")}
           </h2>
           <ul className="list-disc pl-6 space-y-2 text-[14px] md:text-[15px] leading-[1.7]">
@@ -101,8 +101,8 @@ const AboutPage = () => {
         <hr className="border-border mb-10" />
 
         {/* UTN — Materias */}
-        <section className="mb-12" id="utn-materias">
-          <h2 className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-1">
+        <section className="mb-12" id="utn-materias" aria-labelledby="utn-heading">
+          <h2 id="utn-heading" className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-1">
             {t("about.utnTitle")}
           </h2>
           <p className="text-[13px] text-foreground/40 font-mono mb-6">
@@ -129,8 +129,8 @@ const AboutPage = () => {
         <hr className="border-border mb-10" />
 
         {/* Short Bio */}
-        <section className="mb-12" id="bio">
-          <h2 className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
+        <section className="mb-12" id="bio" aria-labelledby="bio-heading">
+          <h2 id="bio-heading" className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
             {t("about.shortBioTitle")}
           </h2>
           <p className="text-[14px] md:text-[15px] leading-[1.8] mb-4">
