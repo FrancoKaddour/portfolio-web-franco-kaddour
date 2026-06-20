@@ -148,6 +148,7 @@ const ContactPage = () => {
                   placeholder={t("contact.namePlaceholder")}
                   {...register("name")}
                   className="w-full border-b border-border bg-transparent py-2 text-[14px] text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-foreground transition-colors"
+                  aria-required="true"
                   aria-invalid={errors.name ? "true" : undefined}
                   aria-describedby={errors.name ? "name-error" : undefined}
                 />
@@ -173,6 +174,7 @@ const ContactPage = () => {
                   placeholder={t("contact.emailPlaceholder")}
                   {...register("email")}
                   className="w-full border-b border-border bg-transparent py-2 text-[14px] text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-foreground transition-colors"
+                  aria-required="true"
                   aria-invalid={errors.email ? "true" : undefined}
                   aria-describedby={errors.email ? "email-error" : undefined}
                 />
@@ -197,6 +199,7 @@ const ContactPage = () => {
                   placeholder={t("contact.messagePlaceholder")}
                   {...register("message")}
                   className="w-full border-b border-border bg-transparent py-2 text-[14px] text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-foreground transition-colors resize-none"
+                  aria-required="true"
                   aria-invalid={errors.message ? "true" : undefined}
                   aria-describedby={errors.message ? "message-error" : undefined}
                 />
