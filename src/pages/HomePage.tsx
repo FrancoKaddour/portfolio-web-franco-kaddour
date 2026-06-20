@@ -106,52 +106,64 @@ const HomePage = () => {
 
         {/* Arrow links */}
         <nav aria-label="Links rápidos">
-          <div className="flex flex-col gap-2">
-            <Link
-              to="/about"
-              className="text-[14px] md:text-[15px] font-bold text-foreground no-underline hover:underline min-h-[44px] flex items-center"
-            >
-              → {t("home.linkAbout")}
-            </Link>
-            <Link
-              to="/projects"
-              className="text-[14px] md:text-[15px] font-bold text-foreground no-underline hover:underline min-h-[44px] flex items-center"
-            >
-              → {t("home.linkProjects")}
-            </Link>
-            <Link
-              to="/contact"
-              className="text-[14px] md:text-[15px] font-bold text-foreground no-underline hover:underline min-h-[44px] flex items-center"
-            >
-              → {t("home.linkContact")}
-            </Link>
-            <a
-              href={GITHUB_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Ver perfil de GitHub de Franco Kaddour (abre en nueva pestaña)"
-              className="text-[14px] md:text-[15px] font-bold text-foreground/50 no-underline hover:underline hover:text-foreground min-h-[44px] flex items-center"
-            >
-              → {t("home.linkGithub")}
-            </a>
-            <a
-              href={LINKEDIN_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Ver perfil de LinkedIn de Franco Kaddour (abre en nueva pestaña)"
-              className="text-[14px] md:text-[15px] font-bold text-foreground/50 no-underline hover:underline hover:text-foreground min-h-[44px] flex items-center"
-            >
-              → {t("home.linkLinkedin")}
-            </a>
-            <a
-              href="/cv-franco-kaddour.pdf"
-              download
-              className="text-[14px] md:text-[15px] font-bold text-foreground/50 no-underline hover:underline hover:text-foreground min-h-[44px] flex items-center"
-              aria-label="Descargar curriculum vitae en PDF"
-            >
-              → {t("home.linkCV")}
-            </a>
-          </div>
+          <ul className="flex flex-col gap-2 list-none p-0 m-0">
+            <li>
+              <Link
+                to="/about"
+                className="text-[14px] md:text-[15px] font-bold text-foreground no-underline hover:underline min-h-[44px] flex items-center"
+              >
+                → {t("home.linkAbout")}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/projects"
+                className="text-[14px] md:text-[15px] font-bold text-foreground no-underline hover:underline min-h-[44px] flex items-center"
+              >
+                → {t("home.linkProjects")}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact"
+                className="text-[14px] md:text-[15px] font-bold text-foreground no-underline hover:underline min-h-[44px] flex items-center"
+              >
+                → {t("home.linkContact")}
+              </Link>
+            </li>
+            <li>
+              <a
+                href={GITHUB_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver perfil de GitHub de Franco Kaddour (abre en nueva pestaña)"
+                className="text-[14px] md:text-[15px] font-bold text-foreground/50 no-underline hover:underline hover:text-foreground min-h-[44px] flex items-center"
+              >
+                → {t("home.linkGithub")}
+              </a>
+            </li>
+            <li>
+              <a
+                href={LINKEDIN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver perfil de LinkedIn de Franco Kaddour (abre en nueva pestaña)"
+                className="text-[14px] md:text-[15px] font-bold text-foreground/50 no-underline hover:underline hover:text-foreground min-h-[44px] flex items-center"
+              >
+                → {t("home.linkLinkedin")}
+              </a>
+            </li>
+            <li>
+              <a
+                href="/cv-franco-kaddour.pdf"
+                download
+                className="text-[14px] md:text-[15px] font-bold text-foreground/50 no-underline hover:underline hover:text-foreground min-h-[44px] flex items-center"
+                aria-label="Descargar curriculum vitae en PDF"
+              >
+                → {t("home.linkCV")}
+              </a>
+            </li>
+          </ul>
         </nav>
       </div>
     </>
