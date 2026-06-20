@@ -9,9 +9,11 @@ interface ProjectImageProps {
   src: string;
   alt: string;
   className?: string;
+  width?: number;
+  height?: number;
 }
 
-const ProjectImage = memo(function ProjectImage({ src, alt, className }: ProjectImageProps) {
+const ProjectImage = memo(function ProjectImage({ src, alt, className, width, height }: ProjectImageProps) {
   const [hasError, setHasError] = useState(false);
   const handleError = useCallback(() => setHasError(true), []);
 
@@ -23,6 +25,8 @@ const ProjectImage = memo(function ProjectImage({ src, alt, className }: Project
       className={className}
       loading="lazy"
       decoding="async"
+      width={width}
+      height={height}
       onError={handleError}
     />
   );
