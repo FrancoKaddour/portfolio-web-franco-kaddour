@@ -100,7 +100,7 @@ const HomePage = () => {
             aria-hidden="true"
           />
           <span className="text-[11px] md:text-[12px] tracking-[0.14em] uppercase text-foreground/65 font-mono">
-            {t("home.availableLabel")}
+            <span className="sr-only">Estado: </span>{t("home.availableLabel")}
           </span>
         </div>
 
