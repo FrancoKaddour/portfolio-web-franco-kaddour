@@ -127,6 +127,10 @@
     outline-offset: 3px;
     border-radius: 2px;
   }
+
+  .dark :focus-visible {
+    outline-color: #f2f2f2;
+  }
 }
 
 /* Fade-in animation for page transitions */
