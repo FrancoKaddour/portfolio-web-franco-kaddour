@@ -48,6 +48,8 @@
   "projects": {
     "title": "Proyectos",
     "subtitle": "Proyectos en los que trabajé. Cada uno representó un problema diferente y una decisión técnica distinta. Todos en producción.",
+    "otherLabel": "Otros proyectos",
+    "featuredLabel": "Proyectos destacados",
     "espacioVinaDesc": "El cliente operaba sin sistema digital — cada pedido era manual. Desarrollé el frontend completo de su e-commerce: catálogo de productos, gestión de pedidos y panel administrativo. También me encargué de toda la identidad visual. Primera vez trabajando con backend real (PHP + MySQL) en colaboración con otro desarrollador.",
     "migaClubDesc": "El cliente necesitaba diferenciarse en un mercado saturado sin presupuesto para agencia. Solución: identidad visual completa desde cero — logo, paleta, tipografía, ilustraciones y web. Resultado: marca coherente en web y redes. Construido en HTML/CSS/JS sin frameworks para máxima velocidad de carga.",
     "laBasicaDesc": "La pastelería no tenía presencia web a la altura de su producto. Diseñé y desarrollé una tienda online completa — identidad visual, catálogo, carrito y panel de administración. React + TypeScript con tipado estricto para gestionar las variaciones del catálogo con solidez. Diseño y desarrollo de punta a punta.",
