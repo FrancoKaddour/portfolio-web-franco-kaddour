@@ -124,11 +124,14 @@ const ContactPage = () => {
             {t("contact.formTitle")}
           </h2>
 
-          {status === "success" ? (
-            <p className="text-[14px] leading-[1.8] text-foreground border-l-2 border-foreground/30 pl-4">
-              {t("contact.formSuccess")}
-            </p>
-          ) : (
+          <div role="status" aria-live="polite" aria-atomic="true">
+            {status === "success" && (
+              <p className="text-[14px] leading-[1.8] text-foreground border-l-2 border-foreground/30 pl-4">
+                {t("contact.formSuccess")}
+              </p>
+            )}
+          </div>
+          {status !== "success" && (
             <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-6" aria-label={t("contact.formTitle")}>
               {/* Name */}
               <div>
