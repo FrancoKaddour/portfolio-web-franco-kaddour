@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -16,8 +16,15 @@ export function Navbar() {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const { theme, setTheme } = useTheme();
+  const firstMobileLinkRef = useRef<HTMLAnchorElement>(null);
 
   const closeMobile = useCallback(() => setMobileOpen(false), []);
+
+  useEffect(() => {
+    if (mobileOpen && firstMobileLinkRef.current) {
+      firstMobileLinkRef.current.focus();
+    }
+  }, [mobileOpen]);
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
@@ -89,11 +96,12 @@ export function Navbar() {
           id="mobile-menu"
           className="lg:hidden border-t border-border bg-background px-6 py-4 flex flex-col gap-3"
         >
-          {navLinks.map((link) => (
+          {navLinks.map((link, index) => (
             <Link
               key={link.path}
               to={link.path}
               onClick={closeMobile}
+              ref={index === 0 ? firstMobileLinkRef : undefined}
               aria-current={location.pathname === link.path ? "page" : undefined}
               className={`text-[13px] tracking-[0.12em] uppercase no-underline py-3 min-h-[44px] flex items-center transition-opacity ${
                 location.pathname === link.path
