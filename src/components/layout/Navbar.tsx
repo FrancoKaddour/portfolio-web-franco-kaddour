@@ -47,6 +47,7 @@ export function Navbar() {
         {/* Logo */}
         <Link
           to="/"
+          aria-label="Ir a la página de inicio"
           className="text-[13px] sm:text-[14px] font-bold tracking-[0.15em] uppercase text-foreground no-underline hover:opacity-55 transition-opacity"
         >
           Franco Kaddour
