@@ -112,7 +112,7 @@ const HomePage = () => {
                 to="/about"
                 className="text-[14px] md:text-[15px] font-bold text-foreground no-underline hover:underline min-h-[44px] flex items-center"
               >
-                → {t("home.linkAbout")}
+                <span aria-hidden="true">→ </span>{t("home.linkAbout")}
               </Link>
             </li>
             <li>
@@ -120,7 +120,7 @@ const HomePage = () => {
                 to="/projects"
                 className="text-[14px] md:text-[15px] font-bold text-foreground no-underline hover:underline min-h-[44px] flex items-center"
               >
-                → {t("home.linkProjects")}
+                <span aria-hidden="true">→ </span>{t("home.linkProjects")}
               </Link>
             </li>
             <li>
@@ -128,7 +128,7 @@ const HomePage = () => {
                 to="/contact"
                 className="text-[14px] md:text-[15px] font-bold text-foreground no-underline hover:underline min-h-[44px] flex items-center"
               >
-                → {t("home.linkContact")}
+                <span aria-hidden="true">→ </span>{t("home.linkContact")}
               </Link>
             </li>
             <li>
