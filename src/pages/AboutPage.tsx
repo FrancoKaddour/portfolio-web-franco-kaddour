@@ -154,7 +154,7 @@ const AboutPage = () => {
           <div className="max-w-[280px]">
             <img
               src="/img/profile.webp"
-              alt="Franco Kaddour — desarrollador web, Buenos Aires"
+              alt="Franco Kaddour, desarrollador web de Buenos Aires — foto de perfil"
               className="w-full rounded shadow-md grayscale"
               loading="lazy"
               decoding="async"
