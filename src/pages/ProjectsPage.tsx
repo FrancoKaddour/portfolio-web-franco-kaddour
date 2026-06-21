@@ -50,6 +50,11 @@ const ProjectsPage = () => {
         <meta property="og:image:height" content="740" />
         <meta property="og:locale" content="es_AR" />
         <meta property="og:site_name" content="Franco Kaddour Portfolio" />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Proyectos — Franco Kaddour | La Básica · Miga Club · Espacio Vina" />
+        <meta name="twitter:description" content={t("meta.projectsDescription")} />
+        <meta name="twitter:image" content={`${BASE_URL}/og.webp`} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
