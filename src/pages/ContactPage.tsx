@@ -69,6 +69,11 @@ const ContactPage = () => {
         <meta property="og:image:height" content="740" />
         <meta property="og:locale" content="es_AR" />
         <meta property="og:site_name" content="Franco Kaddour Portfolio" />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contacto — Franco Kaddour | Desarrollador Web" />
+        <meta name="twitter:description" content={t("meta.contactDescription")} />
+        <meta name="twitter:image" content={`${BASE_URL}/og.webp`} />
       </Helmet>
 
       <div className="page-enter max-w-[780px] mx-auto px-6 py-12 md:py-16">
