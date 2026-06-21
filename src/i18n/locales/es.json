@@ -55,7 +55,7 @@
     "migaClubDesc": "El cliente necesitaba diferenciarse en un mercado saturado sin presupuesto para agencia. Solución: identidad visual completa desde cero — logo, paleta, tipografía, ilustraciones y web. Resultado: marca coherente en web y redes. Construido en HTML/CSS/JS sin frameworks para máxima velocidad de carga.",
     "laBasicaDesc": "La pastelería no tenía presencia web a la altura de su producto. Diseñé y desarrollé una tienda online completa — identidad visual, catálogo, carrito y panel de administración. React + TypeScript con tipado estricto para gestionar las variaciones del catálogo con solidez. Diseño y desarrollo de punta a punta.",
     "portfolioDesc": "Este portfolio. Construido con React, TypeScript y Vite. Diseño minimalista con tipografía monoespaciada, modo claro/oscuro y soporte para tres idiomas.",
-    "monitoreoDesc": "Sistema de monitoreo ambiental en Python desarrollado como proyecto integrador para la TUPaD UTN. Recolección de datos de sensores, procesamiento y visualización con gráficos en tiempo real."
+    "monitoreoDesc": "Sistema de monitoreo ambiental en Python. Proyecto integrador del primer cuatrimestre de la TUPaD UTN — recolección de datos de sensores, procesamiento, almacenamiento y visualización con gráficos en tiempo real."
   },
   "contact": {
     "pageTitle": "Contacto",
