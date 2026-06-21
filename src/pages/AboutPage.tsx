@@ -147,8 +147,8 @@ const AboutPage = () => {
         <hr className="border-border mb-10" />
 
         {/* Headshot */}
-        <section className="mb-10" id="photo">
-          <h2 className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
+        <section className="mb-10" id="photo" aria-labelledby="photo-heading">
+          <h2 id="photo-heading" className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
             {t("about.headshotTitle")}
           </h2>
           <div className="max-w-[280px]">
