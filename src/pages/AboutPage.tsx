@@ -167,8 +167,8 @@ const AboutPage = () => {
         <hr className="border-border mb-10" />
 
         {/* Contact */}
-        <section id="contact-info">
-          <h2 className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
+        <section id="contact-info" aria-labelledby="contact-info-heading">
+          <h2 id="contact-info-heading" className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
             {t("about.contactSectionTitle")}
           </h2>
           <p className="text-[14px] md:text-[15px] leading-[1.8]">
