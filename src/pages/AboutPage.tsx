@@ -139,6 +139,9 @@ const AboutPage = () => {
           <p className="text-[14px] md:text-[15px] leading-[1.8]">
             {t("about.shortBio2")}
           </p>
+          <p className="text-[14px] md:text-[15px] leading-[1.8] mt-4 text-foreground/70">
+            {t("about.availabilityNote")}
+          </p>
         </section>
 
         <hr className="border-border mb-10" />
