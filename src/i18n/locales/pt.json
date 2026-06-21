@@ -91,6 +91,7 @@
   "nav": {
     "about": "About",
     "projects": "Projetos",
-    "contact": "Contato"
+    "contact": "Contato",
+    "home": "Início"
   }
 }
