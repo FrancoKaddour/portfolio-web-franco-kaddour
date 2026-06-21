@@ -54,7 +54,7 @@
     "espacioVinaDesc": "O cliente não tinha sistema digital — cada pedido era manual. Desenvolvi o frontend completo do e-commerce: catálogo de produtos, gestão de pedidos e painel administrativo. Também cuidei de toda a identidade visual. Primeira vez trabalhando com backend real (PHP + MySQL) em colaboração com outro desenvolvedor.",
     "migaClubDesc": "O cliente precisava se destacar em um mercado saturado sem orçamento para agência. Solução: identidade visual completa do zero — logo, paleta, tipografia, ilustrações e site. Resultado: marca coerente na web e nas redes. Construído em HTML/CSS/JS vanilla — sem frameworks, máxima velocidade de carregamento.",
     "laBasicaDesc": "A confeitaria não tinha presença web à altura do seu produto. Desenhei e desenvolvi uma loja online completa — identidade visual, catálogo de produtos, carrinho e painel administrativo. React + TypeScript com tipagem estrita para gerenciar as variações do catálogo com solidez. Design e desenvolvimento de ponta a ponta.",
-    "portfolioDesc": "Este portfólio. React, TypeScript e Vite. Design minimalista com suporte para três idiomas.",
+    "portfolioDesc": "Este portfólio. Construído com React, TypeScript e Vite. Design minimalista com tipografia monoespaçada, modo claro/escuro e suporte para três idiomas.",
     "monitoreoDesc": "Sistema de monitoramento ambiental em Python — projeto integrador da TUPaD UTN. Coleta de dados de sensores, processamento e visualização com gráficos em tempo real."
   },
   "contact": {
