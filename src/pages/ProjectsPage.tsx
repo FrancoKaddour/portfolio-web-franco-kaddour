@@ -22,6 +22,7 @@ const ProjectsPage = () => {
           name: p.name,
           url: p.websiteUrl,
           applicationCategory: "WebApplication",
+          dateCreated: p.year,
           author: {
             "@type": "Person",
             name: "Franco Kaddour",
