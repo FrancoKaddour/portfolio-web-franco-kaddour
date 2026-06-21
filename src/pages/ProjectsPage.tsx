@@ -38,7 +38,7 @@ const ProjectsPage = () => {
   return (
     <>
       <Helmet>
-        <title>Proyectos — Franco Kaddour | React TypeScript E-commerce</title>
+        <title>Proyectos — Franco Kaddour | La Básica · Miga Club · Espacio Vina</title>
         <meta name="description" content={t("meta.projectsDescription")} />
         <link rel="canonical" href={`${BASE_URL}/projects`} />
         <meta property="og:type" content="website" />
