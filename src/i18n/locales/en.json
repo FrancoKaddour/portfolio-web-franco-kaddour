@@ -54,7 +54,7 @@
     "espacioVinaDesc": "The client had no digital system — every order was manual. I built the full frontend of their e-commerce: product catalog, order management, and admin panel. I also handled the entire visual identity. First time working with a real backend (PHP + MySQL) in collaboration with another developer.",
     "migaClubDesc": "The client needed to stand out in a crowded market without an agency budget. Solution: full visual identity from scratch — logo, palette, typography, illustrations, and website. Result: coherent brand across web and social. Built with vanilla HTML/CSS/JS — no frameworks, maximum load speed.",
     "laBasicaDesc": "The bakery had no web presence to match the quality of their product. I designed and built a complete online store — visual identity, product catalog, shopping cart, and admin panel. React + TypeScript with strict typing to handle catalog variations with precision. End-to-end design and development.",
-    "portfolioDesc": "This portfolio. React, TypeScript, and Vite. Minimalist design with three-language support.",
+    "portfolioDesc": "This portfolio. Built with React, TypeScript, and Vite. Minimalist design with monospace typography, light/dark mode, and three-language support.",
     "monitoreoDesc": "Environmental monitoring system in Python — integrative project for the TUPaD UTN program. Sensor data collection, processing, and real-time chart visualization."
   },
   "contact": {
