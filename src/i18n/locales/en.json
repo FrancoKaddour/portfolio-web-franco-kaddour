@@ -3,7 +3,7 @@
     "firstName": "Franco",
     "lastName": "Kaddour",
     "tagline": "Web Development · Freelance · Buenos Aires",
-    "bio": "I build web applications that look good — landing pages, e-commerces, platforms and different types of projects. Two years developing for clients. Not just code: design, visual identity and user experience.",
+    "bio": "I build web applications that look good. Landing pages, e-commerces, platforms. Two years in production for real clients. Code, design, and visual identity.",
     "currentlyLabel": "Working on:",
     "studyingLabel": "Studying:",
     "studyingValue": "University Technical Degree in Programming — UTN (Universidad Tecnológica Nacional)",
@@ -18,7 +18,7 @@
   "about": {
     "pageTitle": "About",
     "webDevTitle": "Web Development",
-    "webDevDesc1": "I build web applications that solve real business problems. Two years developing e-commerces and platforms for real clients — straight into production, with full ownership of the outcome. My approach combines software engineering with a practical business mindset: I understand both the technical architecture and the impact the software has on the client's operations. Beyond the code, I handle the full design: visual identity, user experience, and brand communication.",
+    "webDevDesc1": "I build web applications and make sure they actually work. Two years shipping e-commerces and platforms for clients — straight into production, no middlemen, results as the only metric. Beyond the code: I design the interfaces, define the visual identity, and make sure everything delivered is consistent from start to finish.",
     "webDevCurrently": "Currently working on:",
     "projectEspacioVina": "Home & deco e-commerce with product catalog, order management, and admin panel. Pair project with Nico Alvez — I handled the frontend and all design decisions: color palette and typography. First time working with another developer and touching a real backend: PHP from scratch.",
     "projectMigaClub": "Landing page and dashboard for a miga sandwich club. Full brand ownership: logo, color palette, typography, illustrated storefront, and all site graphics. Built with vanilla HTML, CSS, and JavaScript — a deliberate choice to keep it dependency-free.",
@@ -38,13 +38,13 @@
     "educationCoderHouseJS": "JavaScript — CoderHouse",
     "educationSelfTaught": "Self-taught in web development: two years building real client projects",
     "shortBioTitle": "Bio",
-    "shortBio1": "Franco Kaddour is a web developer from Buenos Aires, Argentina. Two years building web applications with React, TypeScript, and Node.js for real clients — e-commerces, platforms, and brand websites.",
-    "shortBio2": "He works independently and takes full ownership of every project: from technical architecture to visual identity. Studies the University Technical Degree in Programming (TUPaD) at UTN.",
+    "shortBio1": "Franco Kaddour is a web developer from Buenos Aires. Two years building e-commerces and platforms for clients — with React, TypeScript, and Node.js.",
+    "shortBio2": "Works alone, no agency, no middlemen — code and design under the same roof. Studies the University Technical Degree in Programming (TUPaD) at UTN.",
     "testimonialsTitle": "What they say",
     "headshotTitle": "Photo",
     "contactSectionTitle": "Contact",
     "thankYou": "Thanks for taking the time to visit the portfolio.",
-    "availabilityNote": "Available for freelance projects and remote collaborations."
+    "availabilityNote": "Available for new projects. Remote work."
   },
   "projects": {
     "title": "Projects",
