@@ -89,7 +89,7 @@ export function FeaturedCard({ project }: { project: Project }) {
   return (
     <article
       aria-label={project.name}
-      className="group border border-foreground/10 hover:border-foreground/25 transition-colors duration-300 flex flex-col"
+      className="group border border-foreground/10 hover:border-foreground/25 transition-all duration-300 flex flex-col hover:-translate-y-[3px]"
     >
       <a
         href={href}
@@ -157,7 +157,7 @@ export function RegularCard({ project }: { project: Project }) {
   return (
     <article
       aria-label={project.name}
-      className="group border border-foreground/10 hover:border-foreground/25 transition-colors duration-300 flex flex-col"
+      className="group border border-foreground/10 hover:border-foreground/25 transition-all duration-300 flex flex-col hover:-translate-y-[3px]"
     >
       <a
         href={href}
@@ -217,7 +217,7 @@ export function CompactCard({ project }: { project: Project }) {
   return (
     <article
       aria-label={project.name}
-      className="group border border-foreground/10 hover:border-foreground/25 transition-colors duration-300 flex flex-col px-5 py-5"
+      className="group border border-foreground/10 hover:border-foreground/25 transition-all duration-300 flex flex-col px-5 py-5 hover:-translate-y-[3px]"
     >
       <TerminalPlaceholder tech={project.tech} />
 

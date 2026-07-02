@@ -104,63 +104,63 @@ const HomePage = () => {
           </span>
         </div>
 
-        {/* Arrow links */}
+        {/* Arrow links — staggered entry */}
         <nav aria-label="Links rápidos">
           <ul className="flex flex-col gap-2 list-none p-0 m-0">
-            <li>
+            <li className="stagger-item" style={{ animationDelay: "0.30s" }}>
               <Link
                 to="/about"
-                className="text-[14px] md:text-[15px] font-bold text-foreground no-underline hover:underline min-h-[44px] flex items-center"
+                className="link-line text-[14px] md:text-[15px] font-bold text-foreground no-underline min-h-[44px] flex items-center w-fit"
               >
-                <span aria-hidden="true">→ </span>{t("home.linkAbout")}
+                <span aria-hidden="true" className="mr-1.5">→</span>{t("home.linkAbout")}
               </Link>
             </li>
-            <li>
+            <li className="stagger-item" style={{ animationDelay: "0.38s" }}>
               <Link
                 to="/projects"
-                className="text-[14px] md:text-[15px] font-bold text-foreground no-underline hover:underline min-h-[44px] flex items-center"
+                className="link-line text-[14px] md:text-[15px] font-bold text-foreground no-underline min-h-[44px] flex items-center w-fit"
               >
-                <span aria-hidden="true">→ </span>{t("home.linkProjects")}
+                <span aria-hidden="true" className="mr-1.5">→</span>{t("home.linkProjects")}
               </Link>
             </li>
-            <li>
+            <li className="stagger-item" style={{ animationDelay: "0.46s" }}>
               <Link
                 to="/contact"
-                className="text-[14px] md:text-[15px] font-bold text-foreground no-underline hover:underline min-h-[44px] flex items-center"
+                className="link-line text-[14px] md:text-[15px] font-bold text-foreground no-underline min-h-[44px] flex items-center w-fit"
               >
-                <span aria-hidden="true">→ </span>{t("home.linkContact")}
+                <span aria-hidden="true" className="mr-1.5">→</span>{t("home.linkContact")}
               </Link>
             </li>
-            <li>
+            <li className="stagger-item" style={{ animationDelay: "0.54s" }}>
               <a
                 href={GITHUB_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Ver perfil de GitHub de Franco Kaddour (abre en nueva pestaña)"
-                className="text-[14px] md:text-[15px] font-bold text-foreground/50 no-underline hover:underline hover:text-foreground min-h-[44px] flex items-center"
+                className="link-line text-[14px] md:text-[15px] font-bold text-foreground/50 hover:text-foreground no-underline min-h-[44px] flex items-center w-fit transition-colors duration-200"
               >
-                → {t("home.linkGithub")}
+                <span aria-hidden="true" className="mr-1.5">→</span>{t("home.linkGithub")}
               </a>
             </li>
-            <li>
+            <li className="stagger-item" style={{ animationDelay: "0.62s" }}>
               <a
                 href={LINKEDIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Ver perfil de LinkedIn de Franco Kaddour (abre en nueva pestaña)"
-                className="text-[14px] md:text-[15px] font-bold text-foreground/50 no-underline hover:underline hover:text-foreground min-h-[44px] flex items-center"
+                className="link-line text-[14px] md:text-[15px] font-bold text-foreground/50 hover:text-foreground no-underline min-h-[44px] flex items-center w-fit transition-colors duration-200"
               >
-                → {t("home.linkLinkedin")}
+                <span aria-hidden="true" className="mr-1.5">→</span>{t("home.linkLinkedin")}
               </a>
             </li>
-            <li>
+            <li className="stagger-item" style={{ animationDelay: "0.70s" }}>
               <a
                 href="/cv-franco-kaddour.pdf"
                 download
-                className="text-[14px] md:text-[15px] font-bold text-foreground/50 no-underline hover:underline hover:text-foreground min-h-[44px] flex items-center"
+                className="link-line text-[14px] md:text-[15px] font-bold text-foreground/50 hover:text-foreground no-underline min-h-[44px] flex items-center w-fit transition-colors duration-200"
                 aria-label="Descargar curriculum vitae en PDF"
               >
-                → {t("home.linkCV")}
+                <span aria-hidden="true" className="mr-1.5">→</span>{t("home.linkCV")}
               </a>
             </li>
           </ul>

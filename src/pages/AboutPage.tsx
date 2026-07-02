@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { BASE_URL, EMAIL, GITHUB_URL, GITHUB_USER, LINKEDIN_URL } from "@/lib/constants";
+import { useInView } from "@/hooks/useInView";
 
 interface UTNSubject {
   name: string;
@@ -16,6 +17,13 @@ const utnSubjects: UTNSubject[] = [
 
 const AboutPage = () => {
   const { t } = useTranslation();
+  const s1 = useInView<HTMLElement>();
+  const s2 = useInView<HTMLElement>();
+  const s3 = useInView<HTMLElement>();
+  const s4 = useInView<HTMLElement>();
+  const s5 = useInView<HTMLElement>();
+  const s6 = useInView<HTMLElement>();
+  const s7 = useInView<HTMLElement>();
 
   return (
     <>
@@ -46,7 +54,7 @@ const AboutPage = () => {
         </h1>
 
         {/* Web Development */}
-        <section className="mb-12" id="web-dev" aria-labelledby="web-dev-heading">
+        <section ref={s1.ref} className={`mb-12 reveal${s1.visible ? " visible" : ""}`} id="web-dev" aria-labelledby="web-dev-heading">
           <h2 id="web-dev-heading" className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
             {t("about.webDevTitle")}
           </h2>
@@ -75,7 +83,7 @@ const AboutPage = () => {
         <hr className="border-border mb-10" />
 
         {/* Tech Stack */}
-        <section className="mb-12" id="tech" aria-labelledby="tech-heading">
+        <section ref={s2.ref} className={`mb-12 reveal${s2.visible ? " visible" : ""}`} id="tech" aria-labelledby="tech-heading">
           <h2 id="tech-heading" className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
             {t("about.techTitle")}
           </h2>
@@ -91,7 +99,7 @@ const AboutPage = () => {
         <hr className="border-border mb-10" />
 
         {/* Education */}
-        <section className="mb-12" id="education" aria-labelledby="education-heading">
+        <section ref={s3.ref} className={`mb-12 reveal${s3.visible ? " visible" : ""}`} id="education" aria-labelledby="education-heading">
           <h2 id="education-heading" className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
             {t("about.educationTitle")}
           </h2>
@@ -106,7 +114,7 @@ const AboutPage = () => {
         <hr className="border-border mb-10" />
 
         {/* UTN — Materias */}
-        <section className="mb-12" id="utn-materias" aria-labelledby="utn-heading">
+        <section ref={s4.ref} className={`mb-12 reveal${s4.visible ? " visible" : ""}`} id="utn-materias" aria-labelledby="utn-heading">
           <h2 id="utn-heading" className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-1">
             {t("about.utnTitle")}
           </h2>
@@ -134,7 +142,7 @@ const AboutPage = () => {
         <hr className="border-border mb-10" />
 
         {/* Short Bio */}
-        <section className="mb-12" id="bio" aria-labelledby="bio-heading">
+        <section ref={s5.ref} className={`mb-12 reveal${s5.visible ? " visible" : ""}`} id="bio" aria-labelledby="bio-heading">
           <h2 id="bio-heading" className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
             {t("about.shortBioTitle")}
           </h2>
@@ -152,7 +160,7 @@ const AboutPage = () => {
         <hr className="border-border mb-10" />
 
         {/* Headshot */}
-        <section className="mb-10" id="photo" aria-labelledby="photo-heading">
+        <section ref={s6.ref} className={`mb-10 reveal${s6.visible ? " visible" : ""}`} id="photo" aria-labelledby="photo-heading">
           <h2 id="photo-heading" className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
             {t("about.headshotTitle")}
           </h2>
@@ -172,7 +180,7 @@ const AboutPage = () => {
         <hr className="border-border mb-10" />
 
         {/* Contact */}
-        <section id="contact-info" aria-labelledby="contact-info-heading">
+        <section ref={s7.ref} className={`reveal${s7.visible ? " visible" : ""}`} id="contact-info" aria-labelledby="contact-info-heading">
           <h2 id="contact-info-heading" className="text-[18px] md:text-[22px] font-bold tracking-[0.15em] uppercase mb-4">
             {t("about.contactSectionTitle")}
           </h2>

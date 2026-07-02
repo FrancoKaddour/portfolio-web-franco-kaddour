@@ -60,10 +60,10 @@ export function Navbar() {
               key={link.path}
               to={link.path}
               aria-current={location.pathname === link.path ? "page" : undefined}
-              className={`text-[12px] tracking-[0.12em] uppercase no-underline transition-opacity min-h-[44px] flex items-center ${
+              className={`link-line text-[12px] tracking-[0.12em] uppercase no-underline transition-colors min-h-[44px] flex items-center w-fit ${
                 location.pathname === link.path
                   ? "text-foreground font-bold"
-                  : "text-foreground/50 hover:text-foreground hover:opacity-100"
+                  : "text-foreground/50 hover:text-foreground"
               }`}
             >
               {t(link.key)}
