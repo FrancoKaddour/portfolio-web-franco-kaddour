@@ -1,5 +1,7 @@
 # Franco Kaddour — Portfolio
 
+[![CI](https://github.com/FrancoKaddour/portfolio-web-franco-kaddour/actions/workflows/ci.yml/badge.svg)](https://github.com/FrancoKaddour/portfolio-web-franco-kaddour/actions/workflows/ci.yml)
+
 Portfolio personal de Franco Kaddour, desarrollador web de Buenos Aires.
 
 **[francokaddour.vercel.app](https://francokaddour.vercel.app)**
