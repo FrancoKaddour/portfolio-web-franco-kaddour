@@ -3,7 +3,7 @@
     "firstName": "Franco",
     "lastName": "Kaddour",
     "tagline": "Desenvolvimento Web · Freelance · Buenos Aires",
-    "bio": "Construo aplicações web que ficam bem — landings, e-commerces, plataformas e diferentes tipos de projetos. Dois anos desenvolvendo para clientes. Não só código: design, identidade visual e experiência do usuário.",
+    "bio": "Construo aplicações web que ficam bem. Landings, e-commerces, plataformas. Dois anos em produção para clientes reais. Código, design e identidade visual.",
     "currentlyLabel": "Trabalhando em:",
     "studyingLabel": "Estudando:",
     "studyingValue": "Tecnicatura Universitária em Programação — UTN (Universidad Tecnológica Nacional)",
@@ -18,7 +18,7 @@
   "about": {
     "pageTitle": "About",
     "webDevTitle": "Desenvolvimento Web",
-    "webDevDesc1": "Construo aplicações web que resolvem problemas reais de negócio. Dois anos desenvolvendo e-commerces e plataformas para clientes — direto em produção, com responsabilidade total sobre o resultado. Minha abordagem combina engenharia de software com uma visão prática dos negócios: entendo tanto a arquitetura técnica quanto o impacto que o software tem na operação do cliente. Além do código, cuido do design completo: identidade visual, experiência do usuário e comunicação de marca.",
+    "webDevDesc1": "Construo aplicações web e faço funcionar. Dois anos desenvolvendo e-commerces e plataformas para clientes — direto em produção, sem intermediários, resultado como única métrica. Além do código: desenho as interfaces, defino a identidade visual e garanto que o que é entregue tenha coerência do começo ao fim.",
     "webDevCurrently": "Atualmente trabalhando em:",
     "projectEspacioVina": "E-commerce de home & deco com catálogo de produtos, gestão de pedidos e painel administrativo. Projeto em dupla com Nico Alvez — eu fiquei responsável pelo frontend e pelas decisões de design: paleta de cores e tipografia. Primeira vez trabalhando com outra pessoa e tocando um backend real: PHP do zero.",
     "projectMigaClub": "Landing page e dashboard para um clube de sanduíches de miga. Responsabilidade total de marca: logo, paleta de cores, tipografia, ilustração da fachada do local e todos os gráficos do site. Construído em HTML, CSS e JavaScript vanilla — sem frameworks, sem dependências.",
@@ -38,13 +38,13 @@
     "educationCoderHouseJS": "JavaScript — CoderHouse",
     "educationSelfTaught": "Autodidata em desenvolvimento web: dois anos construindo projetos reais para clientes",
     "shortBioTitle": "Bio",
-    "shortBio1": "Franco Kaddour é desenvolvedor web de Buenos Aires, Argentina. Dois anos construindo aplicações web com React, TypeScript e Node.js para clientes reais — e-commerces, plataformas e sites de marca.",
-    "shortBio2": "Trabalha de forma independente e assume responsabilidade total sobre cada projeto: da arquitetura técnica à identidade visual. Cursa a Tecnicatura Universitária em Programação (TUPaD) na UTN.",
+    "shortBio1": "Franco Kaddour é desenvolvedor web de Buenos Aires. Dois anos construindo e-commerces e plataformas para clientes — com React, TypeScript e Node.js.",
+    "shortBio2": "Trabalha sozinho, sem agência nem intermediários — código e design sob o mesmo teto. Cursa a Tecnicatura Universitária em Programação (TUPaD) na UTN.",
     "testimonialsTitle": "O que dizem",
     "headshotTitle": "Foto",
     "contactSectionTitle": "Contato",
     "thankYou": "Obrigado por reservar um tempo para visitar o portfólio.",
-    "availabilityNote": "Disponível para projetos freelance e colaborações remotas."
+    "availabilityNote": "Disponível para novos projetos. Trabalho remoto."
   },
   "projects": {
     "title": "Projetos",
