@@ -11,9 +11,9 @@ describe("ProjectsPage", () => {
     expect(screen.getByRole("heading", { level: 1 })).toBeInTheDocument();
   });
 
-  it("renders all 5 projects", () => {
+  it("renders all 4 projects", () => {
     const articles = screen.getAllByRole("article");
-    expect(articles).toHaveLength(5);
+    expect(articles).toHaveLength(4);
   });
 
   it("renders La Básica as first project", () => {
@@ -37,7 +37,8 @@ describe("ProjectsPage", () => {
   });
 
   it("renders the 'Other' section label for compact projects", () => {
-    expect(screen.getByText("Other")).toBeInTheDocument();
+    // i18n mock returns the key string
+    expect(screen.getByText("projects.otherLabel")).toBeInTheDocument();
   });
 
   it("renders tech badges for La Básica", () => {
@@ -49,7 +50,7 @@ describe("ProjectsPage", () => {
 
   it("renders GitHub links for all projects", () => {
     const githubLinks = screen.getAllByRole("link", { name: /github/i });
-    expect(githubLinks.length).toBeGreaterThanOrEqual(5);
+    expect(githubLinks.length).toBeGreaterThanOrEqual(4);
     githubLinks.forEach((link) => {
       expect(link).toHaveAttribute("target", "_blank");
       expect(link).toHaveAttribute("rel", "noopener noreferrer");
@@ -57,14 +58,14 @@ describe("ProjectsPage", () => {
   });
 
   it("renders Live links only for projects with a websiteUrl", () => {
-    // La Básica, Miga Club, Espacio Vina have websiteUrl → 3 Live links
-    // aria-label is "Ver sitio en vivo"
-    const liveLinks = screen.getAllByRole("link", { name: /sitio en vivo/i });
-    expect(liveLinks).toHaveLength(3);
+    // All 4 projects have websiteUrl → 4 Live links
+    // aria-label is "Ver ${projectName} en vivo"
+    const liveLinks = screen.getAllByRole("link", { name: /en vivo/i });
+    expect(liveLinks).toHaveLength(4);
   });
 
   it("La Básica live link points to labasicapasteleria.com", () => {
-    const liveLinks = screen.getAllByRole("link", { name: /sitio en vivo/i });
+    const liveLinks = screen.getAllByRole("link", { name: /en vivo/i });
     const laBasicaLive = liveLinks.find((l) =>
       l.getAttribute("href")?.includes("labasicapasteleria.com")
     );

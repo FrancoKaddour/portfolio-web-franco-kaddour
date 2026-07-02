@@ -8,7 +8,7 @@ describe("Navbar", () => {
   });
 
   it("renders the site logo linking to /", () => {
-    const logo = screen.getByRole("link", { name: /franco kaddour/i });
+    const logo = screen.getByRole("link", { name: /ir a la página de inicio/i });
     expect(logo).toBeInTheDocument();
     expect(logo).toHaveAttribute("href", "/");
   });
