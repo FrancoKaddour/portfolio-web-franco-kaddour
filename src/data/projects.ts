@@ -43,20 +43,4 @@ export const projects: Project[] = [
     url: `https://github.com/${GITHUB_USER}/portfolio-web-franco-kaddour`,
     websiteUrl: "https://francokaddour.vercel.app/",
   },
-  {
-    id: "05",
-    name: "Monitoreo Ambiental",
-    year: "2025",
-    descKey: "projects.monitoreoDesc",
-    tech: ["Python", "Data Viz", "Sensors"],
-    url: `https://github.com/${GITHUB_USER}/monitoreo-ambiental`,
-  },
-  {
-    id: "06",
-    name: "Badge Farm",
-    year: "2026",
-    descKey: "projects.badgeFarmDesc",
-    tech: ["Open Source", "TypeScript", "Python"],
-    url: `https://github.com/${GITHUB_USER}/badge-farm`,
-  },
 ];

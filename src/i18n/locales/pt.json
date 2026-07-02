@@ -48,7 +48,7 @@
   },
   "projects": {
     "title": "Projetos",
-    "subtitle": "Cinco projetos reais. Design e desenvolvimento de ponta a ponta. Todos em produção.",
+    "subtitle": "Projetos reais. Design e desenvolvimento de ponta a ponta. Todos em produção.",
     "otherLabel": "Outros projetos",
     "featuredLabel": "Projetos destacados",
     "espacioVinaDesc": "O cliente não tinha sistema digital — cada pedido era manual. Desenvolvi o frontend completo do e-commerce: catálogo de produtos, gestão de pedidos e painel administrativo. Também cuidei de toda a identidade visual. Primeira vez trabalhando com backend real (PHP + MySQL) em colaboração com outro desenvolvedor.",

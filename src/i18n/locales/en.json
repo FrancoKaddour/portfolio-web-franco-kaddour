@@ -48,7 +48,7 @@
   },
   "projects": {
     "title": "Projects",
-    "subtitle": "Five real projects. End-to-end design and development. All in production.",
+    "subtitle": "Real projects. End-to-end design and development. All in production.",
     "otherLabel": "Other projects",
     "featuredLabel": "Featured projects",
     "espacioVinaDesc": "The client had no digital system — every order was manual. I built the full frontend of their e-commerce: product catalog, order management, and admin panel. I also handled the entire visual identity. First time working with a real backend (PHP + MySQL) in collaboration with another developer.",
